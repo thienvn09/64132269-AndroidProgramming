@@ -11,11 +11,12 @@
         android:id="@+id/txt_KQ"
         android:layout_width="212dp"
         android:layout_height="54dp"
-        android:layout_marginTop="412dp"
+        android:layout_marginTop="456dp"
         android:ems="10"
         android:inputType="number"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.572"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,10 +46,10 @@
         android:id="@+id/btn_KQ"
         android:layout_width="119dp"
         android:layout_height="59dp"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="336dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

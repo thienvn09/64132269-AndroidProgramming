@@ -62,11 +62,11 @@
 
     <TextView
         android:id="@+id/Title"
-        android:layout_width="112dp"
+        android:layout_width="133dp"
         android:layout_height="41dp"
         android:layout_marginTop="216dp"
         android:text="Singapo"
-        android:textSize="25dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.244"
@@ -74,11 +74,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/CameraLabel"
+        android:id="@+id/Camera"
         android:layout_width="96dp"
         android:layout_height="34dp"
         android:layout_marginTop="28dp"
-        android:text="Camera"
+        android:text="Camera :"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
@@ -90,12 +90,12 @@
         android:layout_width="96dp"
         android:layout_height="34dp"
         android:layout_marginTop="48dp"
-        android:text="Setting"
+        android:text="Setting :"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CameraLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/Camera" />
 
     <EditText
         android:id="@+id/cameraTyple"
@@ -107,22 +107,22 @@
         android:text="@string/Camera"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/CameraLabel"
+        app:layout_constraintStart_toEndOf="@+id/Camera"
         app:layout_constraintTop_toBottomOf="@+id/Title" />
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="324dp"
-        android:layout_height="139dp"
+        android:layout_width="322dp"
+        android:layout_height="157dp"
         android:layout_marginBottom="160dp"
         android:text="@string/Text"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/InputSetting"
-        app:layout_constraintVertical_bias="0.937" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/Discard"
@@ -137,6 +137,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:layout_constraintVertical_bias="1.0" />
 
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="411dp"
+        app:barrierDirection="left"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

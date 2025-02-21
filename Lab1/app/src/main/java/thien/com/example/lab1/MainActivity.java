@@ -2,9 +2,6 @@ package thien.com.example.lab1;
 
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +11,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 EditText Txt_SoA,Txt_SoB;
-TextView = txt_KQ;
 Button btn_KQ;
 
     @Override
@@ -22,13 +18,12 @@ Button btn_KQ;
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        // Ánh xạ
+        // ánh xạ
         Txt_SoA = findViewById(R.id.Txt_SoA);
         Txt_SoB = findViewById(R.id.Txt_SoB);
-        txt_KQ = findViewById(R.id.txt_KQ);
         btn_KQ = findViewById(R.id.btn_KQ);
         // xử lý click
-
+        btn_KQ.setOnClickListener();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

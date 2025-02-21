@@ -2,7 +2,8 @@
     <string name="app_name">Ex1_Contraint</string>
     <string name="test"> Singapore</string>
     <string name="Camera"> Leica M Typ 240</string>
-    <string name="Setting">Setting</string>
+
+    <string name="Setting">f/4 16s 2000</string>
     <string name="Discard"> DISCARD</string>
     <string name="Upload"> UPLOAD</string>
     <string name="Text">Singapore officially the Republic of Singapore, and often referred to as the Lion City...</string>

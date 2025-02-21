@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ex1_Contraint</string>
+    <string name="test"> Singapore</string>
+    <string name="Camera"> Camera</string>
+    <string name="Setting">Setting</string>
+    <string name="Discard"> DISCARD</string>
+    <string name="Upload"> UPLOAD</string>
+</resources>

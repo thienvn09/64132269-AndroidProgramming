@@ -9,29 +9,81 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/txtND"
-        android:layout_width="429dp"
-        android:layout_height="70dp"
-        android:text="Ứng dụng đổi tiền đơn giản"
-        android:textSize="25dp"
-        android:textColor="@color/yerrow"
-        android:gravity="center"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    <!-- Tiêu đề ứng dụng -->
+
+    <!-- Spinner chọn loại tiền tệ cần chuyển đổi -->
+
+    <!-- EditText nhập số tiền muốn chuyển đổi -->
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="78dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="44dp"
-        android:text="TextView"
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Ứng dụng đổi tiền đơn giản"
+        android:textColor="@color/yerrow"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_from"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtND" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_from"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="184dp"
+        app:layout_constraintEnd_toStartOf="@+id/edit_input_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <EditText
+        android:id="@+id/edit_input_amount"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="184dp"
+        android:hint="Nhập số tiền"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinner_from"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <!-- Spinner chọn loại tiền tệ đích -->
+
+    <!-- EditText hiển thị kết quả quy đổi -->
+    <Spinner
+        android:id="@+id/spinner_to"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toStartOf="@+id/edit_output_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_input_amount" />
+
+    <!-- Button thực hiện quy đổi tiền -->
+    <EditText
+        android:id="@+id/edit_output_amount"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:focusable="false"
+        android:hint="Kết quả"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinner_to"
+        app:layout_constraintTop_toBottomOf="@+id/edit_input_amount" />
+
+    <Button
+        android:id="@+id/btn_convert"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="148dp"
+        android:text="Đổi tiền"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_to" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

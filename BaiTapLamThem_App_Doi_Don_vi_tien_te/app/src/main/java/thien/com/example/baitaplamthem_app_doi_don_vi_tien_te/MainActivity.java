@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             double result = amount * (toRate / fromRate);
 
             NumberFormat formatter = new DecimalFormat("#,###.##");
-            edit_output_amount.setText(String.format("%s %s = %s %s", amount, Tienin, formatter.format(result), Tienout));
+            edit_output_amount.setText(String.format("%s.%s = %s %s", amount, Tienin, formatter.format(result), Tienout));
         } catch (NumberFormatException e) {
             edit_output_amount.setText("Lỗi: Nhập số hợp lệ!");
         }

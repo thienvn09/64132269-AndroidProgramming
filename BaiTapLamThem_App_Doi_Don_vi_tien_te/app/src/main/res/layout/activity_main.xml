@@ -9,11 +9,6 @@
     tools:context=".MainActivity">
 
 
-    <!-- Tiêu đề ứng dụng -->
-
-    <!-- Spinner chọn loại tiền tệ cần chuyển đổi -->
-
-    <!-- EditText nhập số tiền muốn chuyển đổi -->
 
     <TextView
         android:id="@+id/txt_title"
@@ -50,9 +45,6 @@
         app:layout_constraintStart_toEndOf="@+id/spinner_from"
         app:layout_constraintTop_toBottomOf="@+id/txt_title" />
 
-    <!-- Spinner chọn loại tiền tệ đích -->
-
-    <!-- EditText hiển thị kết quả quy đổi -->
     <Spinner
         android:id="@+id/spinner_to"
         android:layout_width="150dp"
@@ -62,7 +54,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_input_amount" />
 
-    <!-- Button thực hiện quy đổi tiền -->
+
     <EditText
         android:id="@+id/edit_output_amount"
         android:layout_width="250dp"

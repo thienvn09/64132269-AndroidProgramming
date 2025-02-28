@@ -61,14 +61,32 @@ public class MainActivity extends AppCompatActivity {
         double KQ_Cong = a+b;
         setKetQua("kết quả "+KQ_Cong);
     }
- /*   public void XulyTru(View view)
+    public void XuLyTru(View view)
     {
         double a = Double.parseDouble(getSoA());
         double b = Double.parseDouble(getSoB());
-        double KQ_Cong = a+b;
+        double KQ_Cong = a-b;
         setKetQua("kết quả "+KQ_Cong);
-    }*/
-
+    }
+    public void XuLyNhan(View view)
+    {
+        double a = Double.parseDouble(getSoA());
+        double b = Double.parseDouble(getSoB());
+        double KQ_Cong = a*b;
+        setKetQua("kết quả "+KQ_Cong);
+    }
+    public void XuLyChia(View view)
+    {
+        double a = Double.parseDouble(getSoA());
+        double b = Double.parseDouble(getSoB());
+        double KQ_Cong = a/b;
+        if (b == 0) {
+            setKetQua("Lỗi: Không thể chia cho 0!");
+        } else {
+            double kq_Chia = a / b;
+            setKetQua("Kết quả: " + kq_Chia);
+        }
+    }
 
 
 }

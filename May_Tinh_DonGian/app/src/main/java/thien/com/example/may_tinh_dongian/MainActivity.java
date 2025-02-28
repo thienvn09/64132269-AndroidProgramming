@@ -1,6 +1,7 @@
 package thien.com.example.may_tinh_dongian;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +22,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+    public void XuLyCong(View view)
+    {
+
+    }
+
+
+
 }

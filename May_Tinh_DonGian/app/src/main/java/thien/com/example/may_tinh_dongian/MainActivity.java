@@ -58,8 +58,16 @@ public class MainActivity extends AppCompatActivity {
     {
         double a = Double.parseDouble(getSoA());
         double b = Double.parseDouble(getSoB());
-        double KQ_Cong
+        double KQ_Cong = a+b;
+        setKetQua("kết quả "+KQ_Cong);
     }
+ /*   public void XulyTru(View view)
+    {
+        double a = Double.parseDouble(getSoA());
+        double b = Double.parseDouble(getSoB());
+        double KQ_Cong = a+b;
+        setKetQua("kết quả "+KQ_Cong);
+    }*/
 
 
 

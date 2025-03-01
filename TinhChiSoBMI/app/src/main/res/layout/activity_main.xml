@@ -7,13 +7,71 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/Txt_ChieuCao"
+        android:layout_width="410dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:text="Moi Nhap Chieu cao (m)"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_CanNang" />
+
     <TextView
-        android:layout_width="100dp"
-        android:layout_height="69dp"
-        android:text="Hello World!"
+        android:id="@+id/title"
+        android:layout_width="408dp"
+        android:layout_height="79dp"
+        android:text="Tinh Chi So BMI"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <Button
+        android:id="@+id/Tinh"
+        android:layout_height="53dp"
+        android:onClick="Tinh1"
+        android:text="Tinh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.486" />
+
+    <EditText
+        android:id="@+id/txt_CanNang"
+        android:layout_width="405dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="543dp"
+        android:text="Moi nhap Can Nang(kg)"
+        android:textAlignment="center"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/KQ"
+        android:layout_width="407dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="273dp"
+        android:text="chi so BMI cua ban la :"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:shadowColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tinh" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

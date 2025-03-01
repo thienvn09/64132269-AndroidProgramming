@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         double CanNang = Double.parseDouble(gettxt_CanNang());
         double ChieuCao = Double.parseDouble(gettxt_CanNang());
         double DMI = (CanNang)/(ChieuCao*ChieuCao);
-        
-        setKQ(DMI);
+        setKQ("chi so DMI cua ban la "+ String.valueOf(DMI));
+
     }
 }

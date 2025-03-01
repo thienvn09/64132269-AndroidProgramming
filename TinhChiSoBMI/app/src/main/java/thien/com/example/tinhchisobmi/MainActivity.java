@@ -1,6 +1,7 @@
 package thien.com.example.tinhchisobmi;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     {
         KQ.setText(value);
     }
-    public void Tinh1()
+    public void Tinh1(View v)
     {
         double CanNang = Double.parseDouble(gettxt_CanNang());
         double ChieuCao = Double.parseDouble(gettxt_CanNang());

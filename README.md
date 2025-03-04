@@ -8,3 +8,6 @@
 
 ## Hình ảnh về máy tính 
 ![alt text](image.png)
+ ## hinh anh ve dmi
+ sai về mặt logic 
+ ![alt text](image-1.png)

@@ -8,5 +8,3 @@
 
 ## Hình ảnh về máy tính 
 ![alt text](image.png)
-## Tính năng
-- Chuyển đổi tiền tệ giữa USD, VND, EUR, JPY, GBP

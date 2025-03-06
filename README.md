@@ -1,7 +1,6 @@
 # 64132269 - Android Programming  
 
 ## 🎯 Giới thiệu  
-Chào bạn, mình là ## 🎯 Giới thiệu  
 Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng Thiện</span> 🔥  
 
 

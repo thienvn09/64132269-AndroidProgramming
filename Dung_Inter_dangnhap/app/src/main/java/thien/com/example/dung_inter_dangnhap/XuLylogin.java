@@ -41,7 +41,11 @@ public class XuLylogin extends AppCompatActivity {
                 mk ="1";
                 if(getInputTk() == tk && getInputMK() == mk )
                 {
-                    Intent intent = new Intent(XuLylogin.this,)
+                    Intent intent = new Intent(XuLylogin.this, ChaoMung.class);
+                    startActivity(intent);
+                }
+                else{
+                    
                 }
             }
         });

@@ -42,10 +42,11 @@ public class XuLylogin extends AppCompatActivity {
                 if(getInputTk() == tk && getInputMK() == mk )
                 {
                     Intent intent = new Intent(XuLylogin.this, ChaoMung.class);
+                    intent.putExtra("123",getInputTk());
                     startActivity(intent);
                 }
                 else{
-                    
+                    etxtThongBao.setText("Sai tài khoản hoặc mật khẩu");
                 }
             }
         });

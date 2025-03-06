@@ -15,6 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class XuLylogin extends AppCompatActivity {
     private EditText inputTk,inputMK,etxtThongBao;
     private  Button btnDN;
+    public String tk = new String();
+    public String mk = new String();
+
     public String getInputTk(){
         return inputTk.getText().toString();
     }
@@ -35,11 +38,9 @@ public class XuLylogin extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                String tk = new String();
-                String mk = new String();
-                tk = "thiện";
+                tk = "thien";
                 mk ="1";
-                if(getInputTk() == tk && getInputMK() == mk )
+                if(getInputTk().equals(tk) && getInputMK().equals(mk) )
                 {
                     Intent intent = new Intent(XuLylogin.this, ChaoMung.class);
                     intent.putExtra("123",getInputTk());

@@ -97,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
-        android:background=""
+        android:backgroundTint="#1976D2"
         android:textSize="15dp"
         android:text="Xác nhận"
         app:layout_constraintBottom_toTopOf="@+id/etxtThongBao"

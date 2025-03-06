@@ -13,7 +13,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class XuLylogin extends AppCompatActivity {
     private EditText inputTk,inputMK,etxtThongBao;
-
+    private  Button btnDN;
+    public String getInputTk(){
+        return inputTk.getText().toString();
+    }
+    public String getInputMK()
+    {
+        return inputMK.getText().toString();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,22 +29,28 @@ public class XuLylogin extends AppCompatActivity {
         inputTk = findViewById(R.id.inputTk);
         inputMK =findViewById(R.id.inputMK);
         etxtThongBao=findViewById(R.id.etxtThongBao);
+        btnDN=findViewById(R.id.btnDN);
+        btnDN.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                String tk = new String();
+                String mk = new String();
+                tk = "thiện";
+                mk ="1";
+                if(getInputTk() == tk && getInputMK() == mk )
+                {
 
+                }
+            }
+        });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
     }
-    public String getInputTk(){
-        return inputTk.getText().toString();
-    }
-    public String getInputMK()
-    {
-        return inputMK.getText().toString();
-    }
-    Button btnDN=findViewById(R.id.btnDN);
-    btnDN.setOnClickListener(new View.OnLongClickListener(){
-        @Override
-    })
+
+
+
 }

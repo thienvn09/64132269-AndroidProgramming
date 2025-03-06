@@ -18,14 +18,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        // khai báo
         Button btnLogin = findViewById(R.id.btnLogin);
-        btnLogin.setOnClickListener( new View.OnClickListener()){
+        // xử lý sự kiện
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this,XuLylogin.class);
-                startActivities(intent);
+            public void onClick(View v) {
+                // Chuyển sang XuLylogin activity
+                Intent intent = new Intent(MainActivity.this, XuLylogin.class);
+                startActivity(intent);
             }
-        }
+        });
 
     }
     // su dung inter tuong minh

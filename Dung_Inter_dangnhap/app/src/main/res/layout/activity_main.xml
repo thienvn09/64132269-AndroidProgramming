@@ -32,7 +32,6 @@
         android:layout_height="82dp"
         android:layout_marginBottom="272dp"
         android:backgroundTint="#1976D2"
-
         android:text="đăng nhập"
         android:textColor="#FFFFFF"
         android:textSize="15dp"

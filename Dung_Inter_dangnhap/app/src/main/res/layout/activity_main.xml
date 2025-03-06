@@ -17,7 +17,7 @@
         android:background="@color/yellow"
         android:text="QUIZ kiểm tra bảng cửu chương"
         android:textAlignment="center"
-        android:textSize="16dp"
+        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.692"
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLogin"
         android:layout_width="164dp"
         android:layout_height="82dp"
         android:layout_marginTop="312dp"

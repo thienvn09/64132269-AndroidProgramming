@@ -7,7 +7,7 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 ---
 
 ## 📌 Bài tập nhỏ: Ứng dụng đổi đơn vị tiền tệ  
-![Giao diện ứng dụng](BaiTapLamThem_App_Doi_Don_vi_tien_te.png)  
+![Giao diện ứng dụng](img/BaiTapLamThem_App_Doi_Don_vi_tien_te.png)  
 
 ---
 

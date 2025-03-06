@@ -24,9 +24,9 @@ Chào bạn, mình là **lê hoàng Thiện **
 
 ---
 
-## 🔄 Chuyển màn hình (Logic Navigation)  
-| Hình ảnh | Ghi chú |
-|----------|---------|
+## 🔄 Chuyển màn hình 
+| Hình ảnh | Mô tả   | Ghi chú |
+|----------|---------|---------|
 | ![alt text](image-2.png) | Màn hình 1 |
 | ![alt text](image-3.png) | Màn hình 2 |
-| ![alt text](image-4.png) | Màn hình 3 |
+| ![alt text](image-4.png) | Màn hình 3 | sẽ up câu hỏi trong tương lai sớm nhất |

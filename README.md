@@ -11,3 +11,5 @@
  ## hinh anh ve dmi
  sai về mặt logic 
  ![alt text](image-1.png)
+ ## hình ảnh về chuyển màng logic 
+ ![alt text](image-2.png) ![alt text](image-3.png) ![alt text](image-4.png)

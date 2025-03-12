@@ -60,10 +60,11 @@
         android:id="@+id/btnTinh"
         android:layout_width="132dp"
         android:layout_height="61dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="48dp"
+        android:onClick="TinhTong"
         android:text="Tinh Tong"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputB" />
 

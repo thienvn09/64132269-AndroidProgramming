@@ -18,8 +18,8 @@ import java.util.ArrayList;
 
 public class TrangChu extends AppCompatActivity {
     public TextView txtChaoMung;
-    ListView listDsbaihat;
-    ArrayList<String> dsbaihat = new ArrayList<>();
+    public ListView listDsbaihat;
+    public ArrayList<String> dsbaihat = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

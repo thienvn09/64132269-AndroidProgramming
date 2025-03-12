@@ -10,8 +10,11 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 | Hình ảnh logic | Hình ảnh layout | Ghi chú |
 |---------------|----------------|---------|
 | ![alt text](img/BaiNhac/H0Nhac.png) | ![alt text](img/BaiNhac/H1Nhac.png) | Có sử dụng UI của Google |
+|--------------|--------|-----|
 | ![alt text](img/BaiNhac/H2Nhac.png) | ![alt text](img/BaiNhac/H3Nhac.png) | Sử dụng ListView, có thể chọn vì sử dụng bộ lắng nghe |
+|--------------|--------|-----|
 | ![alt text](img/BaiNhac/H4Nhac.png) | ![alt text](img/BaiNhac/H5Nhac.png) | Chơi được nhạc vui vẻ |
+|--------------|--------|-----|
 
 ### 📹 Video Chơi Nhạc  
 ![bấm vào để nghe nhạc của hiếu monday](img/BaiNhac/Playmusic.mp4)

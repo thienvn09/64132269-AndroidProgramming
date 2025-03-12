@@ -3,8 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="#FFFFFF"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PhatNhac">
 
+    <TextView
+        android:id="@+id/txtTitleBH"
+        android:layout_width="258dp"
+        android:layout_height="42dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <ImageView
+        android:id="@+id/imgCD"
+        android:layout_width="272dp"
+        android:layout_height="285dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/hinh1" />
+
+    <ImageView
+        android:id="@+id/imgCaSi"
+        android:layout_width="116dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCD"
+        app:srcCompat="@mipmap/hinh1a" />
+
+    <TextView
+        android:id="@+id/TxtTenCaSi"
+        android:layout_width="187dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="8dp"
+        android:text="Nghệ sĩ Hiếu Monday"
+        app:layout_constraintBottom_toTopOf="@+id/txtTitleBH"
+        app:layout_constraintEnd_toStartOf="@+id/imgCaSi"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCD"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgStop"
+        android:layout_width="118dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/pasueimg" />
+
+    <ImageView
+        android:id="@+id/imgPlay"
+        android:layout_width="106dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/playimg" />
 </androidx.constraintlayout.widget.ConstraintLayout>

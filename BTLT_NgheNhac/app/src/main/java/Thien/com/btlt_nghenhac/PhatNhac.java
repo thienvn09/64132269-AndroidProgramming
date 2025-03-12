@@ -32,7 +32,7 @@ public class PhatNhac extends AppCompatActivity {
         txtTitleBH.setText(TieuDeBaiHat);
 
         // Phát nhạc
-        music = MediaPlayer.create(this, R.raw.song1hieumonday);
+        music = MediaPlayer.create(this, R.raw.song1_hieu_monday);
 
         // Lấy ID của nút
         btnPlay = findViewById(R.id.btnPlay);
@@ -44,15 +44,16 @@ public class PhatNhac extends AppCompatActivity {
         animator.setDuration(3000); // 3 giây quay 1 vòng
         animator.setRepeatCount(ObjectAnimator.INFINITE); // Lặp vô hạn
         animator.setInterpolator(new LinearInterpolator()); // Chuyển động đều
-        animator.start();
 
         // Xử lý sự kiện phát nhạc
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!music.isPlaying()) {
-                    music.start();
+                animator.start();
+                if (music == null) { // Nếu đã bị giải phóng, tạo lại
+                    music = MediaPlayer.create(PhatNhac.this, R.raw.song1_hieu_monday);
                 }
+                music.start();
             }
         });
 
@@ -60,9 +61,12 @@ public class PhatNhac extends AppCompatActivity {
         btnStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (music.isPlaying()) {
                     music.pause();
                     music.seekTo(0); // Đưa về đầu bài hát
+                    music.release();
+                    animator.pause();
                 }
             }
         });

@@ -26,12 +26,6 @@ public class MainActivity extends AppCompatActivity {
         btnTinhTru = findViewById(R.id.btnTinhTru);
         btnTinhNhan = findViewById(R.id.btnTinhNhan);
         btnTinhChia = findViewById(R.id.btnTinhChia);
-        double a = Double.parseDouble(getTxt_soA());
-        double b = Double.parseDouble(getTxt_soB());
-//        double kqCong = a+b;
-        double kqTru = a-b;
-//        double kqNhan =a*b;
-        double kqchia = a/b;
         btnTinh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

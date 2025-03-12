@@ -18,11 +18,13 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 
 
 ---
-## 🎵 Bài Tập Nhỏ: Ứng Dụng Chơi Nhạc
+## 🎯 BÀI TẬP NHỎ
 
-<h6> link tham khảo UI : https://youtu.be/IxhIa3eZxz8?si=RjqbAAWJWQFvnxaXdon-gian-bang-android-studio</h6>
-<h6> link tham khảo phát nhạc :https://vncoder.vn/bai-viet/cach-xay-dung-ung-dung-trinh-phat-nhac-don-gian-bang-android-studiodon-gian-bang-android-studio</h6>
-<h6> tham khảo listview của thầy Thọ </h6>
+### 🎵 Ứng Dụng Chơi Nhạc  
+
+<h6> 🔗 UI tham khảo: [YouTube](https://youtu.be/IxhIa3eZxz8?si=RjqbAAWJWQFvnxaX) </h6>  
+<h6> 🔗 Phát nhạc tham khảo: [VNCoder](https://vncoder.vn/bai-viet/cach-xay-dung-ung-dung-trinh-phat-nhac-don-gian-bang-android-studio) </h6>  
+<h6> 🔗 ListView tham khảo từ thầy Thọ </h6>  
 
 | Hình ảnh logic | Hình ảnh layout | Ghi chú |
 |---------------|----------------|---------|
@@ -34,12 +36,13 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 ![bấm vào để nghe nhạc của hiếu monday](img/BaiNhac/Playmusic.mp4)
 
 ---
-## 📌 Bài tập nhỏ: Ứng dụng đổi đơn vị tiền tệ  
+
+### 💰 Ứng Dụng Đổi Đơn Vị Tiền Tệ  
 <img src="img/BaiTapLamThem_App_Doi_Don_vi_tien_te.png" width="200">
 
 ---
 
-## ❌ Lỗi về logic trong DMI  
+### ❌ Lỗi Logic Trong BMI  
 | Hình ảnh | Ghi chú |
 |----------|---------|
 | <img src="img/BMI.png" width="200"> | Sai về mặt logic |

@@ -14,7 +14,7 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 | ![alt text](img/BaiNhac/H4Nhac.png) | ![alt text](img/BaiNhac/H5Nhac.png) | Chơi được nhạc vui vẻ |
 
 ### 📹 Video Chơi Nhạc  
-![alt text](img/BaiNhac/Playmusic.mp4)
+![bấm vào để nghe nhạc của hiếu monday](img/BaiNhac/Playmusic.mp4)
 
 ---
 ## 📌 Bài tập nhỏ: Ứng dụng đổi đơn vị tiền tệ  

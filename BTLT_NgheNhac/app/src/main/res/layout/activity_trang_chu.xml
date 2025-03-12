@@ -36,7 +36,7 @@
         android:layout_height="51dp"
         android:layout_marginTop="72dp"
         android:text="Chào mừng "
-        android:textSize="15dp"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"

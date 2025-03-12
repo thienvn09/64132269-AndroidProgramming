@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BTLT_NgheNhac"
         tools:targetApi="31">
         <activity
+            android:name=".PhatNhac"
+            android:exported="false" />
+        <activity
             android:name=".TrangChu"
             android:exported="false" />
         <activity

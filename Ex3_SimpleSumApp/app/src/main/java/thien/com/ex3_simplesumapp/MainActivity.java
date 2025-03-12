@@ -3,6 +3,7 @@ package thien.com.ex3_simplesumapp;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,7 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    public TextView inputA,inputB,OutPut;
+    public EditText inputA,inputB,OutPut;
     public Button btnTinh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,6 @@ public class MainActivity extends AppCompatActivity {
         double a = Double.parseDouble(getinputA());
         double b = Double.parseDouble(getInputB());
         double KQ_Cong = a+b;
-        setKetQua("kết quả "+KQ_Cong);
+        setKetQua("kết quả "+ KQ_Cong);
     }
 }

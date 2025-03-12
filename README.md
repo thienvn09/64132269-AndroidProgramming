@@ -4,12 +4,22 @@
 Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng Thiện</span> 🔥  
 
 
+
+----
+## Giao diện một số bài Ex
+
+| Số thứ tự bài | Hình ảnh                        | Mô tả                         | Ghi chú                              |
+|--------------|--------------------------------|------------------------------|--------------------------------------|
+| Bài 2        | ![alt text](img/bai2.png)     | Giao diện bài 2              | Sử dụng `LinearLayout`             |
+| Bài 4        | ![alt text](img/MayTinh.png)  | Giao diện máy tính           | Dùng sự kiện `onClick`             |
+| Bài 5        | ![alt text](img/bai5.png)     | Giao diện bài 5              | Dùng bộ lắng nghe ẩn danh (`Listener`) |
+
 ---
 ## 🎵 Bài Tập Nhỏ: Ứng Dụng Chơi Nhạc
 
-<h4> link tham khảo UI : https://youtu.be/IxhIa3eZxz8?si=RjqbAAWJWQFvnxaXdon-gian-bang-android-studio</h4>
-<h4> link tham khảo phát nhạc :https://vncoder.vn/bai-viet/cach-xay-dung-ung-dung-trinh-phat-nhac-don-gian-bang-android-studiodon-gian-bang-android-studio</h4>
-tham khảo listview của thầy Thọ
+<h6> link tham khảo UI : https://youtu.be/IxhIa3eZxz8?si=RjqbAAWJWQFvnxaXdon-gian-bang-android-studio</h6>
+<h6> link tham khảo phát nhạc :https://vncoder.vn/bai-viet/cach-xay-dung-ung-dung-trinh-phat-nhac-don-gian-bang-android-studiodon-gian-bang-android-studio</h6>
+<h6> tham khảo listview của thầy Thọ </h6>
 
 | Hình ảnh logic | Hình ảnh layout | Ghi chú |
 |---------------|----------------|---------|
@@ -23,13 +33,6 @@ tham khảo listview của thầy Thọ
 ---
 ## 📌 Bài tập nhỏ: Ứng dụng đổi đơn vị tiền tệ  
 ![Giao diện ứng dụng](img/BaiTapLamThem_App_Doi_Don_vi_tien_te.png)  
-
----
-
-## 💻 Giao diện máy tính  
-| Hình ảnh | Mô tả |
-|----------|-------|
-| ![alt text](img/MayTinh.png) | Giao diện máy tính |
 
 ---
 

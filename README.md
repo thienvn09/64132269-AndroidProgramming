@@ -5,7 +5,18 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 
 
 ---
+## 🎵 Bài Tập Nhỏ: Ứng Dụng Chơi Nhạc
 
+| Hình ảnh logic | Hình ảnh layout | Ghi chú |
+|---------------|----------------|---------|
+| ![alt text](img/BaiNhac/H0Nhac.png) | ![alt text](img/BaiNhac/H1Nhac.png) | Có sử dụng UI của Google |
+| ![alt text](img/BaiNhac/H2Nhac.png) | ![alt text](img/BaiNhac/H3Nhac.png) | Sử dụng ListView, có thể chọn vì sử dụng bộ lắng nghe |
+| ![alt text](img/BaiNhac/H4Nhac.png) | ![alt text](img/BaiNhac/H5Nhac.png) | Chơi được nhạc vui vẻ |
+
+### 📹 Video Chơi Nhạc  
+![alt text](img/BaiNhac/Playmusic.mp4)
+
+---
 ## 📌 Bài tập nhỏ: Ứng dụng đổi đơn vị tiền tệ  
 ![Giao diện ứng dụng](img/BaiTapLamThem_App_Doi_Don_vi_tien_te.png)  
 

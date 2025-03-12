@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         OutPut.setText(value);
     }
 
-    public void XuLyCong(View view)
+    public void TinhTong(View view)
     {
         double a = Double.parseDouble(getinputA());
         double b = Double.parseDouble(getInputB());

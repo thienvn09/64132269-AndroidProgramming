@@ -10,8 +10,8 @@
 
     <EditText
         android:id="@+id/inputB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="303dp"
+        android:layout_height="55dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="36dp"
         android:ems="10"
@@ -44,8 +44,8 @@
 
     <EditText
         android:id="@+id/inputA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="301dp"
+        android:layout_height="57dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="60dp"
         android:ems="10"
@@ -58,8 +58,8 @@
 
     <Button
         android:id="@+id/btnTinh"
-        android:layout_width="132dp"
-        android:layout_height="61dp"
+        android:layout_width="210dp"
+        android:layout_height="81dp"
         android:layout_marginTop="48dp"
         android:onClick="TinhTong"
         android:text="Tinh Tong"
@@ -70,8 +70,8 @@
 
     <EditText
         android:id="@+id/OutPut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="278dp"
+        android:layout_height="62dp"
         android:layout_marginTop="48dp"
         android:ems="10"
         android:hint="hiển thị kết quả"

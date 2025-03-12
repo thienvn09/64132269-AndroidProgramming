@@ -25,7 +25,6 @@ public class TrangChu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_trang_chu);
-
         // ánh xạ
         txtChaoMung = findViewById(R.id.txtChaoMung);
         listDsbaihat = findViewById(R.id.listDsbaihat);

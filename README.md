@@ -6,11 +6,11 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 
 ---
 ## 🎵 Bài Tập Nhỏ: Ứng Dụng Chơi Nhạc
-link tham khảo UI : https://youtu.be/IxhIa3eZxz8?si=dD8ceqCKuu1_QKNL
-----
+
+<h4> link tham khảo UI : https://youtu.be/IxhIa3eZxz8?si=RjqbAAWJWQFvnxaXdon-gian-bang-android-studio</h4>
+<h4> link tham khảo phát nhạc :https://vncoder.vn/bai-viet/cach-xay-dung-ung-dung-trinh-phat-nhac-don-gian-bang-android-studiodon-gian-bang-android-studio</h4>
 tham khảo listview của thầy Thọ
------
-link tham khảo phát nhạc :https://vncoder.vn/bai-viet/cach-xay-dung-ung-dung-trinh-phat-nhac-don-gian-bang-android-studio
+
 | Hình ảnh logic | Hình ảnh layout | Ghi chú |
 |---------------|----------------|---------|
 | ![alt text](img/BaiNhac/H0Nhac.png) | ![alt text](img/BaiNhac/H1Nhac.png) | Có sử dụng UI của Google |

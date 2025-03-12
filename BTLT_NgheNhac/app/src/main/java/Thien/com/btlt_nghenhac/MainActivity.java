@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 if(getTxtInputTk().equals("thien") && getTxtInputMk().equals("1"))
                 {
                     Intent intent = new Intent(MainActivity.this, TrangChu.class);
+                    intent.putExtra(getTxtInputTk(),"123");
                     startActivity(intent);
                 }
 

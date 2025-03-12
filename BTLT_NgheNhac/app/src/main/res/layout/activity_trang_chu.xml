@@ -7,4 +7,38 @@
     android:layout_height="match_parent"
     tools:context=".TrangChu">
 
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="247dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="32dp"
+        android:text="Trình chọn bài hát"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listDsbaihat"
+        android:layout_width="413dp"
+        android:layout_height="385dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtChaoMung"
+        android:layout_width="398dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="72dp"
+        android:text="Chào mừng "
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

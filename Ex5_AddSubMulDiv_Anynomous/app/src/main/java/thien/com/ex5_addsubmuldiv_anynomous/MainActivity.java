@@ -28,31 +28,43 @@ public class MainActivity extends AppCompatActivity {
         btnTinhChia = findViewById(R.id.btnTinhChia);
         double a = Double.parseDouble(getTxt_soA());
         double b = Double.parseDouble(getTxt_soB());
-        double kqCong = a+b;
+//        double kqCong = a+b;
         double kqTru = a-b;
-        double kqNhan =a*b;
+//        double kqNhan =a*b;
         double kqchia = a/b;
         btnTinh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                double a = Double.parseDouble(getTxt_soA());
+                double b = Double.parseDouble(getTxt_soB());
+                double kqCong = a+b;
                 setTxt_KQ(Double.toString(kqCong));
             }
         });
         btnTinhNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                double a = Double.parseDouble(getTxt_soA());
+                double b = Double.parseDouble(getTxt_soB());
+                double kqNhan = a*b;
                 setTxt_KQ(Double.toString(kqNhan));
             }
         });
         btnTinhTru.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                double a = Double.parseDouble(getTxt_soA());
+                double b = Double.parseDouble(getTxt_soB());
+                double kqTru = a-b;
                 setTxt_KQ(Double.toString(kqTru));
             }
         });
         btnTinhChia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                double a = Double.parseDouble(getTxt_soA());
+                double b = Double.parseDouble(getTxt_soB());
+                double kqchia = a/b;
                 if(b == 0){
                     setTxt_KQ("không thể chia cho 0");
                 }

@@ -28,7 +28,7 @@ public class PhatNhac extends AppCompatActivity {
 
         // Nhận dữ liệu từ Intent
         txtTitleBH = findViewById(R.id.txtTitleBH);
-        String TieuDeBaiHat = getIntent().getStringExtra("TieuDeBaiHat");
+        String TieuDeBaiHat = getIntent().getStringExtra("1");
         txtTitleBH.setText(TieuDeBaiHat);
 
         // Phát nhạc

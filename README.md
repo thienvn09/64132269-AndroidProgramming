@@ -5,7 +5,7 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 ----
 <h6> link tham thảo hình ảnh :[storyset]https://storyset.com/ </h6>
 ## Giao diện một số bài Ex
- Số thứ tự bài | Hình ảnh                        | Mô tả                         | Ghi chú                              |
+| Số thứ tự bài | Hình ảnh                        | Mô tả                         | Ghi chú                              |
 |--------------|--------------------------------|------------------------------|--------------------------------------|
 | Bài 2        | <img src="img/bai2.png" width="200">     | Giao diện bài 2              | Sử dụng `LinearLayout`             |
 | Bài 3        | <img src="img/bai3.png" width="200">     | Giao diện bài 3              | Dùng sự kiện `onClick` chỉ có cộng  |

@@ -13,7 +13,7 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 | Bài 4        | <img src="img/MayTinh.png" width="200">  | Giao diện máy tính           | Dùng sự kiện `onClick` có `+,-,*,/` |
 | Bài 5        | <img src="img/bai5.png" width="200">     | Giao diện bài 5              | Dùng bộ lắng nghe ẩn danh (`Listener`) |
 | Bài 7        | ![alt text](img/hinh1.png) <br> ![alt text](img/hinh2.png) <br> ![alt text](img/hinh3.png)  | Chuyển màn hình  | Chuyển màn hình **Login** |
-| Bài 8        | ![alt text](img/DB1.png.png) <br> ![alt text](img/DB2.png) | Giao diện Login & Dashboard | Link tham khảo : [androidknowledge](https://androidknowledge.com/login-page-in-android-studio/) <br> [YouTube](https://www.youtube.com/watch?v=amnSAwVytHg) |
+| Bài 8        | ![alt text](img/DB1.png)  <br> ![alt text](img/DB2.png) <br>| Dùng UI cho logic và DashBoard | tham khảo từ youtube
 
 
 ---

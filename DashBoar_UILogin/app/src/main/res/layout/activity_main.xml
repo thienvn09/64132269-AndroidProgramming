@@ -56,7 +56,7 @@
             android:id="@+id/loginText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Login Vào DashBoard"
             android:textAlignment="center"
             android:textColor="@color/purple"
             android:textSize="36sp"

@@ -12,6 +12,10 @@
         android:id="@+id/Top_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
         android:background="@drawable/bg_view" />
 
     <GridLayout
@@ -23,8 +27,8 @@
         android:layout_marginTop="-4dp"
         android:layout_marginEnd="-129dp"
         android:columnCount="2"
-        android:padding="16dp"
-        android:rowCount="2">
+        android:padding="29dp"
+        android:rowCount="3">
 
 
         <androidx.cardview.widget.CardView
@@ -74,7 +78,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/yhinhhai" />
+                    android:src="@drawable/iconba" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -213,9 +217,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="57dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="77dp"
         android:text="DASHBOARD"
         android:textColor="@color/black"
         android:textSize="36sp"

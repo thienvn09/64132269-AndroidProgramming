@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@mipmap/bgphepcong"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteX="106dp"
     tools:layout_editor_absoluteY="0dp">

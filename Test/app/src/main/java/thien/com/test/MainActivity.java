@@ -18,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     Button btnnut1,btnnut2,btnnut3,btnnut4,btnnut5,btnnut6,btnnut7,btnnut8,btnnut9,btnCheck;
-    EditText edtOutPut,inputA,InputB;
+    EditText edtOutPut,inputA,InputB,edtThongBao;
 
     String a,b;
     int randomInt = ThreadLocalRandom.current().nextInt(1,5);
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        edtThongBao = findViewById(R.id.edtThongBao);
         btnCheck = findViewById(R.id.btnCheck);
         inputA = findViewById(R.id.inputA);
         InputB = findViewById(R.id.InputB);
@@ -114,10 +115,12 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (edtOutPut.getText().toString().equals(String.valueOf(kq))) {
-                        Toast.makeText(MainActivity.this,"dung roi",Toast.LENGTH_SHORT).show();
+                        edtThongBao.setText("Đúng rồi");
+                        /*Toast.makeText(MainActivity.this,"dung roi",Toast.LENGTH_SHORT).show();*/
                     }
                     else {
-                        Toast.makeText(MainActivity.this,"Sai roi",Toast.LENGTH_SHORT).show();
+                        edtThongBao.setText("Sai rồi");
+                       /* Toast.makeText(MainActivity.this,"Sai roi",Toast.LENGTH_SHORT).show();*/
                     }
                 }
             });

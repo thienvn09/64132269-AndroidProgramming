@@ -17,17 +17,17 @@
         android:layout_marginStart="132dp"
         android:layout_marginTop="172dp"
         android:ems="10"
+        android:fontFamily="@font/fredoka_one"
         android:inputType="number"
-
         android:text="B"
         android:textAlignment="center"
 
-        app:layout_constraintBottom_toTopOf="@+id/bnt1"
+        app:layout_constraintBottom_toTopOf="@+id/btnCheck"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.004" />
 
-    <Button
+    <!--<Button
         android:id="@+id/btn4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,6 +39,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bnt1" />
+
 
     <Button
         android:id="@+id/btn2"
@@ -69,6 +70,7 @@
         android:layout_marginStart="46dp"
         android:layout_marginTop="212dp"
         android:layout_marginEnd="25dp"
+        android:fontFamily="@font/fredoka_one"
         android:text="1"
         app:layout_constraintEnd_toStartOf="@+id/btn2"
         app:layout_constraintHorizontal_bias="1.0"
@@ -137,7 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn8"
         app:layout_constraintTop_toBottomOf="@+id/btn6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0" />-->
 
     <EditText
         android:id="@+id/edtOutPut"
@@ -158,12 +160,13 @@
         android:layout_height="75dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="172dp"
+        android:layout_marginBottom="119dp"
         android:ems="10"
+        android:fontFamily="@font/fredoka_one"
         android:inputType="number"
         android:text="A"
         android:textAlignment="center"
-
-        app:layout_constraintBottom_toTopOf="@+id/bnt1"
+        app:layout_constraintBottom_toTopOf="@+id/btnCheck"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.004" />
@@ -180,15 +183,109 @@
         app:layout_constraintStart_toEndOf="@+id/inputA"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <Button
         android:id="@+id/btnCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/fredoka_one"
         android:text="KT Ket Qua"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtOutPut" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtOutPut">
+
+    </androidx.cardview.widget.CardView>
+
+    <GridLayout
+        android:layout_width="287dp"
+        android:layout_height="227dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:padding="16dp"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/fredoka_one"
+            android:text="1"></Button>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/fredoka_one"
+            android:text="2"></Button>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/fredoka_one"
+            android:text="3"></Button>
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/fredoka_one"
+            android:text="5"></Button>
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/fredoka_one"
+            android:text="1"></Button>
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/fredoka_one"
+            android:text="1"></Button>
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/fredoka_one"
+            android:text="1"></Button>
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/fredoka_one"
+            android:text="8"></Button>
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/fredoka_one"
+            android:text="9"></Button>
+
+    </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

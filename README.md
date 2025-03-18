@@ -3,7 +3,7 @@
 ## 🎯 Giới thiệu  
 Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng Thiện</span> 🔥  
 ----
-<h6> link tham thảo hình ảnh :[storyset]https://storyset.com/ </h6>
+<h6> link tham thảo hình ảnh : [storyset] https://storyset.com/ </h6>
 ## Giao diện một số bài Ex
 
 | Số thứ tự bài | Hình ảnh                      | Mô tả                         | Ghi chú                              |

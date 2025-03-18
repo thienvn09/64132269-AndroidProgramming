@@ -197,26 +197,26 @@
         app:layout_constraintTop_toBottomOf="@+id/edtOutPut" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="168dp"
         android:padding="16dp"
         app:cardBackgroundColor="@android:color/white"
-        app:cardCornerRadius="24dp"
+        app:cardCornerRadius="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtOutPut">
 
         <GridLayout
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="267dp"
             android:layout_gravity="center"
             android:layout_marginBottom="8dp"
+            android:layout_marginLeft="55dp"
             android:layout_marginTop="15dp"
             android:alignmentMode="alignMargins"
-            android:background="@color/white"
             android:columnCount="3"
-            android:padding="16dp"
+            android:padding="2dp"
             android:rowCount="3"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -225,64 +225,66 @@
 
             <Button
                 android:id="@+id/btn1"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:fontFamily="@font/fredoka_one"
                 android:text="1"></Button>
 
             <Button
                 android:id="@+id/btn2"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:fontFamily="@font/fredoka_one"
                 android:text="2"></Button>
 
             <Button
                 android:id="@+id/btn3"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:fontFamily="@font/fredoka_one"
                 android:text="3"></Button>
 
             <Button
                 android:id="@+id/btn4"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:fontFamily="@font/fredoka_one"
                 android:text="4"></Button>
 
             <Button
                 android:id="@+id/btn5"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:fontFamily="@font/fredoka_one"
                 android:text="5"></Button>
 
             <Button
                 android:id="@+id/btn6"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:fontFamily="@font/fredoka_one"
                 android:text="6"></Button>
 
             <Button
                 android:id="@+id/btn7"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:fontFamily="@font/fredoka_one"
                 android:text="7"></Button>
 
             <Button
                 android:id="@+id/btn8"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:fontFamily="@font/fredoka_one"
                 android:text="8"></Button>
 
             <Button
                 android:id="@+id/btn9"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:backgroundTint="@null"
+                android:background="@drawable/custombutton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:fontFamily="@font/fredoka_one"
                 android:text="9"></Button>
 

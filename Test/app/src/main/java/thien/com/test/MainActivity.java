@@ -1,6 +1,8 @@
 package thien.com.test;
 
 import android.annotation.SuppressLint;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +19,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     Button btnnut1,btnnut2,btnnut3,btnnut4,btnnut5,btnnut6,btnnut7,btnnut8,btnnut9,btnCheck;
     EditText edtOutPut,inputA,InputB;
+
     String a,b;
     int randomInt = ThreadLocalRandom.current().nextInt(1,5);
     public void setInputA(String a)
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         inputA = findViewById(R.id.inputA);
         InputB = findViewById(R.id.InputB);
         btnnut1 = findViewById(R.id.btn1);
+        btnnut1.setBackgroundColor(Color.parseColor("#40E0D0"));
         btnnut2 = findViewById(R.id.btn2);
         btnnut3 = findViewById(R.id.btn3);
         btnnut4 = findViewById(R.id.btn4);

@@ -188,7 +188,7 @@
         android:id="@+id/btnCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="76dp"
         android:fontFamily="@font/fredoka_one"
         android:text="KT Ket Qua"
         app:layout_constraintEnd_toEndOf="parent"
@@ -201,7 +201,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="168dp"
         android:padding="16dp"
-        app:cardBackgroundColor="@android:color/white"
         app:cardCornerRadius="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -209,7 +208,6 @@
 
         <GridLayout
             android:layout_width="350dp"
-
             android:layout_height="267dp"
             android:layout_gravity="center"
             android:layout_marginBottom="8dp"
@@ -225,13 +223,13 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <Button
-                style="@style/ButtonStyle"
                 android:id="@+id/btn1"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="2dp"
                 android:fontFamily="@font/fredoka_one"
                 android:padding="8dp"
+                android:textColor="@color/black"
                 android:text="1" />
 
 

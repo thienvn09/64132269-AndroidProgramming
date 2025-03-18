@@ -9,7 +9,7 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 | Số thứ tự bài | Hình ảnh | Mô tả | Ghi chú |
 |--------------|--------------------------------|------------------------------|--------------------------------------|
 | Bài 2        | ![alt text](img/bai2.png)     | Giao diện bài 2              | Sử dụng `LinearLayout`             |
-| Bài 3        | <img src="img/bai3.png" width="200"    | Giao diện bài 3              | Dùng sự kiện `onClick` chỉ có cộng  |
+| Bài 3        | <img src="img/bai3.png" width="200">   | Giao diện bài 3              | Dùng sự kiện `onClick` chỉ có cộng  |
 | Bài 4        | <img src="img/MayTinh.png" width="200">   | Giao diện máy tính           | Dùng sự kiện `onClick` có `+,-,*,/` |
 | Bài 5        | <img src="img/bai5.png" width="200"     | Giao diện bài 5              | Dùng bộ lắng nghe ẩn danh (`Listener`) |
 | Bài 7        | ![alt text](img/hinh1.png) <br> ![alt text](img/hinh2.png) <br> ![alt text](img/hinh3.png)  | Chuyển màn hình  | Chuyển màn hình **Login** |

@@ -10,7 +10,9 @@
     tools:layout_editor_absoluteX="106dp"
     tools:layout_editor_absoluteY="0dp">
 
-    <EditText
+
+
+    <!--<EditText
         android:id="@+id/InputB"
         android:layout_width="64dp"
         android:layout_height="75dp"
@@ -27,119 +29,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.004" />
 
-    <!--<Button
-        android:id="@+id/btn4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="25dp"
-        android:text="4"
-        app:layout_constraintEnd_toStartOf="@+id/btn2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bnt1" />
-
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
-        android:text="2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtOutPut" />
-
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
-        android:text="3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.338"
-        app:layout_constraintStart_toEndOf="@+id/btn2"
-        app:layout_constraintTop_toBottomOf="@+id/edtOutPut" />
-
-    <Button
-        android:id="@+id/bnt1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="212dp"
-        android:layout_marginEnd="25dp"
-        android:fontFamily="@font/fredoka_one"
-        android:text="1"
-        app:layout_constraintEnd_toStartOf="@+id/btn2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtOutPut" />
-
-    <Button
-        android:id="@+id/btn5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn2" />
-
-    <Button
-        android:id="@+id/btn6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
-        android:text="6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btn5"
-        app:layout_constraintTop_toBottomOf="@+id/btn3" />
-
-    <Button
-        android:id="@+id/btn7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="28dp"
-        android:text="7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn8"
-        app:layout_constraintHorizontal_bias="0.038"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn4"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn5"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="48dp"
-        android:text="9"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn8"
-        app:layout_constraintTop_toBottomOf="@+id/btn6"
-        app:layout_constraintVertical_bias="0.0" />-->
 
     <EditText
         android:id="@+id/edtOutPut"
@@ -185,38 +74,37 @@
 
 
     <Button
-        android:background="@drawable/custombutton"
         android:id="@+id/btnCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/fredoka_one"
         android:text="KT Ket Qua"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtOutPut" />
+        app:layout_constraintTop_toBottomOf="@+id/edtOutPut" />-->
 
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
         android:padding="16dp"
         app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtOutPut">
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent">
 
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:columnCount="3"
-            android:rowCount="3"
-            android:padding="8dp"
             android:alignmentMode="alignMargins"
-            android:useDefaultMargins="true"
-            android:gravity="center">
+            android:columnCount="3"
+            android:gravity="center"
+            android:padding="8dp"
+            android:rowCount="3"
+            android:useDefaultMargins="true">
 
 
             <Button
@@ -224,16 +112,18 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="2dp"
+                android:backgroundTint="@color/MauNut"
                 android:fontFamily="@font/fredoka_one"
                 android:padding="8dp"
                 android:text="1"
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn2"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="2dp"
+                android:backgroundTint="@color/MauNut"
                 android:fontFamily="@font/fredoka_one"
                 android:padding="0dp"
                 android:text="2" />
@@ -243,6 +133,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="2dp"
+                android:backgroundTint="@color/MauNut"
                 android:fontFamily="@font/fredoka_one"
                 android:padding="0dp"
                 android:text="3" />
@@ -252,6 +143,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="2dp"
+                android:backgroundTint="@color/MauNut"
                 android:fontFamily="@font/fredoka_one"
                 android:padding="0dp"
                 android:text="4" />
@@ -261,6 +153,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="2dp"
+                android:backgroundTint="@color/MauNut"
                 android:fontFamily="@font/fredoka_one"
                 android:padding="0dp"
                 android:text="5" />
@@ -270,6 +163,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="2dp"
+                android:backgroundTint="@color/MauNut"
                 android:fontFamily="@font/fredoka_one"
                 android:padding="0dp"
                 android:text="6" />
@@ -279,15 +173,17 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="2dp"
+                android:backgroundTint="@color/MauNut"
                 android:fontFamily="@font/fredoka_one"
                 android:padding="0dp"
-                android:text="7"></Button>
+                android:text="7" />
 
             <Button
                 android:id="@+id/btn8"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="2dp"
+                android:backgroundTint="@color/MauNut"
                 android:fontFamily="@font/fredoka_one"
                 android:padding="0dp"
                 android:text="8"></Button>
@@ -297,12 +193,30 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="2dp"
+                android:backgroundTint="@color/MauNut"
                 android:fontFamily="@font/fredoka_one"
                 android:padding="0dp"
                 android:text="9"></Button>
 
         </GridLayout>
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="410dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/title"
+        android:fontFamily="@font/fredoka_one"
+        android:paddingTop="15dp"
+        android:text="Gia sư toán học"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

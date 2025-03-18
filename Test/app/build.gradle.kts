@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-
+    implementation ("androidx.emoji2:emoji2:1.2.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

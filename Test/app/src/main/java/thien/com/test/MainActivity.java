@@ -1,6 +1,7 @@
 package thien.com.test;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnnut1,btnnut2,btnnut3,btnnut4,btnnut5,btnnut6,btnnut7,btnnut8,btnnut9,btnCheck;
+    Button btnnut1,btnnut2,btnnut3,btnnut4,btnnut5,btnnut6,btnnut7,btnnut8,btnnut9,btn10,btnCheck;
     EditText edtOutPut,inputA,InputB,edtThongBao;
 
     String a,b;
@@ -38,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         edtThongBao = findViewById(R.id.edtThongBao);
         btnCheck = findViewById(R.id.btnCheck);
+        btn10 = findViewById(R.id.btn10);
+        btn10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, khanhLinh.class);
+                startActivity(in);
+            }
+        });
         inputA = findViewById(R.id.inputA);
         InputB = findViewById(R.id.InputB);
         btnnut1 = findViewById(R.id.btn1);

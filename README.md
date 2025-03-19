@@ -17,7 +17,7 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 | Bài 9 (bài tap)        | ![alt text](img/TieuHoc/Bg1.png) | Giao diện trước ở trên lớp |  |
 |              | ![alt text](img/TieuHoc/neudung.png) <br> ![alt text](img/TieuHoc/logic.png) | Giao diện sau khi chỉnh sửa | tham khảo UI trên youtube |
 
----
+------
 ## 🎯 BÀI TẬP NHỎ
 
 |Học ké | hình ảnh layout | Ghi chú |

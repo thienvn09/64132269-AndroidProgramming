@@ -130,7 +130,6 @@
         android:layout_width="410dp"
         android:layout_height="46dp"
         android:background="#F6F0F0"
-        android:backgroundTint="#F6F0F0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
@@ -143,7 +142,6 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="99dp"
-        android:background="@color/Card2"
         android:backgroundTint="#AA60C8"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
@@ -302,7 +300,6 @@
                     android:layout_height="match_parent"
                     android:paddingLeft="90dp"
                     android:paddingTop="25dp"
-                    app:srcCompat="@drawable/music_note_24px"
                     tools:srcCompat="@drawable/music" />
             </FrameLayout>
 

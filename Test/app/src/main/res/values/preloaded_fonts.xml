@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/fredoka_one</item>
+        <item>@font/saira_bold</item>
         <item>@font/saira_thin</item>
     </array>
 </resources>

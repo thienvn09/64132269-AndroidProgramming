@@ -38,6 +38,7 @@
                     android:fontFamily="@font/saira_bold"
                     android:paddingTop="15dp"
                     android:text="Rhymes"
+                    android:textColor="@color/black"
                     android:textAlignment="center"
                     android:textSize="20dp" />
             </LinearLayout>
@@ -104,6 +105,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/saira_bold"
                 android:paddingLeft="25dp"
+                android:textColor="@color/black"
                 android:text="40 topics" />
 
             <FrameLayout
@@ -173,6 +175,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/saira_bold"
+                android:textColor="@color/black"
                 android:paddingLeft="25dp"
                 android:text="45 topics" />
 
@@ -232,6 +235,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/saira_bold"
                 android:paddingLeft="25dp"
+                android:textColor="@color/black"
                 android:text="20 videos" />
 
             <FrameLayout
@@ -285,6 +289,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/saira_bold"
                 android:paddingLeft="25dp"
+                android:textColor="@color/black"
                 android:text="30 videos" />
 
             <FrameLayout
@@ -379,6 +384,7 @@
                     android:fontFamily="@font/saira_bold"
                     android:paddingTop="15dp"
                     android:text="Essay"
+                    android:textColor="@color/black"
                     android:textAlignment="center"
                     android:textSize="20dp" />
             </LinearLayout>

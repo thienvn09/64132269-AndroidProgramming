@@ -21,7 +21,8 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 ## 🎯 BÀI TẬP NHỎ
 
 |Học ké | hình ảnh layout | Ghi chú |
-|bài 1  | ![alt text](img/TieuHoc/layout.png)| không chạy được :))) |
+|--------------|--------------------------------|------------------------------|
+|bài 1  | ![alt text](img/TieuHoc/layout.png) | không chạy được :))) |
 
 ### 🎵 Ứng Dụng Chơi Nhạc  
 

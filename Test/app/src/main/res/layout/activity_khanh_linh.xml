@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/Main1"
+    android:backgroundTint="#E9E9FF"
     tools:context=".khanhLinh">
 
     <androidx.cardview.widget.CardView
@@ -14,10 +14,11 @@
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="68dp"
+        android:backgroundTint="#98D8EF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.947"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,8 +35,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:fontFamily="@font/saira_bold"
+                    android:paddingTop="15dp"
+                    android:text="Rhymes"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/lib" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -84,8 +96,7 @@
                 android:text="MATHS"
                 android:textColor="#000000"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -120,19 +131,7 @@
         android:backgroundTint="#F6F0F0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/tron" />
-        </FrameLayout>
-    </SearchView>
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
@@ -222,10 +221,10 @@
                 android:fontFamily="@font/saira_bold"
                 android:paddingLeft="25dp"
 
+                android:text="Painting"
                 android:textColor="#000000"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:text="Painting" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -243,6 +242,8 @@
                     android:id="@+id/imageView8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingLeft="90dp"
+                    android:paddingTop="25dp"
                     app:srcCompat="@drawable/art" />
             </FrameLayout>
         </LinearLayout>
@@ -258,7 +259,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView3"
-        app:layout_constraintVertical_bias="0.446" >
+        app:layout_constraintVertical_bias="0.446">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -276,8 +277,7 @@
                 android:text="MUSIC"
                 android:textColor="#000000"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                 />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -285,8 +285,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/saira_bold"
                 android:paddingLeft="25dp"
-                android:text="30 videos"
-                />
+                android:text="30 videos" />
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -356,10 +355,11 @@
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="68dp"
+        android:backgroundTint="#AA60C8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.099"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -375,19 +375,20 @@
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
+                    android:layout_weight="1"
                     android:fontFamily="@font/saira_bold"
                     android:paddingTop="15dp"
+                    android:text="Essay"
                     android:textAlignment="center"
-                    android:layout_weight="1"
-                    android:text="TextView" />
+                    android:textSize="20dp" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+
                 app:srcCompat="@drawable/note" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

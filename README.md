@@ -20,6 +20,9 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 ---
 ## 🎯 BÀI TẬP NHỎ
 
+|Học ké | hình ảnh layout | Ghi chú |
+|bài 1  | ![alt text](img/TieuHoc/layout.png)| không chạy được :))) |
+
 ### 🎵 Ứng Dụng Chơi Nhạc  
 
 <h6> 🔗 UI tham khảo: [YouTube](https://youtu.be/IxhIa3eZxz8?si=RjqbAAWJWQFvnxaX) </h6>  

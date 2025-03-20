@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="182dp"
+    android:height="185dp"
+    android:viewportWidth="182"
+    android:viewportHeight="185">
+
+    <!-- Phần hình nền -->
+    <path
+        android:fillColor="#FFE4C9F9"
+        android:fillType="evenOdd"
+        android:pathData="M15.56 185h35l14.21-34.2-29.99-9.3L15.56 185Zm101.67-34.2l14.21 34.2h35l-19.22-43.5-30 9.3Zm54.66-132.3h-65.72L101.1 0H80.9l-5.06 18.5H10.11c-2.68 0-5.25 0.97-7.15 2.7C1.06 22.95 0 25.3 0 27.76V129.5c0 2.45 1.07 4.8 2.96 6.54 1.9 1.74 4.47 2.71 7.15 2.71H171.9c2.68 0 5.25-0.97 7.15-2.7 1.9-1.74 2.96-4.1 2.96-6.55V27.75c0-2.45-1.06-4.8-2.96-6.54-1.9-1.74-4.47-2.71-7.15-2.71Z"/>
+
+    <!-- Nhóm chứa khuôn mặt và di chuyển nó vào giữa -->
+    <group
+        android:translateX="50"
+         android:translateY="50">
+
+    <!-- Khuôn mặt -->
+    <path
+        android:strokeColor="#FF000000"
+        android:strokeWidth="6.67"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M34 64c16.57 0 30-13.43 30-30S50.57 4 34 4 4 17.43 4 34s13.43 30 30 30Z"/>
+
+    <!-- Mắt & Miệng -->
+    <path
+        android:strokeColor="#FF000000"
+        android:strokeWidth="6.67"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M34 4c-1.77 0-3.46 0.7-4.71 1.95s-1.96 2.95-1.96 4.72c0 1.76 0.7 3.46 1.96 4.71 1.25 1.25 2.94 1.95 4.71 1.95m-10 10h0.03H24Zm20 0h0.03H44ZM25.67 44c1.08 1.1 2.38 1.99 3.81 2.6 1.43 0.6 2.97 0.9 4.52 0.9 1.55 0 3.09-0.3 4.52-0.9 1.43-0.61 2.73-1.5 3.81-2.6H25.67Z"/>
+</group>
+    </vector>

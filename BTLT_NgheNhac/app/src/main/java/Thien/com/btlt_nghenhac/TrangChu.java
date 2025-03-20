@@ -50,9 +50,7 @@ public class TrangChu extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String BaiHatDuocchon = dsbaihat.get(position);
-                String BaiHat1 = dsbaihat.get(0); // test
-                String BaiHat2 = dsbaihat.get(1); // test
-                // mở view mới
+
                 Intent intent = new Intent(TrangChu.this, PhatNhac.class);
                 intent.putExtra("1",BaiHatDuocchon);
                 startActivity(intent);

@@ -1,7 +1,7 @@
 # 64132269 - Android Programming  
 
 ## 🎯 Giới thiệu  
-Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng Thiện</span> 🔥  
+Chào bạn, mình là <span style="color: red; font-weight: bold;"> Lê Hoàng Thiện</span> 🔥  
 ----
 
 ## Bài mới trong tuần 6

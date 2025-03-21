@@ -3,6 +3,16 @@
 ## 🎯 Giới thiệu  
 Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng Thiện</span> 🔥  
 ----
+
+## Bài mới trong tuần 6
+
+|Học ké | hình ảnh layout | Ghi chú |
+|--------------|--------------------------------|------------------------------|
+|bài 1  | ![alt text](img/TieuHoc/layoutthu1.png) <br>![alt text](img/TieuHoc/layout.png) <br> ![alt text](image.png)  | không chạy được :))) <br> đã chạy được | 
+
+
+
+----
 <h6> link tham thảo hình ảnh : [storyset] https://storyset.com/ </h6>
 ## Giao diện một số bài Ex
 
@@ -18,11 +28,7 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;">Lê Hoàng T
 |              | ![alt text](img/TieuHoc/neudung.png) <br> ![alt text](img/TieuHoc/logic.png) | Giao diện sau khi chỉnh sửa | tham khảo UI trên youtube |
 
 ------
-## 🎯 BÀI TẬP NHỎ
 
-|Học ké | hình ảnh layout | Ghi chú |
-|--------------|--------------------------------|------------------------------|
-|bài 1  | ![alt text](img/TieuHoc/layout.png) <br> ![alt text](image.png) | không chạy được :))) <br> đã chạy được | 
 
 
 ### 🎵 Ứng Dụng Chơi Nhạc  

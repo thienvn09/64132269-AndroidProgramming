@@ -5,6 +5,106 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E88E5"
     tools:context=".Cau2Activity">
 
+    <TextView
+        android:id="@+id/txtB"
+        android:layout_width="68dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginEnd="314dp"
+        android:layout_marginBottom="456dp"
+        android:paddingTop="15dp"
+        android:text="Số b:"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtA"
+        android:layout_width="68dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginEnd="314dp"
+        android:layout_marginBottom="528dp"
+        android:paddingTop="15dp"
+        android:text="Số a:"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/inputA"
+        android:layout_width="277dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="531dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/inputB"
+        android:layout_width="277dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="456dp"
+        android:background="#F4F1F1"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputA" />
+
+    <Button
+        android:id="@+id/btnT"
+        android:layout_width="161dp"
+        android:layout_height="57dp"
+        android:text="Tính Tổng (a+b)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.486" />
+
+    <TextView
+        android:id="@+id/txtKq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="280dp"
+        android:text="kết quả"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/OutPut"
+        android:layout_width="243dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="280dp"
+        android:background="#F4F4F4"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

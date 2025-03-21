@@ -49,4 +49,5 @@ public class MainActivity extends AppCompatActivity {
         double KQ_Cong = a+b;
         setKetQua("kết quả "+ KQ_Cong);
     }
+
 }

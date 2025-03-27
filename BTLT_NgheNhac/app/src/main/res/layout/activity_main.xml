@@ -67,18 +67,20 @@
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/btnDN"
-            android:layout_width="107dp"
-            android:layout_height="65dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="88dp"
-            android:layout_marginEnd="64dp"
-            android:text="Đăng nhập"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+    <Button
+        android:id="@+id/btnDN"
+        android:layout_width="107dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="#FFB300"
+        android:textColor="@color/black"
+        android:text="Đăng nhập"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

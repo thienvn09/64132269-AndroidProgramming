@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BaiTapLamThem_DeNamTruoc"
         tools:targetApi="31">
         <activity
+            android:name=".Thien"
+            android:exported="false" />
+        <activity
             android:name=".Cau4Activity4"
             android:exported="false" />
         <activity

@@ -33,7 +33,8 @@ public class PhatNhac extends AppCompatActivity {
 
         // Phát nhạc
         music = MediaPlayer.create(this, R.raw.song1_hieu_monday);
-
+        String TenDn = getIntent().getStringExtra("1");
+        txtTitleBH.setText("Ten bai hat la : " + TenDn );
         // Lấy ID của nút
         btnPlay = findViewById(R.id.btnPlay);
         btnStop = findViewById(R.id.btnStop);

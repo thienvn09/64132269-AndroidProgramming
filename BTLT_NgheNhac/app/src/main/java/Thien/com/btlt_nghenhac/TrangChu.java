@@ -44,17 +44,17 @@ public class TrangChu extends AppCompatActivity {
         // dùng adapter để truyền dữ liệu vào listview
         ArrayAdapter<String> adapterlistDsbaihat = new ArrayAdapter<>(this, android.R.layout.simple_list_item_activated_1, dsbaihat);
         listDsbaihat.setAdapter(adapterlistDsbaihat);
-
-        // bắt sự kiện khi chạm vào màng hình
         listDsbaihat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String BaiHatDuocchon = dsbaihat.get(position);
-                Intent intent = new Intent(TrangChu.this, PhatNhac.class);
-                intent.putExtra("1",BaiHatDuocchon);
-                startActivity(intent);
+                // de android biet lay cai nao
+                String click_chon = dsbaihat.get(position);
+                Intent in = new Intent(TrangChu.this,PhatNhac.class);
+                in.putExtra("1",click_chon);
+                startActivity(in);
             }
         });
+
 
     }
 }

@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#039BE5"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="0dp">
@@ -14,9 +15,10 @@
         android:layout_width="143dp"
         android:layout_height="69dp"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="20dp"
-        android:text="Button"
+        android:backgroundTint="#1E88E5"
+        android:text="Chức năng 2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -29,10 +31,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="171dp"
         android:layout_marginBottom="58dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@mipmap/anh"
+        tools:srcCompat="@mipmap/anh" />
 
     <Button
         android:id="@+id/button2"
@@ -41,7 +45,8 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="20dp"
-        android:text="Button"
+        android:backgroundTint="#1E88E5"
+        android:text="Chức năng 3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -55,7 +60,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="21dp"
         android:layout_marginBottom="30dp"
-        android:text="Button"
+        android:backgroundTint="#039BE5"
+        android:text="Chức năng 4"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"
@@ -69,8 +75,34 @@
         android:layout_marginStart="58dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
-        android:text="Button"
+        android:backgroundTint="#039BE5"
+        android:text="About me"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="414dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="2dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/songgon" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="184dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/logo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

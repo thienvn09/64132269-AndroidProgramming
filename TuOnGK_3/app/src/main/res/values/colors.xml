@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="MauNut">#40E0D0</color>
+    <color name="title_color">#FFEDFA</color>
+    <color name="nutkt">#FFB8E0</color>
+    <color name="Card1">#F4F8D3</color>
+    <color name="card2">#F5F5F5</color>
+    <color name="Main1">#FDFAF6</color>
+    <color name="Card2">#AA60C8</color>
 </resources>

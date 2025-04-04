@@ -42,7 +42,9 @@ public class LayoutLV extends RecyclerView.Adapter<LayoutLV.NhanDuLieu>{
     @Override
     public NhanDuLieu onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
+
         View NhanDuLieu1 = inflater.inflate(R.layout.item,parent,false);
+
         NhanDuLieu holder = new NhanDuLieu(NhanDuLieu1);
         return holder;
     }
@@ -50,10 +52,13 @@ public class LayoutLV extends RecyclerView.Adapter<LayoutLV.NhanDuLieu>{
     @Override
     public void onBindViewHolder(@NonNull NhanDuLieu holder, int position) {
         LandScape Ditme = duLieus.get(position);
+
         String title = Ditme.getTitle();
         String linkHinh = Ditme.getLinkHinh();
+
         holder.txt1.setText(title);
         String packageName = context.getPackageName();
+
         int resID = context.getResources().getIdentifier(linkHinh, "mipmap", packageName);
 
         holder.hinh.setImageResource(resID);

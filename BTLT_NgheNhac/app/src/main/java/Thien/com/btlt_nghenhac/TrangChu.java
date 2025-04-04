@@ -50,7 +50,7 @@ public class TrangChu extends AppCompatActivity {
                 // de android biet lay cai nao
                 String click_chon = dsbaihat.get(position);
                 Intent in = new Intent(TrangChu.this,PhatNhac.class);
-                in.putExtra("1",click_chon);
+                in.putExtra("conchovy",click_chon);
                 startActivity(in);
             }
         });

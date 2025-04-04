@@ -15,7 +15,6 @@ import java.util.List;
 
 public class Adapteritem extends RecyclerView.Adapter<Adapteritem.Item> {
     Context context;
-    ArrayList<>
     @NonNull
     @Override
     public Item onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

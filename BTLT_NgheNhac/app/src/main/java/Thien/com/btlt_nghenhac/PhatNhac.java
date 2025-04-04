@@ -28,13 +28,13 @@ public class PhatNhac extends AppCompatActivity {
 
         // Nhận dữ liệu từ Intent
         txtTitleBH = findViewById(R.id.txtTitleBH);
-        String TieuDeBaiHat = getIntent().getStringExtra("1");
+        String TieuDeBaiHat = getIntent().getStringExtra("conchovy");
         txtTitleBH.setText(TieuDeBaiHat);
 
         // Phát nhạc
         music = MediaPlayer.create(this, R.raw.song1_hieu_monday);
         String TenDn = getIntent().getStringExtra("1");
-        txtTitleBH.setText("Ten bai hat la : " + TenDn );
+        txtTitleBH.setText("Ten bai hat la : " + TenDn);
         // Lấy ID của nút
         btnPlay = findViewById(R.id.btnPlay);
         btnStop = findViewById(R.id.btnStop);

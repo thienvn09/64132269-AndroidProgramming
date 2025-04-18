@@ -9,9 +9,11 @@
 
     <FrameLayout
         android:id="@+id/frameMain"
-        android:layout_width="410dp"
-        android:layout_height="605dp"
+        android:layout_width="0dp"
+        android:layout_height="615dp"
         android:layout_marginTop="4dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/Framefoot"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,7 +22,7 @@
 
     <FrameLayout
         android:id="@+id/Framefoot"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="1dp"

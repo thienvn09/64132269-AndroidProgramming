@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:id="@+id/screenshot_"
+        android:layout_width="428dp"
+        android:layout_height="368dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="558dp"
+        android:background="@drawable/screenshot_"
+        />
+    <!-- drawable/screenshot_.xml -->
+    <vector
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:aapt="http://schemas.android.com/aapt"
+        android:width="428dp"
+        android:height="368dp"
+        android:viewportWidth="428"
+        android:viewportHeight="368"
+        >
+        <group>
+            <clip-path
+                android:pathData="M0 0H428V368H0V0Z"
+                />
+        </group>
+    </vector>
+
+</selector>

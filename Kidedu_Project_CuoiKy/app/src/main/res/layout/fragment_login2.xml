@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment2">
+    android:background="#F4DCBA">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="445dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-4dp"
-        android:layout_marginTop="-1dp"
+        android:layout_width="match_parent"
+        android:layout_height="524dp"
         android:scaleType="centerCrop"
-        android:src="@mipmap/bgthumot" />
+        android:src="@mipmap/bgthuhai" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardbot"
-        android:layout_width="422dp"
-        android:layout_height="311dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-1dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="-3dp"
         android:layout_marginBottom="0dp"
         app:cardCornerRadius="15dp"
@@ -32,56 +27,30 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textViewTitle"
                 android:layout_width="match_parent"
-                android:layout_height="69dp"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
                 android:paddingTop="10dp"
-                android:text="Chinh phục Thế Giới Toán Học"
+                android:text="Vui Học Tiếng Anh"
                 android:textAlignment="center"
                 android:textColor="@color/MauChuXanh"
-                android:textSize="25dp" />
+                android:textSize="40dp" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textViewDescription"
                 android:layout_width="match_parent"
-                android:layout_height="119dp"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
                 android:paddingLeft="10dp"
-                android:text="Học toán thật vui với những trò chơi và bài học thú vị, giúp bé tự tin tính toán mỗi ngày!"
+                android:paddingTop="10dp"
+                android:text="Cùng khám phá từ vựng, câu chuyện và trò chơi tiếng Anh, để bé giỏi tiếng Anh từ những bước đầu tiên!"
                 android:textSize="17dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabLayout"
-                    android:layout_width="234dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:tabBackground="@drawable/tab_selector"
-                    app:tabIndicatorHeight="0dp"
-                    app:tabMode="fixed" />
-
-
-                <Button
-                    android:id="@+id/btnNext"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:backgroundTint="@color/MauCam"
-                    android:text="➞" />
-            </LinearLayout>
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

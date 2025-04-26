@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="thien.com.kidedu_project_cuoiky" />
-                  <option name="mobileSdkAppId" value="1:486627600996:android:c564d108fce9ed6ea44d71" />
-                  <option name="projectId" value="kidedution" />
-                  <option name="projectNumber" value="486627600996" />
+                  <option name="appId" value="PLACEHOLDER" />
+                  <option name="mobileSdkAppId" value="" />
+                  <option name="projectId" value="" />
+                  <option name="projectNumber" value="" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

@@ -1,14 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
-    namespace = "thien.com.kidedu_project_cuoiky"
+    namespace = "thien.com.materialdesign"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "thien.com.kidedu_project_cuoiky"
+        applicationId = "thien.com.materialdesign"
         minSdk = 25
         targetSdk = 35
         versionCode = 1
@@ -33,12 +32,11 @@ android {
 }
 
 dependencies {
-    implementation("com.google.android.material:material:1.12.0") // hoặc phiên bản mới nhất
-    implementation ("com.tbuonomo:dotsindicator:4.3")
+
     implementation(libs.appcompat)
+    implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

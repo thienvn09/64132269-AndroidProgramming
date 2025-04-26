@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
    <color name="MauTieuDe">#AA60C8</color>
+   <color name="MauNen">#FBE4D6</color>"
+   <color name="MauChuXanh">#3C88A7</color>
+   <color name="MauCam">#FE7743</color>
 </resources>

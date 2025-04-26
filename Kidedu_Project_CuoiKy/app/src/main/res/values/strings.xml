@@ -2,5 +2,6 @@
     <string name="app_name">Kidedu_Project_CuoiKy</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name ="cauchaomung">Đi sâu vào thế giới của các khóa học và trò chơi tuyệt vời giúp việc học trở nên siêu thú vị và tương tác!</string>
+    <string name="cauchaomung1">Từ ngôn ngữ đến khoa học, hãy khám phá nhiều khóa học phù hợp với sở thích và độ tuổi của con bạn!</string>
+    <string name="cauchaomung">Đi sâu vào thế giới của các khóa học và trò chơi tuyệt vời giúp việc học trở nên siêu thú vị và tương tác!</string>
 </resources>

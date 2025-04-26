@@ -51,6 +51,18 @@
                 android:paddingTop="10dp"
                 android:text="Đi sâu vào thế giới của các khóa học vừa thú vị và trung thực!"
                 android:textSize="17dp" />
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/MauCam"
+                android:padding="10dp"
+                android:text="➜"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

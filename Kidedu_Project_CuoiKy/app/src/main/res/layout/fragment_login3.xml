@@ -12,14 +12,15 @@
         android:layout_height="462dp"
         android:scaleType="centerCrop"
         android:src="@mipmap/bgthuhai" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardbot"
-        android:layout_width="422dp"
-        android:layout_height="311dp"
+        android:layout_width="match_parent"
+        android:layout_height="384dp"
         android:layout_below="@+id/img"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-1dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="-3dp"
         android:layout_marginBottom="0dp"
         app:cardCornerRadius="15dp"
@@ -69,7 +70,7 @@
 
 
                 <Button
-                    android:id="@+id/btn1"
+                    android:id="@+id/btnNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"

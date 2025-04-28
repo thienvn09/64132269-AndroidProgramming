@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/iconnha"
+        android:title="Trang chủ" />
+    <item
+        android:id="@+id/case_study"
+        android:icon="@drawable/iconbaihoc"
+        android:title="Bai hoc" />
+    <item
+        android:id="@+id/nav_target"
+        android:icon="@drawable/iconmuctieu"
+        android:title="Mục tiêu" />
+    <item
+        android:id="@+id/nav_community"
+        android:icon="@drawable/iconcongdong"
+        android:title="Cộng đồng" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/iconsetting"
+        android:title="Cài đặt" />
+</menu>

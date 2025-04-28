@@ -32,10 +32,13 @@ Chào bạn, mình là <span style="color: red; font-weight: bold;"> Lê Hoàng 
 ---
 
 ## 📌 Ghi Chú Thêm
--- Màu hơi xấu sẽ cố gắng hoàn thiện sớm nhất
+- Màu hơi xấu sẽ cố gắng hoàn thiện sớm nhất
 
 >  Dự án đang tiếp tục được phát triển. Cảm ơn Thầy và các bạn  đã vào kho xem qua!
------------------
+------
+
+
+
 <h6> link tham thảo hình ảnh : [storyset] https://storyset.com/ </h6>
 ## Giao diện một số bài Ex
 

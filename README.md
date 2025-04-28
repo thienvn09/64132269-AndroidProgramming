@@ -3,9 +3,39 @@
 ## 🎯 Giới thiệu  
 Chào bạn, mình là <span style="color: red; font-weight: bold;"> Lê Hoàng Thiện</span> 🔥  
 ----
-
-
 ----
+#  Dự Án Cuối Kỳ - Ứng Dụng Học Tập Cho Trẻ Em
+
+##  Giới Thiệu
+Ứng dụng hỗ trợ học tập dành cho trẻ em, bao gồm hai môn học chính: **Tiếng Anh** và **Toán học**, với giao diện thân thiện và sinh động.
+
+---
+
+## 🚪 Giao Diện Đăng Nhập
+
+| STT | Màn Hình            | Hình Ảnh                                               | Ghi Chú                                  |
+|:---:|:--------------------|:------------------------------------------------------:|:----------------------------------------:|
+| 1   | Màn hình giới thiệu chung | ![Giới thiệu chung](img/Project/hinh1.png)           | Chào mừng bé đến với ứng dụng học tập     |
+| 2   | Màn hình giới thiệu môn Tiếng Anh | ![Giới thiệu tiếng Anh](img/Project/hinh2.png)    | Giới thiệu nội dung học Tiếng Anh         |
+| 3   | Màn hình giới thiệu môn Toán học | ![Giới thiệu Toán học](img/Project/hinh3.png)      | Giới thiệu nội dung học Toán              |
+| 4   | Màn hình đăng nhập     | ![Đăng nhập chọn nhân vật](img/Project/manghinhdangnhap.png) | Bé chọn nhân vật "Mèo nhỏ ham học"        |
+| 5   | Màn hình sau đăng nhập | ![Sau khi đăng nhập](img/Project/saukhidangnhap.png)  | Giao diện sau khi đăng nhập (đang phát triển) |
+
+---
+
+## 🗄️ Hình Ảnh Từ Database
+
+| Mô Tả | Hình Ảnh | Ghi Chú |
+|:-----|:--------:|:-------:|
+| Dữ liệu hình ảnh trong database | ![Dữ liệu database](img/Project/hinhdatabase.png) | Đã lưu được dữ liệu; hiện tại chưa có ý tưởng nội dung cụ thể |
+
+---
+
+## 📌 Ghi Chú Thêm
+-- Màu hơi xấu sẽ cố gắng hoàn thiện sớm nhất
+
+>  Dự án đang tiếp tục được phát triển. Cảm ơn Thầy và các bạn  đã vào kho xem qua!
+-----------------
 <h6> link tham thảo hình ảnh : [storyset] https://storyset.com/ </h6>
 ## Giao diện một số bài Ex
 

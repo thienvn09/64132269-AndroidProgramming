@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 public class LoginFragment2 extends Fragment {
     public Button btnNext;
@@ -22,8 +23,8 @@ public class LoginFragment2 extends Fragment {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), LoginFragment3.class);
-                startActivity(intent);
+                ViewPager2 viewPager = getActivity().findViewById(R.id.viewPager);
+                viewPager.setCurrentItem(2);
             }
         });
         return view;

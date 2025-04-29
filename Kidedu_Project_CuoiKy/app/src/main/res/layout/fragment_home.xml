@@ -104,6 +104,42 @@
                 android:padding="16dp"
                 >
 
+                <TextView
+                    android:id="@+id/txtMathUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Unit 1"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressMath"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="2"
+                    android:max="40"
+                    android:progress="18"
+                    android:progressTint="#FFD54F" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/crown" />
+
+                <TextView
+                    android:id="@+id/txtMathCrowns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="18/40"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

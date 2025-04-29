@@ -9,11 +9,12 @@
     tools:context=".TrangChuActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="317dp"
-        android:layout_height="54dp"
+        android:id="@+id/botmenu"
+        android:layout_width="338dp"
+        android:layout_height="64dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/custom_nav_bottom"
-
+        app:itemIconTint="@color/nav_icon_tint"
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

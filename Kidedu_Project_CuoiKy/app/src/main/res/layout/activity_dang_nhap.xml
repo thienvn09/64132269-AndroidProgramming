@@ -3,156 +3,136 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/MauNenNV"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/MauNenNV"
+    android:padding="16dp"
     tools:context=".DangNhapActivity">
 
     <TextView
         android:id="@+id/txtTitle"
-        android:layout_width="364dp"
-        android:layout_height="123dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
         android:layout_marginEnd="16dp"
         android:background="@color/MauHopThoai"
         android:fontFamily="@font/poppins_bold"
-        android:padding="10dp"
-        android:paddingTop="20dp"
-        android:text="Chào bạn nhỏ hãy chọn nhân vật để bắt đầu nào"
+        android:padding="16dp"
+        android:text="Chào bạn nhỏ, hãy đăng nhập nào!"
         android:textAlignment="center"
         android:textColor="@color/MauChuNhanVat"
-        android:textSize="27dp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imgCat"
-        android:layout_width="154dp"
-        android:layout_height="137dp"
+    <EditText
+        android:id="@+id/edtTen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="79dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgdog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        app:srcCompat="@mipmap/catavartar" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="320dp"
-        android:background="@color/MauHopThoai"
+        android:background="@drawable/edit_text_background"
         android:fontFamily="@font/poppins_medium"
-        android:text="Mèo nhỏ ham học"
+        android:hint="Nhập tên của bé"
+        android:padding="12dp"
         android:textColor="@color/MauChuNhanVat"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColorHint="#B0BEC5"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgCat"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
 
-    <ImageView
-        android:id="@+id/imgdog"
-        android:layout_width="154dp"
-        android:layout_height="137dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="79dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imgCat"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        app:srcCompat="@mipmap/dogavartar" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+    <!-- Trường nhập mật khẩu -->
+    <EditText
+        android:id="@+id/edtPass"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginEnd="4dp"
-        android:background="@color/MauHopThoai"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Chú chó chăm chỉ"
-        android:textColor="@color/MauChuNhanVat"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/imgdog" />
-
-    <ImageView
-        android:id="@+id/imgtho"
-        android:layout_width="154dp"
-        android:layout_height="137dp"
+        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="59dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgcu"
+        android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Nhập mật khẩu"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="@color/MauChuNhanVat"
+        android:textColorHint="#B0BEC5"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@mipmap/rabbitavartar" />
+        app:layout_constraintTop_toBottomOf="@id/edtTen" />
 
+    <!-- Tiêu đề chọn ảnh đại diện -->
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txtChooseAvatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="117dp"
-        android:background="@color/MauHopThoai"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Thỏ con hòa đồng"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Chọn ảnh đại diện"
         android:textColor="@color/MauChuNhanVat"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgtho"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/edtPass" />
 
-    <ImageView
-        android:id="@+id/imgcu"
-        android:layout_width="156dp"
-        android:layout_height="145dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgtho"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@mipmap/owlavartar" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
+    <!-- Khu vực chọn ảnh đại diện -->
+    <LinearLayout
+        android:id="@+id/avatar_container"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="86dp"
-        android:layout_marginEnd="4dp"
-        android:background="@color/MauHopThoai"
-        android:fontFamily="@font/poppins_medium"
-        android:text="cú con cần cù"
-        android:textColor="@color/MauChuNhanVat"
-        android:textSize="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.388"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/imgcu" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtChooseAvatar">
 
+        <ImageView
+            android:id="@+id/imgCat"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:src="@mipmap/catavartar" />
+
+        <ImageView
+            android:id="@+id/imgDog"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:src="@mipmap/dogavartar" />
+
+        <ImageView
+            android:id="@+id/imgRabbit"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:src="@mipmap/rabbitavartar" />
+
+        <ImageView
+            android:id="@+id/imgOwl"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:src="@mipmap/owlavartar" />
+    </LinearLayout>
+
+    <!-- Nút Go -->
     <Button
         android:id="@+id/btnDN"
         android:layout_width="128dp"
         android:layout_height="64dp"
-        android:layout_marginStart="147dp"
-        android:layout_marginEnd="155dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="@color/MauCam"
         android:fontFamily="@font/poppins_bold"
-        android:paddingTop="10dp"
         android:text="Go"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

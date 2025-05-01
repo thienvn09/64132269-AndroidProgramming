@@ -9,6 +9,7 @@
     android:padding="16dp"
     tools:context=".DangNhapActivity">
 
+
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="0dp"
@@ -28,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtTen"
+        android:id="@+id/edtUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -45,9 +46,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTitle" />
 
-    <!-- Trường nhập mật khẩu -->
+
     <EditText
-        android:id="@+id/edtPass"
+        android:id="@+id/edtPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -63,9 +64,9 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtTen" />
+        app:layout_constraintTop_toBottomOf="@id/edtUsername" />
 
-    <!-- Tiêu đề chọn ảnh đại diện -->
+
     <TextView
         android:id="@+id/txtChooseAvatar"
         android:layout_width="wrap_content"
@@ -75,10 +76,11 @@
         android:text="Chọn ảnh đại diện"
         android:textColor="@color/MauChuNhanVat"
         android:textSize="20sp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtPass" />
+        app:layout_constraintTop_toBottomOf="@id/edtPassword" />
 
-    <!-- Khu vực chọn ảnh đại diện -->
+
     <LinearLayout
         android:id="@+id/avatar_container"
         android:layout_width="0dp"
@@ -88,6 +90,7 @@
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         android:gravity="center"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtChooseAvatar">
@@ -121,18 +124,34 @@
             android:src="@mipmap/owlavartar" />
     </LinearLayout>
 
-    <!-- Nút Go -->
-    <Button
-        android:id="@+id/btnDN"
-        android:layout_width="128dp"
-        android:layout_height="64dp"
+    
+    <LinearLayout
+        android:layout_width="345dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/MauCam"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Go"
-        android:textSize="20sp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/MauCam"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Đăng nhập"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="161dp"
+            android:layout_height="69dp"
+            android:backgroundTint="#4FC3F7"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Đăng ký"
+            android:textSize="20sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

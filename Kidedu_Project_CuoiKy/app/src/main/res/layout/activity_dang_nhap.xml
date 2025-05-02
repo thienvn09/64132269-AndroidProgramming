@@ -38,6 +38,7 @@
         android:background="@drawable/edit_text_background"
         android:fontFamily="@font/poppins_medium"
         android:hint="Nhập tên của bé"
+        
         android:padding="12dp"
         android:textColor="@color/MauChuNhanVat"
         android:textColorHint="#B0BEC5"

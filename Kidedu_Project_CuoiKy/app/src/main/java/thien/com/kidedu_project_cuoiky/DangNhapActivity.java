@@ -14,9 +14,6 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -46,9 +43,9 @@ public class DangNhapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_dang_nhap);
-        // khởi tạo database
+
         databaseReference = FirebaseDatabase.getInstance().getReference("users");
-        // ánh xạ qua màng hình
+
         txtTitle = findViewById(R.id.txtTitle);
         txtChooseAvatar = findViewById(R.id.txtChooseAvatar);
         avatarContainer = findViewById(R.id.avatar_container);
@@ -60,35 +57,30 @@ public class DangNhapActivity extends AppCompatActivity {
         imgOwl = findViewById(R.id.imgOwl);
         btnLogin = findViewById(R.id.btnLogin);
         btnRegister = findViewById(R.id.btnRegister);
-        // Xử lý khi bấm vào ảnh đại diện
+
         imgCat.setOnClickListener(v -> ChonAnh("cat", imgCat));
         imgDog.setOnClickListener(v -> ChonAnh("dog", imgDog));
         imgRabbit.setOnClickListener(v -> ChonAnh("rabbit", imgRabbit));
         imgOwl.setOnClickListener(v -> ChonAnh("owl", imgOwl));
 
-        // Xử lý nút Đăng nhập
         btnLogin.setOnClickListener(v -> {
             isRegisterMode = false;
             txtTitle.setText("Chào bạn nhỏ, hãy đăng nhập nào!");
             txtChooseAvatar.setVisibility(View.GONE);
             avatarContainer.setVisibility(View.GONE);
-            Login();
+            loginUser();
         });
 
-        // Xử lý nút Đăng ký
         btnRegister.setOnClickListener(v -> {
             if (!isRegisterMode) {
-                // Chuyển sang chế độ đăng ký
                 isRegisterMode = true;
                 txtTitle.setText("Chào bạn nhỏ, hãy đăng ký nào!");
                 txtChooseAvatar.setVisibility(View.VISIBLE);
                 avatarContainer.setVisibility(View.VISIBLE);
             } else {
-                // Thực hiện đăng ký
                 registerUser();
             }
         });
-
     }
 
     private void ChonAnh(String Tenanh, ImageView anh) {
@@ -104,118 +96,114 @@ public class DangNhapActivity extends AppCompatActivity {
         anh.setAlpha(0.8f);
     }
 
-    private void Login() {
+    private void loginUser() {
         String username = edtUsername.getText().toString().trim();
-        String pass = edtPassword.getText().toString().trim();
-        if (username != null) {
-            Toast.makeText(this, "Bé ơi, hãy nhập tên nhé!", Toast.LENGTH_SHORT).show();
-        }
-        if (pass != null) {
-            Toast.makeText(this, "Bé ơi, hãy nhập mật khẩu nhé!", Toast.LENGTH_SHORT).show();
-        }
-        databaseReference.orderByChild("username").equalTo(username).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
-                    Toast.makeText(DangNhapActivity.this, "bé ơi tên này có người nhập đăng ký rồi", Toast.LENGTH_SHORT).show();
-                } else {
-                    String userID = UUID.randomUUID().toString();
-                    String time = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault()).format(new Date());
-                    // đưa dữ liệu lên
-                    HashMap<String, Object> datauser = new HashMap<>();
-                    datauser.put("username", username);
-                    datauser.put("password", pass);
-                    datauser.put("avatar", selectedAvatar);
-                    datauser.put("time", time);
-                    databaseReference.child(userID).setValue(datauser)
-                            .addOnSuccessListener(aVoid -> {
-                                SharedPreferences pre = getSharedPreferences("user", MODE_PRIVATE);
-                                SharedPreferences.Editor editor = pre.edit();
-                                editor.putString("username", username);
-                                editor.putString("username", username);
-                                editor.putString("avatar", selectedAvatar);
-                                editor.putString("userId", userID);
-                                editor.apply();
-                                // chuyển màng
-                                Intent in = new Intent(DangNhapActivity.this, TrangChuActivity.class);
-                                startActivity(in);
-                                finish();
-                            })
-                            .addOnFailureListener(e -> {
-                                Toast.makeText(DangNhapActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
-                            });
-                }
-            }
+        String password = edtPassword.getText().toString().trim();
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(DangNhapActivity.this, "Lỗi: " + error.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        if (username.isEmpty()) {
+            Toast.makeText(this, "Bé ơi, hãy nhập tên nhé!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (password.isEmpty()) {
+            Toast.makeText(this, "Bé ơi, hãy nhập mật khẩu nhé!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        databaseReference.orderByChild("username").equalTo(username)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()) {
+                            for (DataSnapshot userSnapshot : snapshot.getChildren()) {
+                                String storedPassword = userSnapshot.child("password").getValue(String.class);
+                                if (storedPassword != null && storedPassword.equals(password)) {
+                                    String avatar = userSnapshot.child("avatar").getValue(String.class);
+                                    String userId = userSnapshot.getKey();
+
+                                    SharedPreferences prefs = getSharedPreferences("KidEduPrefs", MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = prefs.edit();
+                                    editor.putString("username", username);
+                                    editor.putString("avatar", avatar);
+                                    editor.putString("userId", userId);
+                                    editor.apply();
+
+                                    Intent intent = new Intent(DangNhapActivity.this, TrangChuActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                    return;
+                                } else {
+                                    Toast.makeText(DangNhapActivity.this, "Sai mật khẩu rồi bé ơi!", Toast.LENGTH_SHORT).show();
+                                    return;
+                                }
+                            }
+                        } else {
+                            Toast.makeText(DangNhapActivity.this, "Tên chưa được đăng ký, bé hãy đăng ký trước nhé!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Toast.makeText(DangNhapActivity.this, "Lỗi: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     private void registerUser() {
         String username = edtUsername.getText().toString().trim();
         String password = edtPassword.getText().toString().trim();
 
-        // Kiểm tra thông tin đầu vào
         if (username.isEmpty()) {
             Toast.makeText(this, "Bé ơi, hãy nhập tên nhé!", Toast.LENGTH_SHORT).show();
             return;
         }
-
         if (password.isEmpty()) {
             Toast.makeText(this, "Bé ơi, hãy nhập mật khẩu nhé!", Toast.LENGTH_SHORT).show();
             return;
         }
-
         if (selectedAvatar == null) {
             Toast.makeText(this, "Bé ơi, hãy chọn ảnh đại diện nhé!", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Kiểm tra xem tên đã tồn tại trên Firebase chưa
-        databaseReference.orderByChild("username").equalTo(username).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    Toast.makeText(DangNhapActivity.this, "Tên này đã được đăng ký, bé hãy chọn tên khác nhé!", Toast.LENGTH_SHORT).show();
-                } else {
-                    // Đăng ký thành công
-                    String userId = UUID.randomUUID().toString();
-                    String timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date());
+        databaseReference.orderByChild("username").equalTo(username)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()) {
+                            Toast.makeText(DangNhapActivity.this, "Tên này đã được đăng ký, bé hãy chọn tên khác nhé!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            String userId = UUID.randomUUID().toString();
+                            String timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date());
 
-                    HashMap<String, String> userData = new HashMap<>();
-                    userData.put("username", username);
-                    userData.put("password", password);
-                    userData.put("avatar", selectedAvatar);
-                    userData.put("timestamp", timestamp);
+                            HashMap<String, String> userData = new HashMap<>();
+                            userData.put("username", username);
+                            userData.put("password", password);
+                            userData.put("avatar", selectedAvatar);
+                            userData.put("timestamp", timestamp);
 
-                    databaseReference.child(userId).setValue(userData)
-                            .addOnSuccessListener(aVoid -> {
-                                // Lưu thông tin vào SharedPrefereces
-                                SharedPreferences prefs = getSharedPreferences("KidEduPrefs", MODE_PRIVATE);
-                                SharedPreferences.Editor editor = prefs.edit();
-                                editor.putString("username", username);
-                                editor.putString("avatar", selectedAvatar);
-                                editor.putString("userId", userId);
-                                editor.apply();
+                            databaseReference.child(userId).setValue(userData)
+                                    .addOnSuccessListener(aVoid -> {
+                                        SharedPreferences prefs = getSharedPreferences("KidEduPrefs", MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = prefs.edit();
+                                        editor.putString("username", username);
+                                        editor.putString("avatar", selectedAvatar);
+                                        editor.putString("userId", userId);
+                                        editor.apply();
 
-                                // Chuyển sang TrangChuActivity
-                                Intent intent = new Intent(DangNhapActivity.this, TrangChuActivity.class);
-                                startActivity(intent);
-                                finish();
-                            })
-                            .addOnFailureListener(e -> {
-                                Toast.makeText(DangNhapActivity.this, "Lỗi khi đăng ký: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                            });
-                }
-            }
+                                        Intent intent = new Intent(DangNhapActivity.this, TrangChuActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    })
+                                    .addOnFailureListener(e -> {
+                                        Toast.makeText(DangNhapActivity.this, "Lỗi khi đăng ký: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    });
+                        }
+                    }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(DangNhapActivity.this, "Lỗi: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Toast.makeText(DangNhapActivity.this, "Lỗi: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }

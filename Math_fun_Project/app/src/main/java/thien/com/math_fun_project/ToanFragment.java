@@ -33,11 +33,12 @@ public class ToanFragment extends Fragment {
 
         // Tạo danh sách 6 bài tập
         dsBaiTap = new ArrayList<>();
-        dsBaiTap.add(new BaiTap("img_baimot", "Bài tập 1"));
+        
+       /* dsBaiTap.add(new BaiTap("img_baimot", "img_baimot"));
         dsBaiTap.add(new BaiTap("img_baihai", "ic_exercise_2"));
         dsBaiTap.add(new BaiTap("img_baiba", "ic_exercise_3"));
         dsBaiTap.add(new BaiTap("img_baibon", "ic_exercise_4"));
-        /*dsBaiTap.add(new BaiTap("Bài tập 5", "ic_exercise_5"));
+        *//*dsBaiTap.add(new BaiTap("Bài tập 5", "ic_exercise_5"));
         dsBaiTap.add(new BaiTap("Bài tập 6", "ic_exercise_6"));*/
 
         // Gán Adapter cho RecyclerView

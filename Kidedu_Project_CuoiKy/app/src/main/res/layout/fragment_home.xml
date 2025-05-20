@@ -153,24 +153,24 @@
                 android:textSize="25dp"
                 >
             </TextView>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:background="@drawable/unit_background"
-                android:padding="16dp"
-                >
+                android:orientation="horizontal"
+                android:padding="16dp">
+
                 <TextView
                     android:id="@+id/txtbaihoc"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="bài học 1"
                     android:fontFamily="@font/poppins_medium"
+                    android:text="bài học 1"
                     android:textColor="#000000"
-                    android:textSize="18sp"
-                    >
-                </TextView>
+                    android:textSize="18sp"></TextView>
+
                 <ProgressBar
                     android:id="@+id/prossTA"
                     style="@android:style/Widget.ProgressBar.Horizontal"
@@ -182,11 +182,13 @@
                     android:max="40"
                     android:progress="20"
                     android:progressTint="#FFD54F"></ProgressBar>
+
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/crown" />
+
                 <TextView
                     android:id="@+id/txtEnglishcr"
                     android:layout_width="wrap_content"

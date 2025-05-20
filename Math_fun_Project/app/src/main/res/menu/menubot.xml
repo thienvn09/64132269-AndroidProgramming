@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/title_toan"
+        android:icon="@mipmap/math_icon"
+        android:title="Toán" />
+    <item
+        android:id="@+id/title_tienganh"
+        android:icon="@mipmap/english_icon"
+        android:title="Tiếng Anh" />
+    <item
+        android:id="@+id/title_setting"
+        android:icon="@mipmap/setting_icon"
+        android:title="Cài đặt" />
+</menu>

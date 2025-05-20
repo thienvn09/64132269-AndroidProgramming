@@ -5,7 +5,7 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/iconnha"
-        android:title="Trang chủ" />
+        android:title="home" />
     <item
         android:id="@+id/case_study"
         android:icon="@drawable/iconbaihoc"

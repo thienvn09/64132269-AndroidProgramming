@@ -12,10 +12,10 @@
 
     <TextView
         android:id="@+id/txtTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="356dp"
+        android:layout_height="104dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="16dp"
         android:background="@color/MauHopThoai"
         android:fontFamily="@font/poppins_bold"
@@ -25,6 +25,7 @@
         android:textColor="@color/MauChuNhanVat"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,28 +33,28 @@
         android:id="@+id/edtUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/edit_text_background"
         android:fontFamily="@font/poppins_medium"
         android:hint="Nhập tên của bé"
-        
+
         android:padding="12dp"
         android:textColor="@color/MauChuNhanVat"
         android:textColorHint="#B0BEC5"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTitle" />
-
 
     <EditText
         android:id="@+id/edtPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/edit_text_background"
         android:fontFamily="@font/poppins_medium"
@@ -64,9 +65,9 @@
         android:textColorHint="#B0BEC5"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtUsername" />
-
 
     <TextView
         android:id="@+id/txtChooseAvatar"
@@ -77,21 +78,21 @@
         android:text="Chọn ảnh đại diện"
         android:textColor="@color/MauChuNhanVat"
         android:textSize="20sp"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtPassword" />
 
 
     <LinearLayout
         android:id="@+id/avatar_container"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="408dp"
+        android:layout_height="99dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
         android:gravity="center"
-        android:visibility="gone"
+        android:orientation="horizontal"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtChooseAvatar">

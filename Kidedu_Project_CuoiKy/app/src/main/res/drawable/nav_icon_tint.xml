@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="#4FC3F7" android:state_checked="true" /> <!-- Màu xanh dương nhạt khi được chọn -->
-    <item android:color="#B0BEC5" /> <!-- Màu xám nhạt khi không được chọn -->
+    <item android:color="#0288D1" android:state_checked="true" /> <!-- Xanh dương đậm khi chọn -->
+    <item android:color="#B0BEC5" /> <!-- Xám nhạt khi không chọn -->
 </selector>

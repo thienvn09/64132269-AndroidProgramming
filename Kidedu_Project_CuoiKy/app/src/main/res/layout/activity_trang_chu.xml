@@ -8,17 +8,27 @@
     android:background="@color/MauNenNV"
     tools:context=".TrangChuActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frangmentsp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/botmenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/botmenu"
-        android:layout_width="338dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/custom_nav_bottom"
-        app:itemIconTint="@color/nav_icon_tint"
-        app:labelVisibilityMode="unlabeled"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menubottom" />
 </androidx.constraintlayout.widget.ConstraintLayout>

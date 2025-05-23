@@ -1,42 +1,45 @@
 package thien.com.math_fun_project;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TiengAnhFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class TiengAnhFragment extends Fragment {
+public class TiengAnhFragment extends Fragment implements HinhAdapter.OnButtonClickListener {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private RecyclerView recyclerView;
+    private HinhAdapter adapter;
+    private List<HinhItem> gameItems;
+    private TextView tvTime, tvTimer, tvScore;
+    private ProgressBar progressBar;
+    private Button btnBack;
+    private CountDownTimer countDownTimer;
+    private int currentScore = 0;
+    private int currentQuestionIndex = 0;
+    private static final int TOTAL_QUESTIONS = 10; // Tổng số câu hỏi
 
     public TiengAnhFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment TiengAnhFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static TiengAnhFragment newInstance(String param1, String param2) {
         TiengAnhFragment fragment = new TiengAnhFragment();
         Bundle args = new Bundle();
@@ -56,9 +59,104 @@ public class TiengAnhFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tieng_anh, container, false);
+        View view = inflater.inflate(R.layout.fragment_tieng_anh, container, false);
+
+        // Khởi tạo các view
+        tvTimer = view.findViewById(R.id.tvTimer);
+        tvScore = view.findViewById(R.id.tvScore);
+        progressBar = view.findViewById(R.id.progressBar);
+        btnBack = view.findViewById(R.id.btnBack);
+        recyclerView = view.findViewById(R.id.tienganh);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
+        // Khởi tạo timer (3 giây mỗi câu hỏi)
+        startTimer();
+
+        // Cập nhật điểm số ban đầu
+        tvScore.setText("🏆 " + currentScore);
+
+        // Cập nhật thanh tiến độ
+        updateProgressBar();
+
+        // Nút Quay lại
+        btnBack.setOnClickListener(v -> {
+            if (getActivity() != null) {
+                getActivity().onBackPressed();
+            }
+        });
+
+        // Tạo dữ liệu mẫu
+        gameItems = new ArrayList<>();
+        gameItems.add(new HinhItem(R.mipmap.english_icon, "fox", new String[]{"f", "o", "x"}));
+
+        // Thiết lập adapter
+        adapter = new HinhAdapter(gameItems, this);
+        recyclerView.setAdapter(adapter);
+
+        // Cuộn đến câu hỏi hiện tại
+        recyclerView.scrollToPosition(currentQuestionIndex);
+
+        return view;
+    }
+
+    private void startTimer() {
+        countDownTimer = new CountDownTimer(3000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                tvTimer.setText("⏰ " + (millisUntilFinished / 1000));
+            }
+
+            @Override
+            public void onFinish() {
+                Toast.makeText(getContext(), "Hết thời gian! Chuyển câu tiếp theo.", Toast.LENGTH_SHORT).show();
+                currentQuestionIndex++;
+                if (currentQuestionIndex < gameItems.size()) {
+                    recyclerView.scrollToPosition(currentQuestionIndex);
+                    startTimer();
+                } else {
+                    Toast.makeText(getContext(), "Hoàn thành!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }.start();
+    }
+
+    private void updateProgressBar() {
+        int progress = (currentQuestionIndex + 1) * 100 / TOTAL_QUESTIONS;
+        progressBar.setProgress(progress);
+    }
+
+    @Override
+    public void onButtonClick(int itemPosition, String selectedAnswer, boolean isCorrect) {
+        if (itemPosition != currentQuestionIndex) {
+            return; // Chỉ cho phép trả lời câu hỏi hiện tại
+        }
+
+        if (isCorrect) {
+            Toast.makeText(getContext(), "Đúng rồi!", Toast.LENGTH_SHORT).show();
+            currentScore++;
+            tvScore.setText("🏆 " + currentScore);
+            countDownTimer.cancel();
+            currentQuestionIndex++;
+            if (currentQuestionIndex < gameItems.size()) {
+                recyclerView.scrollToPosition(currentQuestionIndex);
+                startTimer();
+            } else {
+                Toast.makeText(getContext(), "Hoàn thành!", Toast.LENGTH_SHORT).show();
+            }
+            updateProgressBar();
+        } else {
+            Toast.makeText(getContext(), "Sai rồi, thử lại!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
     }
 }

@@ -40,7 +40,7 @@ public class AdapterBaiTap extends RecyclerView.Adapter<AdapterBaiTap.itemBaiTap
         holder.title_BaiHoc.setText(caption);
         // đặt ảnh
         String packagename = holder.itemView.getContext().getPackageName();
-        int img_ID = holder.itemView.getContext().getResources().getIdentifier(TenAnh,"drawable",packagename);
+        int img_ID = holder.itemView.getContext().getResources().getIdentifier(TenAnh,"mipmap",packagename);
         holder.img_BaiHoc.setImageResource(img_ID);
     }
 
@@ -49,7 +49,7 @@ public class AdapterBaiTap extends RecyclerView.Adapter<AdapterBaiTap.itemBaiTap
         return dsBaiTap.size();
     }
 
-    class itemBaiTap extends RecyclerView.ViewHolder{
+    class itemBaiTap extends RecyclerView.ViewHolder implements  View.OnClickListener{
         ImageView img_BaiHoc;
         TextView title_BaiHoc;
 
@@ -57,8 +57,14 @@ public class AdapterBaiTap extends RecyclerView.Adapter<AdapterBaiTap.itemBaiTap
           super(itemView);
           img_BaiHoc = itemView.findViewById(R.id.img_BaiHoc);
           title_BaiHoc = itemView.findViewById(R.id.title_BaiHoc);
+          itemView.setOnClickListener(this);
       }
-  }
+
+        @Override
+        public void onClick(View v) {
+
+        }
+    }
 
 }
 

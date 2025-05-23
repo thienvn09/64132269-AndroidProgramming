@@ -29,17 +29,16 @@ public class ToanFragment extends Fragment {
 
         // Khởi tạo RecyclerView
         recyclerView = view.findViewById(R.id.recycler_view_bai_tap);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 5)); // 5 cột
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2)); // 5 cột
 
         // Tạo danh sách 6 bài tập
         dsBaiTap = new ArrayList<>();
-        
-       /* dsBaiTap.add(new BaiTap("img_baimot", "img_baimot"));
-        dsBaiTap.add(new BaiTap("img_baihai", "ic_exercise_2"));
-        dsBaiTap.add(new BaiTap("img_baiba", "ic_exercise_3"));
-        dsBaiTap.add(new BaiTap("img_baibon", "ic_exercise_4"));
-        *//*dsBaiTap.add(new BaiTap("Bài tập 5", "ic_exercise_5"));
-        dsBaiTap.add(new BaiTap("Bài tập 6", "ic_exercise_6"));*/
+        dsBaiTap.add(new BaiTap("img_baimot", "Đoán hình"));
+        dsBaiTap.add(new BaiTap("img_baihai", "bài hai"));
+        dsBaiTap.add(new BaiTap("img_baiba", "bài ba "));
+        dsBaiTap.add(new BaiTap("img_baibon", "bài bốn "));
+        dsBaiTap.add(new BaiTap("img_bainam", "bài năm"));
+        dsBaiTap.add(new BaiTap("img_baisau", "bài sáu "));
 
         // Gán Adapter cho RecyclerView
         adapter = new AdapterBaiTap(getContext(), dsBaiTap);

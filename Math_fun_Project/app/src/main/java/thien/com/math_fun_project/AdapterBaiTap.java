@@ -1,11 +1,13 @@
 package thien.com.math_fun_project;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -62,6 +64,29 @@ public class AdapterBaiTap extends RecyclerView.Adapter<AdapterBaiTap.itemBaiTap
 
         @Override
         public void onClick(View v) {
+            int Vitri = getAdapterPosition();
+            if(Vitri == RecyclerView.NO_POSITION)
+            {
+                BaiTap baiTapHienThi = dsBaiTap.get(Vitri);
+                String caption = baiTapHienThi.getTitle_BaiHoc();
+                Intent intent;
+                if(caption.equals("Đoán hình"))
+                {
+                    intent = new Intent(context,ToanBai1Activity.class);
+                    context.startActivity(intent);
+                }
+                else
+                {
+                    Toast.makeText(context,"Chưa có bài tập",Toast.LENGTH_SHORT).show();
+                }
+            }
+
+          /*  // cac thong tin
+            String caption = baitaphienthi.getTitle_BaiHoc();
+            String TenAnh = baitaphienthi.getImg_BaiHoc();
+            // đặt vào các trường thông tinh
+            String choi = "ban vua click vao " + caption;
+            Toast.makeText(context,choi,Toast.LENGTH_SHORT).show();*/
 
         }
     }

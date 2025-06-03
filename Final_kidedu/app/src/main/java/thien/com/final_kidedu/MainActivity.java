@@ -25,7 +25,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,DangNhapActivity.class);
-
+                startActivity(intent);
+            }
+        });
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,DangKyActivity.class);
+                startActivity(intent);
             }
         });
     }

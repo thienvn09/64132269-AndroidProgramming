@@ -36,7 +36,7 @@ public class DangNhapActivity extends AppCompatActivity {
         tvGoToRegisterFromLogin = findViewById(R.id.tvGoToRegisterFromLogin);
         //
         AppDatabase db = AppDatabase.getDatabase(getApplicationContext());
-        UserDao userDao = db.userDao();
+         this.userDao = db.userDao();
         // sử ly sự kiện đăng nhập
         btnPerformLogin.setOnClickListener(v -> sukiendangnhap());
         // sử ly sự kiện đăng ký

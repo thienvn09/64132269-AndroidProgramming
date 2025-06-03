@@ -21,18 +21,19 @@
             android:text="Đăng Ký Tài Khoản"
             android:textSize="28sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/labelName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"  android:text="Họ và Tên"
+            android:layout_marginTop="32dp"
+            android:text="Họ và Tên"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvRegisterTitle" />
 
         <EditText
@@ -55,8 +56,8 @@
             android:layout_marginTop="16dp"
             android:text="Giới Tính"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etdTenDK" />
 
         <RadioGroup
@@ -65,16 +66,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/labelGender">
 
             <RadioButton
                 android:id="@+id/rbMale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nam"
-                android:checked="true"/>
+                android:checked="true"
+                android:text="Nam" />
 
             <RadioButton
                 android:id="@+id/rbFemale"
@@ -91,8 +92,8 @@
             android:layout_marginTop="16dp"
             android:text="Trường Học"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rgGender" />
 
         <EditText
@@ -115,8 +116,8 @@
             android:layout_marginTop="16dp"
             android:text="Lớp"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etSchool" />
 
         <EditText
@@ -139,8 +140,8 @@
             android:layout_marginTop="16dp"
             android:text="Mật Khẩu"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etClass" />
 
         <EditText

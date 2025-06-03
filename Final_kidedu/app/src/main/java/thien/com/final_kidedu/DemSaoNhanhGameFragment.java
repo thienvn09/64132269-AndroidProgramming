@@ -26,8 +26,7 @@ public class DemSaoNhanhGameFragment extends Fragment {
     private TextView tvGameTitle;
     private TextView tvScoreValue;
     private FrameLayout starDisplayArea;
-    private MaterialButton btnAnswer1, btnAnswer2, btnAnswer3; // Hoặc Button
-
+    private MaterialButton btnAnswer1, btnAnswer2, btnAnswer3;
     private int currentScore = 0;
     private int correctAnswer;
     private final Random random = new Random();
@@ -36,7 +35,7 @@ public class DemSaoNhanhGameFragment extends Fragment {
 
     private static final int MIN_STARS = 2;
     private static final int MAX_STARS = 9; // Số lượng sao tối đa
-    private static final long DISPLAY_DURATION_MS = 1500; // Thời gian hiển thị sao (1.5 giây)
+    private static final long DISPLAY_DURATION_MS = 8000; // Thời gian hiển thị sao (8 giây)
 
     public DemSaoNhanhGameFragment() {
         // Required empty public constructor
@@ -59,7 +58,6 @@ public class DemSaoNhanhGameFragment extends Fragment {
             tvGameTitle.setText("Game: Đếm Sao Nhanh");
         }
         updateScoreDisplay();
-
         if (ivBackFromGame != null) {
             ivBackFromGame.setOnClickListener(v -> {
                 if (getActivity() != null) {
@@ -67,7 +65,6 @@ public class DemSaoNhanhGameFragment extends Fragment {
                 }
             });
         }
-
         btnAnswer1.setOnClickListener(v -> checkAnswer(Integer.parseInt(btnAnswer1.getText().toString())));
         btnAnswer2.setOnClickListener(v -> checkAnswer(Integer.parseInt(btnAnswer2.getText().toString())));
         btnAnswer3.setOnClickListener(v -> checkAnswer(Integer.parseInt(btnAnswer3.getText().toString())));
@@ -97,27 +94,27 @@ public class DemSaoNhanhGameFragment extends Fragment {
 
     private void displayStars(int numberOfStars) {
         if (starDisplayArea.getWidth() == 0 || starDisplayArea.getHeight() == 0) {
-            // Nếu khu vực hiển thị chưa có kích thước, thử lại sau một chút
             starDisplayArea.post(() -> displayStars(numberOfStars));
             return;
         }
+        int starSize = getResources().getDimensionPixelSize(R.dimen.star_size); // Lấy kích thước từ dimens.xml
 
         for (int i = 0; i < numberOfStars; i++) {
             ImageView starView = new ImageView(getContext());
             starView.setImageResource(R.drawable.ic_star);
+
+            // Đặt kích thước cố định cho ImageView của ngôi sao
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
+                    starSize, // Chiều rộng bằng starSize
+                    starSize  // Chiều cao bằng starSize
             );
 
-            // Đảm bảo sao không bị che khuất hoặc ra ngoài lề quá nhiều
-            int starSize = getResources().getDimensionPixelSize(R.dimen.star_size); // Định nghĩa star_size trong dimens.xml, ví dụ 48dp
             int maxWidth = starDisplayArea.getWidth() - starSize;
             int maxHeight = starDisplayArea.getHeight() - starSize;
 
-            if (maxWidth <=0 || maxHeight <=0) { // Nếu khu vực quá nhỏ, đặt ở giữa
-                params.leftMargin = starDisplayArea.getWidth() / 2 - starSize / 2;
-                params.topMargin = starDisplayArea.getHeight() / 2 - starSize / 2;
+            if (maxWidth <=0 || maxHeight <=0) {
+                params.leftMargin = Math.max(0, starDisplayArea.getWidth() / 2 - starSize / 2);
+                params.topMargin = Math.max(0, starDisplayArea.getHeight() / 2 - starSize / 2);
             } else {
                 params.leftMargin = random.nextInt(maxWidth);
                 params.topMargin = random.nextInt(maxHeight);
@@ -165,17 +162,13 @@ public class DemSaoNhanhGameFragment extends Fragment {
             if (answers.size() < 3 && correctAnswer - answers.size() -1 > 0 && !answers.contains(correctAnswer - answers.size() -1 )) answers.add(correctAnswer - answers.size() -1);
 
         }
-
-
         Collections.shuffle(answers); // Xáo trộn các đáp án
-
         if (answers.size() >= 3) {
             btnAnswer1.setText(String.valueOf(answers.get(0)));
             btnAnswer2.setText(String.valueOf(answers.get(1)));
             btnAnswer3.setText(String.valueOf(answers.get(2)));
         } else {
-            // Xử lý trường hợp không tạo đủ 3 đáp án khác nhau (hiếm khi xảy ra với logic trên)
-            // Hoặc đơn giản là đặt các giá trị mặc định và đảm bảo một trong số đó là đúng
+            // Xử lý trường hợp không tạo đủ 3 đáp án khác nhau
             btnAnswer1.setText(String.valueOf(correctAnswer));
             btnAnswer2.setText(String.valueOf(correctAnswer + 1));
             btnAnswer3.setText(String.valueOf(correctAnswer + 2 > 0 ? correctAnswer + 2 : 1));
@@ -189,12 +182,11 @@ public class DemSaoNhanhGameFragment extends Fragment {
             Toast.makeText(getActivity(), "Đúng rồi!", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(getActivity(), "Sai rồi! Đáp án là " + correctAnswer, Toast.LENGTH_SHORT).show();
-            // Có thể trừ điểm hoặc không
         }
         updateScoreDisplay();
 
         // Chờ một chút trước khi bắt đầu vòng mới
-        handler.postDelayed(this::startNewRound, 1000); // 1 giây sau bắt đầu vòng mới
+        handler.postDelayed(this::startNewRound, 1000); // 10 giây sau bắt đầu vòng mới
     }
 
     private void updateScoreDisplay() {

@@ -40,8 +40,10 @@ public class DanhSachGameToanFragment extends Fragment {
         });
 
         cvGameToan1.setOnClickListener(v -> {
+            // test bo lắng nghe
             Toast.makeText(getActivity(), "Mở game Đếm Sao Nhanh", Toast.LENGTH_SHORT).show();
-            // loadFragment(new DemSaoNhanhGameFragment(), true); // Tạo DemSaoNhanhGameFragment
+            // Tạo DemSaoNhanhGameFragment
+             loadFragment(new DemSaoNhanhGameFragment(), true);
         });
 
         cvGameToan2.setOnClickListener(v -> {

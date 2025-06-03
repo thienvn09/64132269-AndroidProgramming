@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="star_size">48dp</dimen>
+    <dimen name="star_size">128dp</dimen>
 </resources>

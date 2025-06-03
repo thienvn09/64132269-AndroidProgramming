@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="math_icon">#ADD8E6</color>
+    <color name="English_icon">#FFB6C1</color>
+    <color name="Mau_main">#FAF0E6</color>
 </resources>

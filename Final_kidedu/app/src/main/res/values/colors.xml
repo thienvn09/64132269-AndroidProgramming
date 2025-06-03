@@ -5,4 +5,8 @@
     <color name="math_icon">#ADD8E6</color>
     <color name="English_icon">#FFB6C1</color>
     <color name="Mau_main">#FAF0E6</color>
+    <color name="mau_chu_bottom_nav_selected">#FF6F00</color>
+    <color name="mau_chu_bottom_nav_default">#757575</color>
+
+
 </resources>

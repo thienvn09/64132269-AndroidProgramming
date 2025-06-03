@@ -27,6 +27,8 @@
         android:layout_marginTop="24dp"
         android:gravity="center"
         android:text="Trò Chơi Môn Toán"
+        android:paddingTop="15dp"
+        android:paddingRight="55dp"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"

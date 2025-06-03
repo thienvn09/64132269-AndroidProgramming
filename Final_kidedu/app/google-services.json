@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "486627600996",
+    "firebase_url": "https://kidedution-default-rtdb.firebaseio.com",
+    "project_id": "kidedution",
+    "storage_bucket": "kidedution.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486627600996:android:3278f25df31c7db4a44d71",
+        "android_client_info": {
+          "package_name": "thien.com.final_kidedu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp5djD045r1cROESsXAzQOilHATAdfYgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486627600996:android:c564d108fce9ed6ea44d71",
+        "android_client_info": {
+          "package_name": "thien.com.kidedu_project_cuoiky"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp5djD045r1cROESsXAzQOilHATAdfYgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

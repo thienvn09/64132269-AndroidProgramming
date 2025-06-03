@@ -94,7 +94,7 @@ public class DangKyActivity extends AppCompatActivity {
         newUser.clas = className;
         newUser.Passhash = hashedPassword;
 
-        AppDatabase.databaseWriteExecutor.execute(() -> {userDao.Dangky(name, hashedPassword);
+        AppDatabase.databaseWriteExecutor.execute(() -> {userDao.register(newUser);
             runOnUiThread(() -> {
                 Toast.makeText(DangKyActivity.this, "Đăng ký thành công!", Toast.LENGTH_SHORT).show();
                 finish();

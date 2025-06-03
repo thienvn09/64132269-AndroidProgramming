@@ -17,8 +17,8 @@ public class User {
     @ColumnInfo(name="class")
     public String clas;
     @NonNull
-    @ColumnInfo(name = "password")
-    public String Passhash;
+    @ColumnInfo(name = "password") // tên cột trong datase
+    public String Passhash; // tên cột trong java
 
     public User() {
         this.uid = uid;

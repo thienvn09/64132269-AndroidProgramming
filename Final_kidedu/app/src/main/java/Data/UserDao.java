@@ -12,4 +12,7 @@ public interface UserDao{
     void register(User user);
     @Query("SELECT * FROM students WHERE name = :name AND password = :Passhash LIMIT 1")
     User Dangky(String name, String Passhash);
+    // truy vấn đăng nhập
+    @Query("SELECT * FROM students WHERE name = :name AND password = :passwordHash LIMIT 1")
+    User dangnhap(String name, String passwordHash);
 }

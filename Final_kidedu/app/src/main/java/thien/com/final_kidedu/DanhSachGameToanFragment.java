@@ -1,64 +1,77 @@
 package thien.com.final_kidedu;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
+import com.google.android.material.card.MaterialCardView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link DanhSachGameToanFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class DanhSachGameToanFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private MaterialCardView cvGameToan1, cvGameToan2, cvGameToan3, cvGameToan4;
+    private ImageView ivBack;
 
     public DanhSachGameToanFragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment DanhSachGameToanFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static DanhSachGameToanFragment newInstance(String param1, String param2) {
-        DanhSachGameToanFragment fragment = new DanhSachGameToanFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_danh_sach_game_toan, container, false);
+        View view = inflater.inflate(R.layout.fragment_danh_sach_game_toan, container, false);
+
+        ivBack = view.findViewById(R.id.ivBackFromGameListToan);
+        cvGameToan1 = view.findViewById(R.id.cvGameToan1);
+        cvGameToan2 = view.findViewById(R.id.cvGameToan2);
+        cvGameToan3 = view.findViewById(R.id.cvGameToan3);
+        cvGameToan4 = view.findViewById(R.id.cvGameToan4);
+
+        ivBack.setOnClickListener(v -> {
+            // Quay lại HomeFragment hoặc Fragment trước đó
+            if (getActivity() != null) {
+                getActivity().getSupportFragmentManager().popBackStack();
+            }
+        });
+
+        cvGameToan1.setOnClickListener(v -> {
+            Toast.makeText(getActivity(), "Mở game Đếm Sao Nhanh", Toast.LENGTH_SHORT).show();
+            // loadFragment(new DemSaoNhanhGameFragment(), true); // Tạo DemSaoNhanhGameFragment
+        });
+
+        cvGameToan2.setOnClickListener(v -> {
+            Toast.makeText(getActivity(), "Mở game Phép Tính Bong Bóng", Toast.LENGTH_SHORT).show();
+            // loadFragment(new PhepTinhBongBongGameFragment(), true);
+        });
+
+        cvGameToan3.setOnClickListener(v -> {
+            Toast.makeText(getActivity(), "Mở game Tìm Số Bí Ẩn", Toast.LENGTH_SHORT).show();
+            // loadFragment(new TimSoBiAnGameFragment(), true);
+        });
+
+        cvGameToan4.setOnClickListener(v -> {
+            Toast.makeText(getActivity(), "Mở game Xếp Hình Thông Minh", Toast.LENGTH_SHORT).show();
+            // loadFragment(new XepHinhGameFragment(), true);
+        });
+
+        return view;
+    }
+
+    private void loadFragment(Fragment fragment, boolean addToBackStack) {
+        if (getActivity() != null) {
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            // Sử dụng R.id.fragment_container từ GiaoDienChinhActivity
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            if (addToBackStack) {
+                fragmentTransaction.addToBackStack(fragment.getClass().getSimpleName());
+            }
+            fragmentTransaction.commit();
+        }
     }
 }

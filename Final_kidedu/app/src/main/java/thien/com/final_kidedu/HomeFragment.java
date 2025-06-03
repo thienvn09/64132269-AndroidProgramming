@@ -1,64 +1,78 @@
 package thien.com.final_kidedu;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.google.android.material.card.MaterialCardView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class HomeFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private MaterialCardView cvMonToanHome, cvMonTiengAnhHome;
 
     public HomeFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    // Bạn có thể xóa bỏ phần newInstance và các ARG_PARAM nếu không truyền dữ liệu vào Fragment này
+    // Hoặc giữ lại nếu sau này bạn muốn truyền dữ liệu.
+    // Hiện tại, HomeFragment không cần nhận tham số.
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        // Xóa bỏ phần getArguments nếu bạn không dùng newInstance và ARG_PARAM
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        // Ánh xạ các CardView từ layout fragment_home.xml
+        cvMonToanHome = view.findViewById(R.id.cvMonToan_home);
+        cvMonTiengAnhHome = view.findViewById(R.id.cvMonTiengAnh_home);
+
+        // Xử lý sự kiện click cho CardView Môn Toán
+        if (cvMonToanHome != null) {
+            cvMonToanHome.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Load DanhSachGameToanFragment
+                    loadFragment(new DanhSachGameToanFragment(), true); // true: thêm vào back stack
+                }
+            });
+        }
+
+        // Xử lý sự kiện click cho CardView Môn Tiếng Anh
+        if (cvMonTiengAnhHome != null) {
+            cvMonTiengAnhHome.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Load DanhSachGameTiengAnhFragment
+                    loadFragment(new DanhSachGameTiengAnhFragment(), true); // true: thêm vào back stack
+                }
+            });
+        }
+
+        return view;
+    }
+
+    // Phương thức tiện ích để load  Fragment
+    private void loadFragment(Fragment fragment, boolean addToBackStack) {
+        if (getActivity() != null) { // Đảm bảo Fragment đã được gắn vào một Activity
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            if (addToBackStack) {
+                // Thêm tên class của fragment vào back stack để có thể pop đến fragment cụ thể nếu cần
+                fragmentTransaction.addToBackStack(fragment.getClass().getSimpleName());
+            }
+            // Thêm hiệu ứng chuyển Fragment
+            fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+            fragmentTransaction.commit();
+        }
     }
 }

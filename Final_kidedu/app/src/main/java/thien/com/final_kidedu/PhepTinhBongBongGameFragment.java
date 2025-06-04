@@ -25,33 +25,43 @@ import java.util.Random;
 public class PhepTinhBongBongGameFragment extends Fragment {
 
     private ImageView ivBackFromBubbleGame;
-    private TextView tvBubbleGameTitle, tvBubbleScoreLabel, tvBubbleScoreValue;
-    private FrameLayout bubble_game_area;
+    private TextView tvBubbleGameTitle, tvBubbleScoreValue; // tvBubbleScoreLabel đã bị xóa khỏi khai báo vì không dùng trong code Java
+    private FrameLayout bubble_game_area; // Giữ tên biến từ layout
     private TextView tvDropTarget1, tvDropTarget2, tvDropTarget3;
-    private int DienHienTai = 0;
-    private final Random randoms = new Random();
-    private final Handler VongLapGame = new Handler(Looper.getMainLooper());
+
+    private int DienHienTai = 0; // Giữ tên biến của bạn
+    private final Random randoms = new Random(); // Giữ tên biến của bạn
+    private final Handler VongLapGame = new Handler(Looper.getMainLooper()); // Giữ tên biến của bạn
     private final List<View> activeBubbles = new ArrayList<>();
-    private boolean DoiCauTraLoi = false;
-    private int DapAn;
-    private static final long ThoiGianDoiCau = 3500;
-    private static final long ThoiGianBongBay = 10000;
-    private static final int MAX_SoBong = 9;
-    private static final int MIN_SoBong = 1;
-    private static class MathBT{
+
+    private boolean DoiCauTraLoi = false; // Giữ tên biến của bạn
+    private int DapAn; // Đáp án đúng của bong bóng vừa được làm vỡ
+
+    private static final long ThoiGianDoiCau = 3500; // Thời gian giữa mỗi lần tạo bong bóng mới
+    private static final long ThoiGianBongBay = 10000; // Thời gian để bong bóng bay hết màn hình
+    private static final int MAX_SoBong = 9; // Giá trị tối đa cho một toán hạng
+    private static final int MIN_SoBong = 1; // Giá trị tối thiểu cho một toán hạng
+
+    // Class để lưu thông tin của một phép tính
+    private static class MathBT { // Giữ tên class của bạn
         String CauHoi;
-        int DapAn;
-        MathBT(String CauHoi, int DapAn){
+        int DapAn; // Đáp án đúng
+
+        MathBT(String CauHoi, int DapAn) {
             this.CauHoi = CauHoi;
             this.DapAn = DapAn;
         }
+    }
+
+    public PhepTinhBongBongGameFragment() {
+        // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_phep_tinh_bong_bong_game, container, false);
-        // ánh xạ các view trong layout
+
         ivBackFromBubbleGame = view.findViewById(R.id.ivBackFromBubbleGame);
         tvBubbleGameTitle = view.findViewById(R.id.tvBubbleGameTitle);
         tvBubbleScoreLabel = view.findViewById(R.id.tvBubbleScoreLabel);
@@ -60,173 +70,199 @@ public class PhepTinhBongBongGameFragment extends Fragment {
         tvDropTarget1 = view.findViewById(R.id.tvDropTarget1);
         tvDropTarget2 = view.findViewById(R.id.tvDropTarget2);
         tvDropTarget3 = view.findViewById(R.id.tvDropTarget3);
+
         updateDiemDisplay();
         LamMoiDrop();
-        // gán sự kiện cho nút quay lại
-        if(ivBackFromBubbleGame != null)
-        {
-            ivBackFromBubbleGame.setOnClickListener(v ->{
-               if(getActivity() != null){
+
+        if (ivBackFromBubbleGame != null) {
+            ivBackFromBubbleGame.setOnClickListener(v -> {
+                if (getActivity() != null) {
                     getActivity().getSupportFragmentManager().popBackStack();
                 }
             });
         }
-       // gán sự kiện click cho các ô đích
+
         tvDropTarget1.setOnClickListener(v -> handleDropTargetClick(tvDropTarget1));
         tvDropTarget2.setOnClickListener(v -> handleDropTargetClick(tvDropTarget2));
         tvDropTarget3.setOnClickListener(v -> handleDropTargetClick(tvDropTarget3));
-        bubble_game_area.post(this::starGameLoop);
+
+        bubble_game_area.post(this::starGameLoop); // Đổi tên hàm cho đúng
+
         return view;
     }
-    // vòng lập của game
-    private void starGameLoop()
-    {
-        spawnBubble(); // tạo bong bóng đầu tiên
+
+    private void starGameLoop() { // Đổi tên hàm cho đúng
+        spawnBubble();
+        // Kích hoạt vòng lặp game
+        VongLapGame.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (isAdded() && !isRemoving() && getView() != null) {
+                    spawnBubble();
+                    VongLapGame.postDelayed(this, ThoiGianDoiCau + randoms.nextInt(1500));
+                }
+            }
+        }, ThoiGianDoiCau + randoms.nextInt(1500));
     }
-    private MathBT generateMathProblem()
-    {
+
+    private MathBT generateMathProblem() {
         int So1 = randoms.nextInt(MAX_SoBong - MIN_SoBong + 1) + MIN_SoBong;
         int So2 = randoms.nextInt(MAX_SoBong - MIN_SoBong + 1) + MIN_SoBong;
         int Kq;
         String BaiTap;
-        // ngẫu nhiên chọn một phép cộng hoặc trừ ( Đảm bảo kết quả không âm cho pheps trừ )
-        if(randoms.nextBoolean() || So1 < So2)
-        {
+
+        if (randoms.nextBoolean() || So1 < So2) {
             Kq = So1 + So2;
-            BaiTap = So1 + "+" + So2;
-        }
-        else{
+            BaiTap = So1 + " + " + So2;
+        } else {
             Kq = So1 - So2;
-            BaiTap = So1 + "-" + So2;
+            BaiTap = So1 + " - " + So2;
         }
         return new MathBT(BaiTap, Kq);
     }
-    private void populateDropTargets(int correctAnswer)
-    {
+
+    private void populateDropTargets(int correctAnswerParam) { // Đổi tên tham số để tránh nhầm lẫn
         List<Integer> answers = new ArrayList<>();
-        answers.add(correctAnswer);
-        while(answers.size() < 3)
-        {
+        answers.add(correctAnswerParam);
+        while (answers.size() < 3) {
             int wrongAnswer;
             do {
-                int offset = randoms.nextInt(5) + 1; // Sai lệch từ 1 đến 5
+                int offset = randoms.nextInt(5) + 1;
                 if (randoms.nextBoolean()) {
-                    wrongAnswer = correctAnswer + offset;
+                    wrongAnswer = correctAnswerParam + offset;
                 } else {
-                    wrongAnswer = correctAnswer - offset;
+                    wrongAnswer = correctAnswerParam - offset;
                 }
-            } while (wrongAnswer <= 0 || answers.contains(wrongAnswer)); // Đảm bảo > 0 và không trùng
+            } while (wrongAnswer <= 0 || answers.contains(wrongAnswer));
             answers.add(wrongAnswer);
-            Collections.shuffle(answers);
+        }
+        Collections.shuffle(answers);
+
+        if (answers.size() >= 3) {
             tvDropTarget1.setText(String.valueOf(answers.get(0)));
             tvDropTarget2.setText(String.valueOf(answers.get(1)));
             tvDropTarget3.setText(String.valueOf(answers.get(2)));
+        } else {
+            // Fallback (hiếm khi xảy ra với logic trên)
+            tvDropTarget1.setText(String.valueOf(correctAnswerParam));
+            tvDropTarget2.setText(String.valueOf(correctAnswerParam + 1));
+            tvDropTarget3.setText(String.valueOf(correctAnswerParam + 2 > 0 ? correctAnswerParam + 2 : 1));
         }
     }
-    private void spawnBubble()
-    {
+
+    private void spawnBubble() {
         if (getContext() == null || bubble_game_area.getWidth() == 0 || bubble_game_area.getHeight() == 0) {
-            // Nếu context null hoặc khu vực game chưa sẵn sàng, thử lại sau
             if (isAdded() && getView() != null) {
                 bubble_game_area.postDelayed(this::spawnBubble, 100);
             }
-            LayoutInflater inflater = LayoutInflater.from(getContext());
+            return; // QUAN TRỌNG: return ở đây để tránh lỗi
+        }
 
-            View bubbleView = inflater.inflate(R.layout.layout_bubble_item, bubble_game_area, false);
-            TextView tvBubble = bubbleView.findViewById(R.id.tv_bubble_text);
-            // tạo bài toán mới
-            final MathBT mathbt = generateMathProblem();
-            tvBubble.setText(mathbt.DapAn);
-            bubbleView.setTag(mathbt.DapAn); // lưu đối tượng vào MathBT vào tag của view
-            // lấy kích thước của chữ
-            bubbleView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
-            int bubbleWidth = bubbleView.getMeasuredWidth();
-            int bubbleHeight = bubbleView.getMeasuredHeight();
-            if(bubbleWidth == 0 || bubbleHeight == 0) // lấy kích thước là 0 thì lấy giá trị mặc định
-            {
-                Log.e("BubbleGame", "Bubble view size is zero.");
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View bubbleView = inflater.inflate(R.layout.layout_bubble_item, bubble_game_area, false);
+        TextView tvBubble = bubbleView.findViewById(R.id.tv_bubble_text);
+
+        final MathBT mathbt = generateMathProblem();
+        tvBubble.setText(mathbt.CauHoi); // SỬA: Hiển thị câu hỏi, không phải đáp án
+        bubbleView.setTag(mathbt);       // SỬA: Lưu cả đối tượng MathBT
+
+        bubbleView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+        int bubbleWidth = bubbleView.getMeasuredWidth();
+        int bubbleHeight = bubbleView.getMeasuredHeight();
+
+        if (bubbleWidth == 0 || bubbleHeight == 0) {
+            Log.e("BubbleGame", "Bubble view size is zero after measure.");
+            // Không gọi đệ quy spawnBubble ở đây nữa để tránh vòng lặp vô hạn nếu layout có vấn đề
+            return;
+        }
+
+        int StarX = randoms.nextInt(Math.max(1, bubble_game_area.getWidth() - bubbleWidth));
+        bubbleView.setX(StarX);
+        bubbleView.setY(bubble_game_area.getHeight()); // Bắt đầu từ dưới cùng
+
+        bubble_game_area.addView(bubbleView); // Thêm vào khu vực game
+        activeBubbles.add(bubbleView);
+
+        // SỬA: Animation bay từ dưới lên trên
+        ObjectAnimator animator = ObjectAnimator.ofFloat(bubbleView, "translationY", bubble_game_area.getHeight(), (float) -bubbleHeight);
+        animator.setDuration(ThoiGianBongBay + randoms.nextInt(2000));
+        animator.setInterpolator(new LinearInterpolator());
+        animator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
                 if (isAdded() && getView() != null) {
-                    bubble_game_area.postDelayed(this::spawnBubble, 100);
+                    bubble_game_area.removeView(bubbleView);
+                    activeBubbles.remove(bubbleView);
                 }
+            }
+        });
+        animator.start();
+
+        bubbleView.setOnClickListener(v -> {
+            if (DoiCauTraLoi) {
                 return;
             }
-            // đặt vị trí xuất hiện ngẫu nhiên trong khu vực game
-            int StarX = randoms.nextInt(Math.max(0, bubble_game_area.getWidth() - bubbleWidth));
-            bubbleView.setX(StarX);
-            bubbleView.setY(bubble_game_area.getHeight());
-            //
-            ObjectAnimator animator = ObjectAnimator.ofFloat(bubbleView, "translationY", -bubbleHeight, -bubble_game_area.getHeight());
-            animator.setDuration(ThoiGianBongBay + randoms.nextInt(2000)); // thời gian lấy bóng bay ngẫu nhiên
-            animator.setInterpolator(new LinearInterpolator());
-            animator.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    if (isAdded() && getView() != null) {
-                        bubble_game_area.removeView(bubbleView);
-                        activeBubbles.remove(bubbleView);
-                    }
-                }
-            });
-            animator.start();
-            bubbleView.setOnClickListener(v -> {
-                if (DoiCauTraLoi) { // Nếu đang chờ chọn đáp án cho bong bóng khác, không làm gì cả
-                    return;
-                }
-                MathBT clickedProblem = (MathBT) v.getTag();
-                if (clickedProblem != null) {
-                    DapAn = Integer.parseInt(clickedProblem.CauHoi);
-                    DoiCauTraLoi = true;
-                    populateDropTargets(DapAn);
+            MathBT clickedProblem = (MathBT) v.getTag(); // Lấy lại đối tượng MathBT
+            if (clickedProblem != null) {
+                DapAn = clickedProblem.DapAn; // SỬA: Lấy đáp án đúng từ clickedProblem
+                DoiCauTraLoi = true;
+                populateDropTargets(DapAn);
 
-                    // Làm vỡ bong bóng (xóa view và dừng animation)
-                    animator.cancel();
-                    activeBubbles.remove(bubbleView);
-                    /*// TODO: Thêm hiệu ứng vỡ bong bóng (ví dụ: animation ngắn hoặc âm thanh)
-                    Toast.makeText(getActivity(), "Phép tính: " + clickedProblem.problemText, Toast.LENGTH_SHORT).show();*/
-                }
-            });
-
-        }
+                animator.cancel();
+                bubble_game_area.removeView(bubbleView); // Xóa khỏi khu vực game
+                activeBubbles.remove(bubbleView);
+                Toast.makeText(getActivity(), "Phép tính: " + clickedProblem.CauHoi, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
-    private void handleDropTargetClick(TextView selectedTarget)
-    {
-        if(!DoiCauTraLoi)
-        {
-            // không làm gì nếu chưa có bong bóng nào được làm vỡ
+    private void handleDropTargetClick(TextView selectedTarget) {
+        if (!DoiCauTraLoi) {
             return;
         }
-        try{
+        try {
             int selectedAnswer = Integer.parseInt(selectedTarget.getText().toString());
-            if(selectedAnswer == DapAn)
-            {
+            if (selectedAnswer == DapAn) {
                 DienHienTai++;
                 Toast.makeText(getActivity(), "Đúng rồi!", Toast.LENGTH_SHORT).show();
-            }
-            else{
+            } else {
                 Toast.makeText(getActivity(), "Sai rồi! Đáp án là " + DapAn, Toast.LENGTH_SHORT).show();
             }
-            VongLapGame.postDelayed(this::spawnBubble, ThoiGianDoiCau);
-            }catch (NumberFormatException e) {
-            // Trường hợp text trên target không phải là số (ví dụ: "?")
+        } catch (NumberFormatException e) {
             Toast.makeText(getActivity(), "Vui lòng làm vỡ bong bóng trước!", Toast.LENGTH_SHORT).show();
-            return;
+            return; // Không reset nếu chưa chọn bong bóng
         }
+
+        updateDiemDisplay();
+        DoiCauTraLoi = false; // Reset lại để có thể chọn bong bóng mới
+        LamMoiDrop(); // Làm mới các ô đích
+        // Không gọi spawnBubble ở đây nữa, vòng lặp game sẽ tự xử lý
     }
-    // gán lại sự text '?' cho các droptagerts
-    private void LamMoiDrop()
-    {
+
+    private void LamMoiDrop() {
         tvDropTarget1.setText("?");
         tvDropTarget2.setText("?");
         tvDropTarget3.setText("?");
     }
-    // cập nhật điểm
-    private void updateDiemDisplay()
-    {
-        // kiểm tra giá trị
-        if(tvBubbleScoreValue != null){
+
+    private void updateDiemDisplay() {
+        if (tvBubbleScoreValue != null) {
             tvBubbleScoreValue.setText(String.valueOf(DienHienTai));
         }
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        VongLapGame.removeCallbacksAndMessages(null);
+        for (View bubble : new ArrayList<>(activeBubbles)) {
+            if (bubble.getAnimation() != null) {
+                bubble.getAnimation().cancel();
+            }
+            if (bubble.getParent() != null) {
+                ((ViewGroup) bubble.getParent()).removeView(bubble);
+            }
+        }
+        activeBubbles.clear();
+    }
 }

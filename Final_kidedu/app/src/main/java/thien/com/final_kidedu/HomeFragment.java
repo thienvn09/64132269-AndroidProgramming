@@ -17,14 +17,10 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    // Bạn có thể xóa bỏ phần newInstance và các ARG_PARAM nếu không truyền dữ liệu vào Fragment này
-    // Hoặc giữ lại nếu sau này bạn muốn truyền dữ liệu.
-    // Hiện tại, HomeFragment không cần nhận tham số.
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Xóa bỏ phần getArguments nếu bạn không dùng newInstance và ARG_PARAM
+
     }
 
     @Override
@@ -67,7 +63,7 @@ public class HomeFragment extends Fragment {
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             if (addToBackStack) {
-                // Thêm tên class của fragment vào back stack để có thể pop đến fragment cụ thể nếu cần
+
                 fragmentTransaction.addToBackStack(fragment.getClass().getSimpleName());
             }
             // Thêm hiệu ứng chuyển Fragment

@@ -53,7 +53,7 @@ public class DanhSachGameToanFragment extends Fragment {
 
         cvGameToan3.setOnClickListener(v -> {
             Toast.makeText(getActivity(), "Mở game Tìm Số Bí Ẩn", Toast.LENGTH_SHORT).show();
-            // loadFragment(new TimSoBiAnGameFragment(), true);
+            loadFragment(new TimSoBiAnGameFragment(), true);
         });
 
         cvGameToan4.setOnClickListener(v -> {

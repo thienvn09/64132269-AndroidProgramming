@@ -97,7 +97,8 @@ public class PhepTinhBongBongGameFragment extends Fragment {
         }
         else{
             Kq = So1 - So2;
-            
+            BaiTap = So1 + "-" + So2;
+        
         }
     }
     private void spawnBubble()

@@ -98,8 +98,8 @@ public class PhepTinhBongBongGameFragment extends Fragment {
         else{
             Kq = So1 - So2;
             BaiTap = So1 + "-" + So2;
-        
         }
+        return new MathBT(BaiTap, Kq);
     }
     private void spawnBubble()
     {
@@ -111,9 +111,41 @@ public class PhepTinhBongBongGameFragment extends Fragment {
             LayoutInflater inflater = LayoutInflater.from(getContext());
             View bubbleView = inflater.inflate(R.layout.layout_bubble_item, bubble_game_area, false);
             TextView tvBubble = bubbleView.findViewById(R.id.tv_bubble_text);
+            // tạo bài toán mới
             final MathBT mathbt = generateMathProblem();
+            tvBubble.setText(mathbt.DapAn);
+            bubbleView.setTag(mathbt.DapAn); // lưu đối tượng vào MathBT vào tag của view
+            // lấy kích thước của chữ
+            bubbleView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+            int bubbleWidth = bubbleView.getMeasuredWidth();
+            int bubbleHeight = bubbleView.getMeasuredHeight();
+            if(bubbleWidth == 0 || bubbleHeight == 0) // lấy kích thước là 0 thì lấy giá trị mặc định
+            {
+                Log.e("BubbleGame", "Bubble view size is zero.");
+                if (isAdded() && getView() != null) {
+                    bubble_game_area.postDelayed(this::spawnBubble, 100);
+                }
+                return;
+            }
+            // đặt vị trí xuất hiện ngẫu nhiên trong khu vực game
+            int StarX = randoms.nextInt(Math.max(0, bubble_game_area.getWidth() - bubbleWidth));
+            bubbleView.setX(StarX);
+            bubbleView.setY(bubble_game_area.getHeight());
+            //
+            ObjectAnimator animator = ObjectAnimator.ofFloat(bubbleView, "translationY", -bubbleHeight, -bubble_game_area.getHeight());
+            animator.setDuration(ThoiGianBongBay + randoms.nextInt(2000)); // thời gian lấy bóng bay ngẫu nhiên
+            animator.setInterpolator(new LinearInterpolator());
+            animator.addListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    if (isAdded() && getView() != null) {
+                        bubble_game_area.removeView(bubbleView);
+                        activeBubbles.remove(bubbleView);
+                    }
+                }
+            });
+            animator.start();
 
-            return;
         }
     }
     private void handleDropTargetClick(TextView selectedTarget)

@@ -76,7 +76,7 @@ public class PhepTinhBongBongGameFragment extends Fragment {
         tvDropTarget2.setOnClickListener(v -> handleDropTargetClick(tvDropTarget2));
         tvDropTarget3.setOnClickListener(v -> handleDropTargetClick(tvDropTarget3));
         bubble_game_area.post(this::starGameLoop);
-        return inflater.inflate(R.layout.fragment_phep_tinh_bong_bong_game, container, false);
+        return view;
     }
     // vòng lập của game
     private void starGameLoop()

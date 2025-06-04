@@ -64,7 +64,6 @@ public class PhepTinhBongBongGameFragment extends Fragment {
 
         ivBackFromBubbleGame = view.findViewById(R.id.ivBackFromBubbleGame);
         tvBubbleGameTitle = view.findViewById(R.id.tvBubbleGameTitle);
-        tvBubbleScoreLabel = view.findViewById(R.id.tvBubbleScoreLabel);
         tvBubbleScoreValue = view.findViewById(R.id.tvBubbleScoreValue);
         bubble_game_area = view.findViewById(R.id.bubble_game_area);
         tvDropTarget1 = view.findViewById(R.id.tvDropTarget1);

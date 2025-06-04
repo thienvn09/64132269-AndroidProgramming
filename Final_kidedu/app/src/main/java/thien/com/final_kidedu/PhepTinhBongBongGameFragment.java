@@ -101,6 +101,28 @@ public class PhepTinhBongBongGameFragment extends Fragment {
         }
         return new MathBT(BaiTap, Kq);
     }
+    private void populateDropTargets(int correctAnswer)
+    {
+        List<Integer> answers = new ArrayList<>();
+        answers.add(correctAnswer);
+        while(answers.size() < 3)
+        {
+            int wrongAnswer;
+            do {
+                int offset = randoms.nextInt(5) + 1; // Sai lệch từ 1 đến 5
+                if (randoms.nextBoolean()) {
+                    wrongAnswer = correctAnswer + offset;
+                } else {
+                    wrongAnswer = correctAnswer - offset;
+                }
+            } while (wrongAnswer <= 0 || answers.contains(wrongAnswer)); // Đảm bảo > 0 và không trùng
+            answers.add(wrongAnswer);
+            Collections.shuffle(answers);
+            tvDropTarget1.setText(String.valueOf(answers.get(0)));
+            tvDropTarget2.setText(String.valueOf(answers.get(1)));
+            tvDropTarget3.setText(String.valueOf(answers.get(2)));
+        }
+    }
     private void spawnBubble()
     {
         if (getContext() == null || bubble_game_area.getWidth() == 0 || bubble_game_area.getHeight() == 0) {
@@ -109,6 +131,7 @@ public class PhepTinhBongBongGameFragment extends Fragment {
                 bubble_game_area.postDelayed(this::spawnBubble, 100);
             }
             LayoutInflater inflater = LayoutInflater.from(getContext());
+
             View bubbleView = inflater.inflate(R.layout.layout_bubble_item, bubble_game_area, false);
             TextView tvBubble = bubbleView.findViewById(R.id.tv_bubble_text);
             // tạo bài toán mới
@@ -145,14 +168,48 @@ public class PhepTinhBongBongGameFragment extends Fragment {
                 }
             });
             animator.start();
+            bubbleView.setOnClickListener(v -> {
+                if (DoiCauTraLoi) { // Nếu đang chờ chọn đáp án cho bong bóng khác, không làm gì cả
+                    return;
+                }
+                MathBT clickedProblem = (MathBT) v.getTag();
+                if (clickedProblem != null) {
+                    DapAn = Integer.parseInt(clickedProblem.CauHoi);
+                    DoiCauTraLoi = true;
+                    populateDropTargets(DapAn);
+
+                    // Làm vỡ bong bóng (xóa view và dừng animation)
+                    animator.cancel();
+                    activeBubbles.remove(bubbleView);
+                    /*// TODO: Thêm hiệu ứng vỡ bong bóng (ví dụ: animation ngắn hoặc âm thanh)
+                    Toast.makeText(getActivity(), "Phép tính: " + clickedProblem.problemText, Toast.LENGTH_SHORT).show();*/
+                }
+            });
 
         }
     }
+
     private void handleDropTargetClick(TextView selectedTarget)
     {
         if(!DoiCauTraLoi)
         {
             // không làm gì nếu chưa có bong bóng nào được làm vỡ
+            return;
+        }
+        try{
+            int selectedAnswer = Integer.parseInt(selectedTarget.getText().toString());
+            if(selectedAnswer == DapAn)
+            {
+                DienHienTai++;
+                Toast.makeText(getActivity(), "Đúng rồi!", Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(getActivity(), "Sai rồi! Đáp án là " + DapAn, Toast.LENGTH_SHORT).show();
+            }
+            VongLapGame.postDelayed(this::spawnBubble, ThoiGianDoiCau);
+            }catch (NumberFormatException e) {
+            // Trường hợp text trên target không phải là số (ví dụ: "?")
+            Toast.makeText(getActivity(), "Vui lòng làm vỡ bong bóng trước!", Toast.LENGTH_SHORT).show();
             return;
         }
     }

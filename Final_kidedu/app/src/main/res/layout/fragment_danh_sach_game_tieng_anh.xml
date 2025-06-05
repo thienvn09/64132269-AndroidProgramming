@@ -1,52 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Mau_main"
     tools:context=".DanhSachGameTiengAnhFragment">
 
+
     <ImageView
-        android:id="@+id/ivBackFromGameListToan"
+        android:id="@+id/ivBackFromGameListTiengAnh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="53dp"
         android:contentDescription="Quay lại"
         android:padding="8dp"
-
         android:src="@drawable/ic_arrow_back"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:tint="@color/black" />
 
     <TextView
-        android:id="@+id/tvTitleGameTiengAnh"
+        android:id="@+id/tvTitleGameTiengAnhList"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="17dp"
         android:gravity="center"
-        android:paddingTop="15dp"
-        android:paddingRight="55dp"
         android:text="Trò Chơi Tiếng Anh"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@id/ivBackFromGameListToan"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@id/ivBackFromGameListToan"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBackFromGameListTiengAnh" />
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="417dp"
+        android:layout_height="615dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tvTitleGameTiengAnh"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:fillViewport="true">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleGameTiengAnhList">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,14 +58,15 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Game 1: Lật Thẻ Từ Vựng -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cvGameToan1"
+                android:id="@+id/cvGameTiengAnh1"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -69,148 +74,157 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:id="@+id/ivIconGameToan1"
+                        android:id="@+id/ivIconGameTiengAnh1"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:contentDescription="Game Đếm Sao"
+                        android:contentDescription="Game Lật Thẻ Từ Vựng"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/icon_star" />
+                        app:srcCompat="@mipmap/img_flashcard" />
 
                     <TextView
-                        android:id="@+id/tvTitleGameTA1"
+                        android:id="@+id/tvTitleGameTiengAnh1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="bài 1"
+                        android:text="Lật Thẻ Từ Vựng"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@id/ivIconGameToan1"
+                        app:layout_constraintBottom_toBottomOf="@id/ivIconGameTiengAnh1"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/ivIconGameToan1"
-                        app:layout_constraintTop_toTopOf="@id/ivIconGameToan1" />
+                        app:layout_constraintStart_toEndOf="@id/ivIconGameTiengAnh1"
+                        app:layout_constraintTop_toTopOf="@id/ivIconGameTiengAnh1" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cvGameToan2"
+                android:id="@+id/cvGameTiengAnh2"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="16dp">
 
                     <ImageView
-                        android:id="@+id/ivIconGameToan2"
+                        android:id="@+id/ivIconGameTiengAnh2"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:contentDescription="Game Bong Bóng"
+                        android:contentDescription="Game Nghe và Chạm"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@mipmap/ic_bongbong" />
+                        app:srcCompat="@mipmap/img_listen" />
+                    <!-- Bạn cần tạo icon ic_listen_tap.xml -->
 
                     <TextView
-                        android:id="@+id/tvTitleGameTA2"
+                        android:id="@+id/tvTitleGameTiengAnh2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="tvTitleGameTA2"
+                        android:text="Nghe và Chạm"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@id/ivIconGameToan2"
+                        app:layout_constraintBottom_toBottomOf="@id/ivIconGameTiengAnh2"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/ivIconGameToan2"
-                        app:layout_constraintTop_toTopOf="@id/ivIconGameToan2" />
+                        app:layout_constraintStart_toEndOf="@id/ivIconGameTiengAnh2"
+                        app:layout_constraintTop_toTopOf="@id/ivIconGameTiengAnh2" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Game 3: Ghép Chữ Thành Từ -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cvGameToan3"
+                android:id="@+id/cvGameTiengAnh3"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="16dp">
 
                     <ImageView
-                        android:id="@+id/ivIconGameToan3"
+                        android:id="@+id/ivIconGameTiengAnh3"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:contentDescription="Game Tìm Số"
+                        android:contentDescription="Game Ghép Chữ"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@mipmap/ic_random" />
+                        app:srcCompat="@mipmap/img_chu" />
+                    <!-- Bạn cần tạo icon ic_word_jumble.xml -->
+
                     <TextView
-                        android:id="@+id/tvTitleGameToan3"
+                        android:id="@+id/tvTitleGameTiengAnh3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Tìm Số Bí Ẩn"
+                        android:layout_marginStart="16dp"
+                        android:text="Ghép Chữ Thành Từ"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:layout_marginStart="16dp"
-                        app:layout_constraintStart_toEndOf="@id/ivIconGameToan3"
+                        app:layout_constraintBottom_toBottomOf="@id/ivIconGameTiengAnh3"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/ivIconGameToan3"
-                        app:layout_constraintBottom_toBottomOf="@id/ivIconGameToan3"/>
+                        app:layout_constraintStart_toEndOf="@id/ivIconGameTiengAnh3"
+                        app:layout_constraintTop_toTopOf="@id/ivIconGameTiengAnh3" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Game 4: Câu Chuyện Tương Tác -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cvGameToan4"
+                android:id="@+id/cvGameTiengAnh4"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="16dp">
 
                     <ImageView
-                        android:id="@+id/ivIconGameToan4"
+                        android:id="@+id/ivIconGameTiengAnh4"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:contentDescription="Game Xếp Hình"
+                        android:contentDescription="Game Câu Chuyện"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@mipmap/ic_xephinh" />
+                        app:srcCompat="@mipmap/icon_readbook" />
+                    <!-- Bạn cần tạo icon ic_interactive_story.xml -->
+
                     <TextView
-                        android:id="@+id/tvTitleGameToan4"
+                        android:id="@+id/tvTitleGameTiengAnh4"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Xếp Hình Thông Minh"
+                        android:layout_marginStart="16dp"
+                        android:text="Câu Chuyện Tương Tác"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:layout_marginStart="16dp"
-                        app:layout_constraintStart_toEndOf="@id/ivIconGameToan4"
+                        app:layout_constraintBottom_toBottomOf="@id/ivIconGameTiengAnh4"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/ivIconGameToan4"
-                        app:layout_constraintBottom_toBottomOf="@id/ivIconGameToan4"/>
+                        app:layout_constraintStart_toEndOf="@id/ivIconGameTiengAnh4"
+                        app:layout_constraintTop_toTopOf="@id/ivIconGameTiengAnh4" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

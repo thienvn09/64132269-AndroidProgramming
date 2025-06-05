@@ -27,7 +27,7 @@
         android:layout_width="259dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="41dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="55dp"
         android:gravity="center"
         android:text="Game: Lật Thẻ Từ Vựng"
@@ -58,7 +58,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="29dp"
         android:layout_marginEnd="134dp"
+
         android:layout_marginBottom="33dp"
         android:text="0/10"
         android:textColor="@color/Mau_diem"
@@ -66,7 +68,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/flashcard_container"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvFlashcardScoreLabel" />
+        app:layout_constraintStart_toEndOf="@+id/tvFlashcardScoreLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvFlashcardGameTitle" />
 
     <FrameLayout
         android:id="@+id/flashcard_container"
@@ -74,9 +77,10 @@
         android:layout_height="400dp"
         android:layout_marginStart="55dp"
         android:layout_marginEnd="55dp"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextFlashcard"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="178dp">
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <com.google.android.material.card.MaterialCardView

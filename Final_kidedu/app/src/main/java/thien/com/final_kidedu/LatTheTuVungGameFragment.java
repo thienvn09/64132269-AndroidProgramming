@@ -29,7 +29,6 @@ public class LatTheTuVungGameFragment extends Fragment {
 
     private ImageView ivBackFromFlashcardGame;
     private TextView tvFlashcardGameTitle, tvFlashcardScoreValue;
-    // FrameLayout flashcardContainer; // Không cần tham chiếu trực tiếp nếu chỉ xử lý cardFront, cardBack
     private MaterialCardView cardFront, cardBack;
     private ImageView ivFlashcardImage;
     private TextView tvFlashcardHint, tvFlashcardEnglishWord, tvFlashcardPronunciation;
@@ -77,7 +76,6 @@ public class LatTheTuVungGameFragment extends Fragment {
         ivBackFromFlashcardGame = view.findViewById(R.id.ivBackFromFlashcardGame);
         tvFlashcardGameTitle = view.findViewById(R.id.tvFlashcardGameTitle);
         tvFlashcardScoreValue = view.findViewById(R.id.tvFlashcardScoreValue);
-        // flashcardContainer = view.findViewById(R.id.flashcard_container); // Không cần nếu chỉ tương tác với cardFront/Back
         cardFront = view.findViewById(R.id.card_front);
         cardBack = view.findViewById(R.id.card_back);
         ivFlashcardImage = view.findViewById(R.id.ivFlashcardImage);
@@ -159,11 +157,11 @@ public class LatTheTuVungGameFragment extends Fragment {
     private void prepareFlashcards() {
         flashcardList = new ArrayList<>();
         // Thêm các từ vựng vào đây
-        flashcardList.add(new FlashcardItem("Quả Táo", "Apple", "/ˈæp.əl/", R.drawable.ic_sample_apple, 0)); // 0 nếu dùng TTS
-        flashcardList.add(new FlashcardItem("Con Chó", "Dog", "/dɒɡ/", R.drawable.ic_sample_dog, 0));
-        flashcardList.add(new FlashcardItem("Màu Đỏ", "Red", "/rɛd/", R.drawable.ic_sample_red_color, 0));
-        flashcardList.add(new FlashcardItem("Quyển Sách", "Book", "/bʊk/", R.drawable.ic_book, 0)); // Thêm icon ic_book
-        flashcardList.add(new FlashcardItem("Mèo Con", "Cat", "/kæt/", R.drawable.ic_cat, 0)); // Thêm icon ic_cat
+        flashcardList.add(new FlashcardItem("Quả Táo", "Apple", "/ˈæp.əl/", R.mipmap.img_tao, 0)); // 0 nếu dùng TTS
+        flashcardList.add(new FlashcardItem("Con Chó", "Dog", "/dɒɡ/", R.mipmap.img_dog, 0));
+        flashcardList.add(new FlashcardItem("Con Mèo", "Red", "/kæt/", R.mipmap.img_cat, 0));
+        flashcardList.add(new FlashcardItem("Con gà", "Chicken", "/tʃɪk.ɪn/", R.mipmap.img_chicken, 0)); // Thêm icon ic_book
+        flashcardList.add(new FlashcardItem("Con Vịt", "Cat", "/dʌk/", R.mipmap.img_duck, 0)); // Thêm icon ic_cat
 
         if (!flashcardList.isEmpty()) {
             Collections.shuffle(flashcardList); // Xáo trộn thứ tự thẻ

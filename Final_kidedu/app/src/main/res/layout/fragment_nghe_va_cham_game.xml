@@ -1,14 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E1F5FE"
     tools:context=".NgheVaChamGameFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/ivBackFromListenTapGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:contentDescription="Quay lại"
+        android:padding="8dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvListenTapGameTitle"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="6dp"
+        android:gravity="center"
+        android:text="Game: Nghe và Chạm"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayWordSound"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivBackFromListenTapGame"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvListenTapScoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="74dp"
+        android:text="Điểm:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvListenTapInstruction"
+        app:layout_constraintStart_toEndOf="@+id/btnPlayWordSound"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvListenTapScoreValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="63dp"
+        android:text="0"
+
+        android:textAlignment="center"
+        android:textColor="@color/Mau_diem"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvListenTapScoreLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnPlayWordSound"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Phát âm từ cần đoán"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/image_choice_background_selector"
+        app:layout_constraintBottom_toTopOf="@+id/tvListenTapInstruction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvListenTapGameTitle" />
+
+    <TextView
+        android:id="@+id/tvListenTapInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nghe và chọn hình đúng nhé!"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnPlayWordSound"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Khu vực hiển thị các lựa chọn hình ảnh -->
+    <!-- Sử dụng GridLayout để hiển thị 2x2 hình ảnh -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayoutImageChoices"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:columnCount="2"
+        app:rowCount="2"
+        app:alignmentMode="alignMargins"
+        app:columnOrderPreserved="false"
+        app:useDefaultMargins="true"
+        app:layout_constraintTop_toBottomOf="@id/tvListenTapInstruction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Các ImageView sẽ được thêm vào đây bằng code Java hoặc đặt sẵn -->
+        <!-- Ví dụ một ImageView (bạn sẽ cần 4 cái) -->
+        <ImageView
+            android:id="@+id/ivListenChoice1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/image_choice_background_selector"
+            android:contentDescription="Lựa chọn 1"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/ivListenChoice2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/image_choice_background_selector"
+            android:contentDescription="Lựa chọn 2"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/ivListenChoice3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/image_choice_background_selector"
+            android:contentDescription="Lựa chọn 3"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/ivListenChoice4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/image_choice_background_selector"
+            android:contentDescription="Lựa chọn 4"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1"
+            tools:srcCompat="@drawable/ic_star" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

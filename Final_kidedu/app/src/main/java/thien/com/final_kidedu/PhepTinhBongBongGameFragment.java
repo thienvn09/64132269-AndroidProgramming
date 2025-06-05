@@ -181,7 +181,6 @@ public class PhepTinhBongBongGameFragment extends Fragment {
 
         bubble_game_area.addView(bubbleView); // Thêm vào khu vực game
         activeBubbles.add(bubbleView);
-
         // SỬA: Animation bay từ dưới lên trên
         ObjectAnimator animator = ObjectAnimator.ofFloat(bubbleView, "translationY", bubble_game_area.getHeight(), (float) -bubbleHeight);
         animator.setDuration(ThoiGianBongBay + randoms.nextInt(2000));

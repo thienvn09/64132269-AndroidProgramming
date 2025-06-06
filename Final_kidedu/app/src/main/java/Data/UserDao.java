@@ -14,4 +14,7 @@ public interface UserDao{
     // truy vấn đăng nhập
     @Query("SELECT * FROM students WHERE name = :nameParam AND password = :passwordHashParam LIMIT 1")
     User dangnhap(String nameParam, String passwordHashParam);
+    // Phương thức mới để lấy người dùng gần nhất (dựa trên ID lớn nhất)
+    @Query("SELECT * FROM students ORDER BY uid DESC LIMIT 1")
+    User getLastRegisteredUser();
 }

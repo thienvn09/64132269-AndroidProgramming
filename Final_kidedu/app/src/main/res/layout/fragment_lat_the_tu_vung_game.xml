@@ -26,16 +26,16 @@
         android:id="@+id/tvFlashcardGameTitle"
         android:layout_width="259dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
+        android:layout_marginStart="76dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="55dp"
+        android:layout_marginEnd="76dp"
         android:gravity="center"
         android:text="Game: Lật Thẻ Từ Vựng"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivBackFromFlashcardGame"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="134dp"
 
         android:layout_marginBottom="33dp"

@@ -52,12 +52,12 @@ public class DanhSachGameTiengAnhFragment extends Fragment {
 
         cvGameTiengAnh3.setOnClickListener(v -> {
             Toast.makeText(getActivity(), "Mở game Ghép Chữ Thành Từ", Toast.LENGTH_SHORT).show();
-            // loadFragment(new GhepChuThanhTuGameFragment(), true); // Tạo GhepChuThanhTuGameFragment
+             loadFragment(new GhepChuThanhTuGameFragment(), true); // Tạo GhepChuThanhTuGameFragment
         });
 
         cvGameTiengAnh4.setOnClickListener(v -> {
             Toast.makeText(getActivity(), "Mở game Câu Chuyện Tương Tác", Toast.LENGTH_SHORT).show();
-            // loadFragment(new CauChuyenTuongTacGameFragment(), true); // Tạo CauChuyenTuongTacGameFragment
+             loadFragment(new MatchingPairsGameFragment(), true); // Tạo CauChuyenTuongTacGameFragment
         });
 
         return view;

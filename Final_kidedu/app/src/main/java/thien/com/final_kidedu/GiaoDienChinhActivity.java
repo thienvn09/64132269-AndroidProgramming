@@ -36,13 +36,13 @@ public class GiaoDienChinhActivity extends AppCompatActivity {
                 if (itemId == R.id.navigation_home) { // ID từ file menu bot_menu.xml
                     selectedFragment = new HomeFragment();
                 } else if (itemId == R.id.navigation_profile) { // ID từ file menu
-                    // selectedFragment = new ProfileFragment(); // Tạo ProfileFragment nếu có
+                     selectedFragment = new fragment_profile(); // Tạo ProfileFragment nếu có
                     Toast.makeText(GiaoDienChinhActivity.this, "Profile Đã Được Chọn", Toast.LENGTH_SHORT).show();
                 } else if (itemId == R.id.navigation_games) { // ID từ file menu
-                    // selectedFragment = new GamesFragment(); // Tạo GamesFragment nếu có
+                     selectedFragment = new GamesFragment();
                     Toast.makeText(GiaoDienChinhActivity.this, "Luyện Tập Đã Được Chọn", Toast.LENGTH_SHORT).show();
                 } else if (itemId == R.id.navigation_settings) { // ID từ file menu
-                    // selectedFragment = new SettingsFragment(); // Tạo SettingsFragment nếu có
+                     selectedFragment = new SettingsFragment();
                     Toast.makeText(GiaoDienChinhActivity.this, "Cài Đặt Đã Được Chọn", Toast.LENGTH_SHORT).show();
                 }
 
@@ -53,9 +53,6 @@ public class GiaoDienChinhActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-        // Đặt item "Trang chủ" được chọn mặc định (nếu cần, nhưng loadFragment ở trên đã làm việc này)
-        // bottomNavigationView.setSelectedItemId(R.id.navigation_home);
     }
 
     private void loadFragment(Fragment fragment, boolean addToBackStack) {

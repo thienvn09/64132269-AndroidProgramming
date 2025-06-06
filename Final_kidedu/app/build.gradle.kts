@@ -38,6 +38,7 @@ android {
 dependencies {
     val roomVersion = "2.6.1" // Kiểm tra phiên bản mới nhất
     implementation("androidx.gridlayout:gridlayout:1.0.0")
+    implementation("com.google.android.flexbox:flexbox:3.0.0")
     implementation("androidx.room:room-runtime:$roomVersion")
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
     implementation(libs.appcompat)

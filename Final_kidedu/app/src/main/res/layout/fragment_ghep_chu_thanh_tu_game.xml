@@ -24,53 +24,64 @@
         android:id="@+id/tvWordJumbleGameTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="84dp"
         android:gravity="center"
         android:text="Game: Ghép Chữ Vui Nhộn"
         android:textColor="@color/black"
+
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ivBackFromWordJumbleGame"
-        app:layout_constraintEnd_toStartOf="@id/tvWordJumbleScoreLabel"
-        app:layout_constraintBaseline_toBaselineOf="@id/ivBackFromWordJumbleGame"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvWordJumbleScoreLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="9dp"
+
+        android:layout_marginBottom="560dp"
         android:text="Điểm:"
-        android:textSize="16sp"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@id/tvWordJumbleScoreValue"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvWordJumbleGameTitle" />
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordJumbleScoreValue"
+        app:layout_constraintStart_toEndOf="@+id/ivWordJumbleImageClue"
+        app:layout_constraintTop_toBottomOf="@+id/tvWordJumbleGameTitle" />
 
     <TextView
         android:id="@+id/tvWordJumbleScoreValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_width="15dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="40dp"
         android:text="0"
+
+        android:textAlignment="center"
+        android:textColor="@color/Mau_diem"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/purple_700"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvWordJumbleGameTitle" />
+        app:layout_constraintStart_toEndOf="@+id/tvWordJumbleScoreLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvWordJumbleGameTitle" />
 
     <ImageView
         android:id="@+id/ivWordJumbleImageClue"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="24dp"
+        android:contentDescription="Hình ảnh gợi ý"
         android:scaleType="fitCenter"
-        tools:srcCompat="@drawable/ic_sample_apple"
-        app:layout_constraintTop_toBottomOf="@id/tvWordJumbleGameTitle"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="Hình ảnh gợi ý"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWordJumbleGameTitle"
+        tools:srcCompat="@mipmap/img_tao" />
 
-    <!-- Khu vực hiển thị từ đang được ghép -->
+
     <TextView
         android:id="@+id/tvFormedWord"
         android:layout_width="wrap_content"
@@ -92,13 +103,7 @@
         app:layout_constraintTop_toBottomOf="@id/ivWordJumbleImageClue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-    <!-- Tạo drawable/formed_word_background.xml (ví dụ: nền trắng, bo góc, có viền) -->
 
-
-    <!-- Khu vực chứa các chữ cái bị xáo trộn -->
-    <!-- Sử dụng FlowLayout (cần thêm dependency) hoặc FlexboxLayout (cần thêm dependency) -->
-    <!-- để các nút chữ cái tự động xuống hàng nếu không đủ chỗ. -->
-    <!-- Hoặc đơn giản là một LinearLayout ngang, nếu số chữ cái ít. -->
     <androidx.legacy.widget.Space
         android:id="@+id/space_before_letters"
         android:layout_width="wrap_content"

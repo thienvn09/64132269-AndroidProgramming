@@ -27,7 +27,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/nunito_black"
         android:gravity="center"
-        android:text="Game: Tìm Cặp Thẻ"
+        android:text="Tìm Cặp Thẻ"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"

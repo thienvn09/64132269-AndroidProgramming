@@ -59,12 +59,12 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Game 1: Lật Thẻ Từ Vựng -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cvGameTiengAnh1"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginBottom="16dp"
+                android:backgroundTint="#FFC1CC"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp">
@@ -91,7 +91,7 @@
                         android:layout_marginStart="16dp"
                         android:fontFamily="@font/nunito_black"
                         android:text="Lật Thẻ Từ Vựng"
-                        android:textColor="@color/black"
+                        android:textColor="#212121"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/ivIconGameTiengAnh1"
@@ -113,6 +113,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="#B2F2BB"
                     android:padding="16dp">
 
                     <ImageView
@@ -124,7 +125,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@mipmap/img_ta2" />
-                    <!-- Bạn cần tạo icon ic_listen_tap.xml -->
+
 
                     <TextView
                         android:id="@+id/tvTitleGameTiengAnh2"
@@ -132,8 +133,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:fontFamily="@font/nunito_black"
+                        android:shadowColor="#512DA8"
                         android:text="Nghe và Chạm"
-                        android:textColor="@color/black"
+                        android:textColor="#00695C"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/ivIconGameTiengAnh2"
@@ -143,12 +145,13 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Game 3: Ghép Chữ Thành Từ -->
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cvGameTiengAnh3"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginBottom="16dp"
+                android:backgroundTint="#FFF3B0"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp">
@@ -167,7 +170,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@mipmap/abc" />
-                    <!-- Bạn cần tạo icon ic_word_jumble.xml -->
+
 
                     <TextView
                         android:id="@+id/tvTitleGameTiengAnh3"
@@ -176,7 +179,7 @@
                         android:layout_marginStart="16dp"
                         android:fontFamily="@font/nunito_black"
                         android:text="Ghép Chữ Thành Từ"
-                        android:textColor="@color/black"
+                        android:textColor="#D84315"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/ivIconGameTiengAnh3"
@@ -186,12 +189,13 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Game 4: Câu Chuyện Tương Tác -->
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cvGameTiengAnh4"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginBottom="16dp"
+                android:backgroundTint="#AEDFF7"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp">
@@ -210,7 +214,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@mipmap/img_ta4" />
-                    <!-- Bạn cần tạo icon ic_interactive_story.xml -->
+
 
                     <TextView
                         android:id="@+id/tvTitleGameTiengAnh4"
@@ -218,8 +222,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:fontFamily="@font/nunito_black"
-                        android:text="Câu Chuyện Tương Tác"
-                        android:textColor="@color/black"
+                        android:text="Tìm Cặp Thẻ"
+                        android:textColor="#1A237E"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/ivIconGameTiengAnh4"

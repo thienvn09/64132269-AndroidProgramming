@@ -29,7 +29,7 @@
         android:fontFamily="@font/nunito_black"
         android:gravity="center"
         android:paddingTop="15dp"
-        android:text="Game: Phép Tính Bong Bóng"
+        android:text=" Phép Tính Bong Bóng"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/Mau_hongnhat"
     android:padding="24dp"
     tools:context=".DangNhapActivity">
 
@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Đăng Nhập"
+        android:textAlignment="center"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,5 +98,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnPerformLogin" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="346dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGoToRegisterFromLogin"
+        app:srcCompat="@mipmap/boy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

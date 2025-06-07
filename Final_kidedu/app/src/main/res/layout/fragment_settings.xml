@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Mau_hongnhat"
     android:padding="16dp"
-    android:background="#FFFFFF"
     tools:context=".SettingsFragment">
 
     <TextView
@@ -26,9 +26,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:checked="true"
         android:text="Âm Thanh Trò Chơi"
         android:textSize="18sp"
-        android:checked="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSettingsTitle" />
@@ -37,22 +37,22 @@
         android:id="@+id/divider"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/switchSound"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/switchSound" />
 
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="32dp"
-        android:text="Đăng Xuất"
         android:backgroundTint="@android:color/holo_red_light"
-        android:padding="14dp"/>
+        android:padding="14dp"
+        android:text="Đăng Xuất"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

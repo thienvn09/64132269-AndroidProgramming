@@ -9,5 +9,6 @@
     <color name="mau_chu_bottom_nav_selected">#FF6F00</color>
     <color name="mau_chu_bottom_nav_default">#757575</color>
     <color name="mau_do">#F44336</color>
-
+    <color name="Mau_hongnhat">#FFF1F8</color>
+    <color name="mau_button">#FFD180</color>
 </resources>

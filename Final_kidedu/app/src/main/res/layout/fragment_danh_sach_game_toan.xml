@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Mau_main"
+    android:background="@color/Mau_hongnhat"
     tools:context=".DanhSachGameToanFragment">
 
     <ImageView
@@ -76,7 +76,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/icon_star" />
+                        app:srcCompat="@mipmap/img_toan1" />
 
                     <TextView
                         android:id="@+id/tvTitleGameTA1"
@@ -116,7 +116,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@mipmap/ic_bongbong" />
+                        app:srcCompat="@mipmap/img_toan2" />
 
                     <TextView
                         android:id="@+id/tvTitleGameTA2"
@@ -156,7 +156,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@mipmap/ic_random" />
+                        app:srcCompat="@mipmap/img_toan3" />
 
                     <TextView
                         android:id="@+id/tvTitleGameToan3"
@@ -196,7 +196,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@mipmap/ic_xephinh" />
+                        app:srcCompat="@mipmap/img_toan4" />
 
                     <TextView
                         android:id="@+id/tvTitleGameToan4"

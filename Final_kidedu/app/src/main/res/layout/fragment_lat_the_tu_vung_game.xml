@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFDE7"
+    android:background="@color/Mau_hongnhat"
     tools:context=".LatTheTuVungGameFragment">
 
     <ImageView
@@ -175,7 +175,9 @@
         android:layout_marginStart="135dp"
         android:layout_marginEnd="135dp"
         android:layout_marginBottom="68dp"
+        android:backgroundTint="@color/mau_button"
         android:text="Thẻ Tiếp Theo"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF1E0"
+    android:background="@color/Mau_hongnhat"
     tools:context=".GhepChuThanhTuGameFragment">
 
     <ImageView
@@ -13,12 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="Quay lại"
         android:padding="8dp"
         android:src="@drawable/ic_arrow_back"
-        app:tint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="Quay lại" />
+        app:tint="@color/black" />
 
     <TextView
         android:id="@+id/tvWordJumbleGameTitle"
@@ -88,63 +88,62 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="@drawable/formed_word_background"
+        android:gravity="center"
+        android:hint="Từ của bé"
+        android:letterSpacing="0.1"
+        android:minWidth="200dp"
         android:paddingStart="24dp"
         android:paddingTop="12dp"
         android:paddingEnd="24dp"
         android:paddingBottom="12dp"
-        android:minWidth="200dp"
-        android:gravity="center"
         android:text=""
-        android:hint="Từ của bé"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:letterSpacing="0.1"
-        app:layout_constraintTop_toBottomOf="@id/ivWordJumbleImageClue"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/ivWordJumbleImageClue" />
 
     <androidx.legacy.widget.Space
         android:id="@+id/space_before_letters"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
-        app:layout_constraintTop_toBottomOf="@id/tvFormedWord"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFormedWord" />
 
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/flexboxJumbledLetters"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:alignItems="center"
         app:flexWrap="wrap"
         app:justifyContent="center"
-        app:alignItems="center"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@id/space_before_letters"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-    </com.google.android.flexbox.FlexboxLayout>
+        app:layout_constraintTop_toBottomOf="@id/space_before_letters"></com.google.android.flexbox.FlexboxLayout>
 
     <LinearLayout
         android:id="@+id/llActionButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
-        app:layout_constraintTop_toBottomOf="@id/flexboxJumbledLetters"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flexboxJumbledLetters"
         app:layout_constraintVertical_bias="0.8">
 
         <Button
             android:id="@+id/btnClearWord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Xóa"
-            android:layout_marginEnd="16dp"/>
+            android:layout_marginEnd="16dp"
+            android:text="Xóa" />
 
         <Button
             android:id="@+id/btnCheckWordJumble"

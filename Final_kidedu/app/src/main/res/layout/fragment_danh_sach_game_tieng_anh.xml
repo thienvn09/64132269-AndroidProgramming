@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Mau_main"
+    android:background="@color/Mau_hongnhat"
     tools:context=".DanhSachGameTiengAnhFragment">
 
 
@@ -81,7 +81,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@mipmap/img_flashcard" />
+                        app:srcCompat="@mipmap/img_ta1" />
 
                     <TextView
                         android:id="@+id/tvTitleGameTiengAnh1"
@@ -121,7 +121,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@mipmap/img_listen" />
+                        app:srcCompat="@mipmap/img_ta2" />
                     <!-- Bạn cần tạo icon ic_listen_tap.xml -->
 
                     <TextView
@@ -163,7 +163,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@mipmap/img_chu" />
+                        app:srcCompat="@mipmap/abc" />
                     <!-- Bạn cần tạo icon ic_word_jumble.xml -->
 
                     <TextView
@@ -205,7 +205,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@mipmap/icon_readbook" />
+                        app:srcCompat="@mipmap/img_ta4" />
                     <!-- Bạn cần tạo icon ic_interactive_story.xml -->
 
                     <TextView

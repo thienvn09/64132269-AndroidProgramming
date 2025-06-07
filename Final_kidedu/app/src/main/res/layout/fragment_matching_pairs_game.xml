@@ -13,12 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="Quay lại"
         android:padding="8dp"
         android:src="@drawable/ic_arrow_back"
-        app:tint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="Quay lại" />
+        app:tint="@color/black" />
 
     <TextView
         android:id="@+id/tvMatchingGameTitle"
@@ -30,10 +30,10 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ivBackFromMatchingGame"
+        app:layout_constraintBaseline_toBaselineOf="@id/ivBackFromMatchingGame"
         app:layout_constraintEnd_toStartOf="@id/tvMatchingScoreLabel"
-        app:layout_constraintBaseline_toBaselineOf="@id/ivBackFromMatchingGame"/>
+        app:layout_constraintStart_toEndOf="@id/ivBackFromMatchingGame"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvMatchingScoreLabel"
@@ -41,10 +41,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:text="Cặp đã tìm:"
-        android:textSize="16sp"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@id/tvMatchingScoreValue"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvMatchingGameTitle" />
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvMatchingGameTitle"
+        app:layout_constraintEnd_toStartOf="@id/tvMatchingScoreValue" />
 
     <TextView
         android:id="@+id/tvMatchingScoreValue"
@@ -52,14 +52,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:text="0/6"
+        android:textColor="@color/Mau_diem"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/Mau_diem"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvMatchingGameTitle" />
+        app:layout_constraintBaseline_toBaselineOf="@id/tvMatchingGameTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Khu vực hiển thị lưới các thẻ -->
-    <!-- Sử dụng GridLayout để hiển thị lưới 3x4 -->
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridMatchingCards"
         android:layout_width="387dp"

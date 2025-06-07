@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Mau_hongnhat"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -163,7 +164,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="24dp"
-            android:backgroundTint="#FFD180"
+            android:backgroundTint="@color/mau_button"
             android:paddingTop="14dp"
             android:paddingBottom="14dp"
             android:text="Đăng Ký"

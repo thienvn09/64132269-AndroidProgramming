@@ -58,7 +58,7 @@ public class DanhSachGameToanFragment extends Fragment {
 
         cvGameToan4.setOnClickListener(v -> {
             Toast.makeText(getActivity(), "Mở game Xếp Hình Thông Minh", Toast.LENGTH_SHORT).show();
-            // loadFragment(new XepHinhGameFragment(), true);
+             loadFragment(new XepHinhGameFragment(), true);
         });
 
         return view;

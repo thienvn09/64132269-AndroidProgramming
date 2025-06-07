@@ -112,9 +112,8 @@ public class GhepChuThanhTuGameFragment extends Fragment {
     private void startNewRound() {
         if (wordDataList.isEmpty()) {
             Toast.makeText(getActivity(), "Đã hoàn thành tất cả các từ!", Toast.LENGTH_LONG).show();
-            // Có thể quay lại màn hình chọn game hoặc làm gì đó khác
             if (getActivity() != null) {
-                // getActivity().getSupportFragmentManager().popBackStack();
+                 getActivity().getSupportFragmentManager().popBackStack();
             }
             return;
         }

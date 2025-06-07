@@ -31,11 +31,10 @@
         android:fontFamily="@font/nunito_black"
         android:gravity="center"
         android:text="Trò Chơi Môn Toán"
-        android:textColor="@color/black"
+        android:textColor="#333333"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivBackFromGameListToan" />
 
@@ -61,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="#FFF3B0"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp">
 
@@ -87,7 +86,7 @@
                         android:layout_marginStart="16dp"
                         android:fontFamily="@font/nunito_black"
                         android:text="Đếm Sao Nhanh"
-                        android:textColor="@color/black"
+                        android:textColor="#424242"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/ivIconGameToan1"
@@ -102,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="#AEDFF7"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp">
 
@@ -128,7 +127,7 @@
                         android:layout_marginStart="16dp"
                         android:fontFamily="@font/nunito_black"
                         android:text="Phép Tính Bong Bóng"
-                        android:textColor="@color/black"
+                        android:textColor="#424242"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/ivIconGameToan2"
@@ -143,7 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="#B2F2BB"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp">
 
@@ -169,7 +168,7 @@
                         android:layout_marginStart="16dp"
                         android:fontFamily="@font/nunito_black"
                         android:text="Tìm Số Bí Ẩn"
-                        android:textColor="@color/black"
+                        android:textColor="#424242"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/ivIconGameToan3"
@@ -184,7 +183,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="#FFC1CC"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp">
 
@@ -210,7 +209,7 @@
                         android:layout_marginStart="16dp"
                         android:fontFamily="@font/nunito_black"
                         android:text="Xếp Hình Thông Minh"
-                        android:textColor="@color/black"
+                        android:textColor="#424242"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/ivIconGameToan4"

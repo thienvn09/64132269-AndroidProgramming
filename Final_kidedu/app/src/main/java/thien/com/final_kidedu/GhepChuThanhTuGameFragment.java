@@ -104,7 +104,7 @@ public class GhepChuThanhTuGameFragment extends Fragment {
         wordDataList.add(new WordData("DOG", R.mipmap.img_dog));
         wordDataList.add(new WordData("CAT", R.mipmap.img_cat));
         wordDataList.add(new WordData("SUN", R.mipmap.img_sun));
-        wordDataList.add(new WordData("BOOK", R.mipmap.img_sun));
+        wordDataList.add(new WordData("BOOK", R.mipmap.img_book));
         // ... Thêm các từ khác ...
         Collections.shuffle(wordDataList);
     }

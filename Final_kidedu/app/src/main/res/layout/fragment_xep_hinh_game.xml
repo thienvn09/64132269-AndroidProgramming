@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF9C4"
+    android:background="@color/Mau_hongnhat"
     tools:context=".XepHinhGameFragment">
 
     <ImageView
@@ -12,51 +12,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="Quay lại"
         android:padding="8dp"
         android:src="@drawable/ic_arrow_back"
-        app:tint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="Quay lại" />
+        app:tint="@color/black" />
 
     <TextView
         android:id="@+id/tvSortGameTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/nunito_black"
         android:gravity="center"
-        android:text="Game: Xếp Hình Thông Minh"
+        android:text="Xếp Hình Thông Minh"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ivBackFromSortGame"
         app:layout_constraintEnd_toStartOf="@id/tvSortScoreLabel"
-        app:layout_constraintBaseline_toBaselineOf="@id/ivBackFromSortGame"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/ivBackFromSortGame"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvSortScoreLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/nunito_black"
         android:text="Điểm:"
-        android:textSize="16sp"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@id/tvSortScoreValue"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvSortGameTitle" />
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvSortGameTitle"
+        app:layout_constraintEnd_toStartOf="@id/tvSortScoreValue" />
 
     <TextView
         android:id="@+id/tvSortScoreValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:fontFamily="@font/nunito_black"
         android:text="0"
+        android:textColor="@color/Mau_diem"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/Mau_diem"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvSortGameTitle" />
+        app:layout_constraintBaseline_toBaselineOf="@id/tvSortGameTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <TextView
@@ -66,6 +69,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="104dp"
         android:layout_marginEnd="24dp"
+        android:fontFamily="@font/nunito_black"
         android:gravity="center"
         android:text="Hãy chọn các hình theo thứ tự từ nhỏ nhất đến lớn nhất!"
         android:textColor="@color/black"
@@ -79,64 +83,71 @@
         android:id="@+id/llUnsortedItems"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tvSortInstruction"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/tvSortInstruction" />
 
     <TextView
         android:id="@+id/tvChosenOrderLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thứ tự bé chọn:"
-        android:textSize="16sp"
-        android:textColor="@color/black"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/llUnsortedItems"
+        android:fontFamily="@font/nunito_black"
+        android:text="Thứ tự bé chọn:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/llUnsortedItems" />
 
 
     <LinearLayout
         android:id="@+id/llChosenOrder"
         android:layout_width="0dp"
         android:layout_height="120dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="8dp"
-        android:padding="8dp"
-        android:background="@drawable/chosen_order_area_background"
-        app:layout_constraintTop_toBottomOf="@id/tvChosenOrderLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/chosen_order_area_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvChosenOrderLabel" />
 
     <LinearLayout
         android:id="@+id/llActionButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/llChosenOrder"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/llChosenOrder">
 
         <Button
             android:id="@+id/btnCheckOrder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/mau_button"
+            android:fontFamily="@font/nunito_black"
             android:text="Kiểm Tra"
-            android:layout_marginEnd="16dp"/>
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/btnResetOrder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Làm Lại"/>
+            android:backgroundTint="@color/mau_button"
+            android:fontFamily="@font/nunito_black"
+            android:text="Làm Lại"
+            android:textColor="@color/black" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="Quay lại"
         android:padding="8dp"
         android:src="@drawable/ic_arrow_back"
@@ -22,19 +22,21 @@
 
     <TextView
         android:id="@+id/tvListenTapGameTitle"
-        android:layout_width="0dp"
-        android:layout_height="27dp"
+        android:layout_width="287dp"
+        android:layout_height="30dp"
         android:layout_marginStart="38dp"
         android:layout_marginTop="46dp"
         android:layout_marginEnd="122dp"
         android:layout_marginBottom="6dp"
+        android:fontFamily="@font/nunito_black"
         android:gravity="center"
-        android:text="Game: Nghe và Chạm"
+        android:text="Nghe và Chạm"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnPlayWordSound"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toEndOf="@+id/ivBackFromListenTapGame"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,30 +44,34 @@
         android:id="@+id/tvListenTapScoreLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="79dp"
         android:layout_marginBottom="74dp"
+        android:fontFamily="@font/nunito_black"
         android:text="Điểm:"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/tvListenTapInstruction"
         app:layout_constraintStart_toEndOf="@+id/btnPlayWordSound"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tvListenTapScoreValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="79dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="63dp"
-        android:text="0"
+        android:fontFamily="@font/nunito_black"
 
+        android:text="0"
         android:textAlignment="center"
         android:textColor="@color/Mau_diem"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvListenTapScoreLabel"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,9 +85,10 @@
         android:contentDescription="Phát âm từ cần đoán"
         android:padding="16dp"
         android:scaleType="fitCenter"
-        android:src="@mipmap/img_headphone"
+        android:src="@mipmap/img"
         app:layout_constraintBottom_toTopOf="@+id/tvListenTapInstruction"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvListenTapGameTitle" />
 
@@ -90,6 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_black"
         android:text="Nghe và chọn hình đúng nhé!"
         android:textColor="@color/black"
         android:textSize="18sp"

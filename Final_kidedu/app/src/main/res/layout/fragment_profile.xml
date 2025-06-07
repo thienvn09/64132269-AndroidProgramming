@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/nunito_black"
         android:text="Hồ Sơ Của Bé"
         android:textColor="@color/black"
         android:textSize="28sp"
@@ -60,6 +61,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_black"
                     android:text="Họ và Tên:"
                     android:textStyle="bold" />
 
@@ -67,6 +69,7 @@
                     android:id="@+id/tvProfileName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_black"
                     tools:text="Lê Hoàng Thiện" />
             </LinearLayout>
 
@@ -85,6 +88,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_black"
                     android:text="Giới tính:"
                     android:textStyle="bold" />
 
@@ -92,6 +96,7 @@
                     android:id="@+id/tvProfileGender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_black"
                     tools:text="Nam" />
             </LinearLayout>
 
@@ -110,6 +115,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_black"
                     android:text="Trường:"
                     android:textStyle="bold" />
 
@@ -118,6 +124,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/nunito_black"
                     tools:text="Tiểu học Kim Đồng" />
             </LinearLayout>
 
@@ -136,6 +143,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_black"
                     android:text="Lớp:"
                     android:textStyle="bold" />
 
@@ -143,6 +151,7 @@
                     android:id="@+id/tvProfileClass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_black"
                     tools:text="1A" />
             </LinearLayout>
         </LinearLayout>

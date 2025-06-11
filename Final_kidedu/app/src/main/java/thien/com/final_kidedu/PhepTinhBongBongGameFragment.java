@@ -120,7 +120,7 @@ public class PhepTinhBongBongGameFragment extends Fragment {
         return new MathBT(BaiTap, Kq);
     }
 
-    private void populateDropTargets(int correctAnswerParam) { // Đổi tên tham số để tránh nhầm lẫn
+    private void populateDropTargets(int correctAnswerParam) {
         List<Integer> answers = new ArrayList<>();
         answers.add(correctAnswerParam);
         while (answers.size() < 3) {

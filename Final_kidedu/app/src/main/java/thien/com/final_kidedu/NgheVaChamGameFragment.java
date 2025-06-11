@@ -232,11 +232,9 @@ public class NgheVaChamGameFragment extends Fragment {
         if (selectedWord.englishWord.equals(currentWordToGuess.englishWord)) {
             currentScore++;
             Toast.makeText(getActivity(), "Đúng rồi! Đó là " + currentWordToGuess.englishWord, Toast.LENGTH_SHORT).show();
-            // TODO: Thêm hiệu ứng khi đúng (ví dụ: hình ảnh được chọn nhấp nháy màu xanh)
             clickedImageView.setAlpha(1.0f); // Làm nổi bật lựa chọn đúng
         } else {
             Toast.makeText(getActivity(), "Sai rồi! Từ đúng là " + currentWordToGuess.englishWord, Toast.LENGTH_SHORT).show();
-            // TODO: Thêm hiệu ứng khi sai (ví dụ: hình ảnh được chọn nhấp nháy màu đỏ, và làm nổi bật hình đúng)
             // Tìm và làm nổi bật hình đúng
             for(ImageView iv : choiceImageViews) {
                 WordItem item = (WordItem) iv.getTag();

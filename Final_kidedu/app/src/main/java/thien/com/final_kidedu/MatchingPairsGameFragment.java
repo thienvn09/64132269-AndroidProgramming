@@ -106,7 +106,6 @@ public class MatchingPairsGameFragment extends Fragment {
         // Cặp 6: Car
         cardList.add(new CardItem(11, 6, "Car", 0));
         cardList.add(new CardItem(12, 6, null, R.mipmap.img_car));
-
         totalPairs = cardList.size() / 2;
         updateScoreDisplay();
         Collections.shuffle(cardList);
@@ -137,7 +136,6 @@ public class MatchingPairsGameFragment extends Fragment {
             }
 
             cardView.setOnClickListener(this::onCardClicked);
-
             // Thiết lập GridLayout.LayoutParams
             GridLayout.LayoutParams params = new GridLayout.LayoutParams();
             params.width = 0;
@@ -146,7 +144,6 @@ public class MatchingPairsGameFragment extends Fragment {
             params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1, 1f);
             params.rowSpec = GridLayout.spec(GridLayout.UNDEFINED, 1, 1f);
             cardView.setLayoutParams(params);
-
             gridMatchingCards.addView(cardView);
             cardViews.add(cardView);
         }

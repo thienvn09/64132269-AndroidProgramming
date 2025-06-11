@@ -44,7 +44,6 @@ public class SettingsFragment extends Fragment {
         });
 
         btnLogout.setOnClickListener(v -> {
-            // TODO: Xử lý logic xóa thông tin đăng nhập nếu cần
             if (getActivity() != null) {
                 Intent intent = new Intent(getActivity(), DangNhapActivity.class);
                 // Xóa tất cả các activity trước đó và tạo một task mới

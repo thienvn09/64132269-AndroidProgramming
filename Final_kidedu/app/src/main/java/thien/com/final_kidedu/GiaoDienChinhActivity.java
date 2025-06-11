@@ -37,13 +37,10 @@ public class GiaoDienChinhActivity extends AppCompatActivity {
                     selectedFragment = new HomeFragment();
                 } else if (itemId == R.id.navigation_profile) { // ID từ file menu
                      selectedFragment = new fragment_profile(); // Tạo ProfileFragment nếu có
-                    Toast.makeText(GiaoDienChinhActivity.this, "Profile Đã Được Chọn", Toast.LENGTH_SHORT).show();
                 } else if (itemId == R.id.navigation_games) { // ID từ file menu
                      selectedFragment = new GamesFragment();
-                    Toast.makeText(GiaoDienChinhActivity.this, "Luyện Tập Đã Được Chọn", Toast.LENGTH_SHORT).show();
                 } else if (itemId == R.id.navigation_settings) { // ID từ file menu
                      selectedFragment = new SettingsFragment();
-                    Toast.makeText(GiaoDienChinhActivity.this, "Cài Đặt Đã Được Chọn", Toast.LENGTH_SHORT).show();
                 }
 
                 if (selectedFragment != null) {

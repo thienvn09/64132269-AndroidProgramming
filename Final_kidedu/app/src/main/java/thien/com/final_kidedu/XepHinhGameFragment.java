@@ -113,7 +113,6 @@ public class XepHinhGameFragment extends Fragment {
         items.add(new SortableItem(0, 1, R.drawable.ic_square_small)); // id=0, value=1 (nhỏ)
         items.add(new SortableItem(1, 2, R.drawable.ic_square_medium)); // id=1, value=2 (vừa)
         items.add(new SortableItem(2, 3, R.drawable.ic_square_large)); // id=2, value=3 (lớn)
-
         // Xáo trộn danh sách để hiển thị ngẫu nhiên
         Collections.shuffle(items);
         return items;
@@ -200,7 +199,6 @@ public class XepHinhGameFragment extends Fragment {
 
     private void checkOrder() {
         btnCheckOrder.setEnabled(false); // Vô hiệu hóa nút sau khi nhấn
-
         boolean isCorrect = true;
         for (int i = 0; i < NUMBER_OF_ITEMS_TO_SORT; i++) {
             if (chosenOrderList.get(i).id != correctOrder.get(i).id) {
@@ -208,7 +206,6 @@ public class XepHinhGameFragment extends Fragment {
                 break;
             }
         }
-
         if (isCorrect) {
             currentScore++;
             Toast.makeText(getActivity(), "Tuyệt vời! Em đã xếp đúng rồi!", Toast.LENGTH_SHORT).show();

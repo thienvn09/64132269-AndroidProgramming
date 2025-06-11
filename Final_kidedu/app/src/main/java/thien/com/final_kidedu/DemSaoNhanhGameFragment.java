@@ -80,10 +80,8 @@ public class DemSaoNhanhGameFragment extends Fragment {
     private void startNewRound() {
         clearStars();
         disableAnswerButtons();
-
         correctAnswer = random.nextInt(MAX_STARS - MIN_STARS + 1) + MIN_STARS;
         displayStars(correctAnswer);
-
         // Ẩn sao sau một khoảng thời gian và hiển thị đáp án
         handler.postDelayed(() -> {
             clearStars(); // Ẩn sao
@@ -98,20 +96,16 @@ public class DemSaoNhanhGameFragment extends Fragment {
             return;
         }
         int starSize = getResources().getDimensionPixelSize(R.dimen.star_size); // Lấy kích thước từ dimens.xml
-
         for (int i = 0; i < numberOfStars; i++) {
             ImageView starView = new ImageView(getContext());
             starView.setImageResource(R.drawable.ic_star);
-
             // Đặt kích thước cố định cho ImageView của ngôi sao
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
                     starSize, // Chiều rộng bằng starSize
                     starSize  // Chiều cao bằng starSize
             );
-
             int maxWidth = starDisplayArea.getWidth() - starSize;
             int maxHeight = starDisplayArea.getHeight() - starSize;
-
             if (maxWidth <=0 || maxHeight <=0) {
                 params.leftMargin = Math.max(0, starDisplayArea.getWidth() / 2 - starSize / 2);
                 params.topMargin = Math.max(0, starDisplayArea.getHeight() / 2 - starSize / 2);
@@ -136,7 +130,6 @@ public class DemSaoNhanhGameFragment extends Fragment {
     private void populateAnswerButtons() {
         List<Integer> answers = new ArrayList<>();
         answers.add(correctAnswer);
-
         // Tạo 2 đáp án sai
         while (answers.size() < 3) {
             int wrongAnswerOffset = random.nextInt(3) + 1; // Sai lệch 1, 2, hoặc 3
@@ -146,7 +139,6 @@ public class DemSaoNhanhGameFragment extends Fragment {
             } else {
                 wrongAnswer = correctAnswer - wrongAnswerOffset;
             }
-
             // Đảm bảo đáp án sai khác đáp án đúng và không âm, và không trùng nhau
             if (wrongAnswer > 0 && wrongAnswer != correctAnswer && !answers.contains(wrongAnswer)) {
                 answers.add(wrongAnswer);
@@ -174,7 +166,6 @@ public class DemSaoNhanhGameFragment extends Fragment {
             btnAnswer3.setText(String.valueOf(correctAnswer + 2 > 0 ? correctAnswer + 2 : 1));
         }
     }
-
     private void checkAnswer(int selectedAnswer) {
         disableAnswerButtons(); // Vô hiệu hóa nút ngay khi chọn
         if (selectedAnswer == correctAnswer) {
@@ -184,7 +175,6 @@ public class DemSaoNhanhGameFragment extends Fragment {
             Toast.makeText(getActivity(), "Sai rồi! Đáp án là " + correctAnswer, Toast.LENGTH_SHORT).show();
         }
         updateScoreDisplay();
-
         // Chờ một chút trước khi bắt đầu vòng mới
         handler.postDelayed(this::startNewRound, 1000); // 10 giây sau bắt đầu vòng mới
     }

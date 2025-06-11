@@ -40,8 +40,6 @@ public class GhepChuThanhTuGameFragment extends Fragment {
     private WordData currentWordData;
     private List<Button> letterButtons; // Lưu trữ các nút chữ cái để có thể kích hoạt lại
     private StringBuilder formedWordBuilder;
-
-
     // Lớp nội để chứa thông tin mỗi từ
     private static class WordData {
         String englishWord;

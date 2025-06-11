@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/iv_bubble_image"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:scaleType="fitCenter"
         app:srcCompat="@mipmap/img_bongbong" />
 
@@ -23,7 +23,8 @@
         android:shadowDy="1"
         android:shadowRadius="2"
         android:text="1+1"
-        android:textColor="@color/black"
+        android:textColor="@color/Mau_hongnhat"
+        android:paddingBottom="50dp"
         android:textSize="28sp"
         android:textStyle="bold" />
 

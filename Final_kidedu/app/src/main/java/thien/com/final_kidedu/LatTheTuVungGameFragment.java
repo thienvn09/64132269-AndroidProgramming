@@ -159,10 +159,9 @@ public class LatTheTuVungGameFragment extends Fragment {
         // Thêm các từ vựng vào đây
         flashcardList.add(new FlashcardItem("Quả Táo", "Apple", "/ˈæp.əl/", R.mipmap.img_tao, 0)); // 0 nếu dùng TTS
         flashcardList.add(new FlashcardItem("Con Chó", "Dog", "/dɒɡ/", R.mipmap.img_dog, 0));
-        flashcardList.add(new FlashcardItem("Con Mèo", "Red", "/kæt/", R.mipmap.img_cat, 0));
+        flashcardList.add(new FlashcardItem("Con Mèo", "Cat", "/kæt/", R.mipmap.img_cat, 0));
         flashcardList.add(new FlashcardItem("Con gà", "Chicken", "/tʃɪk.ɪn/", R.mipmap.img_chicken, 0)); // Thêm icon ic_book
-        flashcardList.add(new FlashcardItem("Con Vịt", "Cat", "/dʌk/", R.mipmap.img_duck, 0)); // Thêm icon ic_cat
-
+        flashcardList.add(new FlashcardItem("Con Vịt", "Duck", "/dʌk/", R.mipmap.img_duck, 0)); // Thêm icon ic_cat
         if (!flashcardList.isEmpty()) {
             Collections.shuffle(flashcardList); // Xáo trộn thứ tự thẻ
         }
